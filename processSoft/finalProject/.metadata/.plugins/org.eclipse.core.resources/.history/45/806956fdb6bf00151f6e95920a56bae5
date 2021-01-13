@@ -1,0 +1,111 @@
+package com.lib.pojos;
+
+
+import javax.persistence.*;
+
+import java.util.Date;
+
+
+@Entity
+@Table(name="TBookrequest")
+public class Bookrequest  {
+	
+	private Integer bookrequestId;
+     private Book book;
+	private Date issueDate;
+	private Member member;
+	private Date requestDate;
+	private Date returnDate;
+	private String status;
+
+	public Bookrequest()
+	{
+	}
+
+
+	@Id
+    @GeneratedValue
+	@Column(name="BOOKREQUEST_ID")
+	public Integer getBookrequestId()
+	{
+		return this.bookrequestId;
+	}
+
+	public void setBookrequestId(Integer bookrequestId)
+	{
+		this.bookrequestId = bookrequestId;
+	}
+    @ManyToOne
+	public Book getBook()
+    {
+		return book;
+	}
+
+
+	public void setBook(Book book)
+	{
+		this.book = book;
+	}
+
+    @ManyToOne
+	public Member getMember() 
+    {
+		return member;
+	}
+
+
+	public void setMember(Member member)
+	{
+		this.member = member;
+	}
+
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="ISSUE_DATE")
+	public Date getIssueDate() {
+		return this.issueDate;
+	}
+
+	public void setIssueDate(Date issueDate) 
+	{
+		this.issueDate = issueDate;
+	}
+
+
+
+
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="REQUEST_DATE")
+	public Date getRequestDate()
+	{
+		return this.requestDate;
+	}
+
+	public void setRequestDate(Date requestDate) 
+	{
+		this.requestDate = requestDate;
+	}
+
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="RETURN_DATE")
+	public Date getReturnDate() {
+		return this.returnDate;
+	}
+
+	public void setReturnDate(Date returnDate)
+	{
+		this.returnDate = returnDate;
+	}
+
+	@Column(name="STATUS")
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+}

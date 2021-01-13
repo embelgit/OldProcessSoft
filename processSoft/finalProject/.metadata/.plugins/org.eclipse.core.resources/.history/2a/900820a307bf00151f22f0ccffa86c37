@@ -1,0 +1,22 @@
+package com.lib.DAO;
+
+
+
+import java.util.List;
+
+
+
+
+public interface LibraryDAO 
+{
+  List<MemberTable> memberList();
+  List<BookTable> bookList();
+  MemberTable addMember(MemberTable m);
+  AuthorTable addAuthor(AuthorTable a);
+  PublisherTable addPublisher(PublisherTable p);
+  CategoryTable addCategory(CategoryTable c);
+  BookTable addBook(BookTable b);
+  MemberTable isValidUser(MemberTable m);
+  MemberTable updateMember(MemberTable m);
+  MemberTable changePassword(MemberTable m); 
+}

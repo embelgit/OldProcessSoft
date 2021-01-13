@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.PackingBean" 
+    table="Packing" schema="process_soft">
+    
+    	<id name="packing_Id" type="java.lang.Long" column="pk_pack_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property 
+		name="proName" 
+		type="java.lang.String" 
+		column="product_Name"
+		 />
+		
+		<property 
+		name="fk_type_id" 
+		type="java.lang.Long" 
+		column="fk_type_id"
+		 />
+		 
+		 <property 
+		name="container" 
+		type="java.lang.String" 
+		column="container"/>
+		
+		 <property 
+		name="packingQuantity" 
+		type="java.lang.Long" 
+		column="Packing_Quantity"/>
+		
+		<property 
+		name="fkCatId" 
+		type="java.lang.Long" 
+		column="fk_Cat_Id"
+		 />
+		 
+		 <property 
+		name="fkSubCatId" 
+		type="java.lang.Long" 
+		column="fk_SubCat_Id"/>
+		
+		 <property 
+		name="fkShopId" 
+		type="java.lang.Long" 
+		column="fk_Shop_Id" />
+		
+		<property 
+		name="billNo" 
+		type="java.lang.Long" 
+		column="bill_No" />
+		
+		<property 
+		name="supplier" 
+		type="java.lang.Long" 
+		column="supplier" />
+		
+		<property 
+		name="buyPrice" 
+		type="java.lang.Double" 
+		column="buy_Price" />
+		
+		<property 
+		name="quantity" 
+		type="java.lang.Double" 
+		column="quantity" />
+		
+		<property 
+		name="inwardDate" 
+		type="java.sql.Date" 
+		column="inward_Date" />
+		
+		<property 
+		name="purchaseDate" 
+		type="java.sql.Date" 
+		column="purchase_Date" />
+		
+		<property 
+		name="bundel" 
+		type="java.lang.String" 
+		column="bundel" />
+		
+		<property 
+		name="quantityinbundle" 
+		type="java.lang.Long" 
+		column="quantity_in_bundle" />
+		
+		<property 
+		name="length" 
+		type="java.lang.Long" 
+		column="length" />
+		
+		<property 
+		name="typeoffunction" 
+		type="java.lang.String" 
+		column="type_of_function" />
+		
+		<property 
+		name="color" 
+		type="java.lang.String" 
+		column="color" />
+		
+		<property 
+		name="micron" 
+		type="java.lang.Double" 
+		column="micron" />
+		
+			<property 
+		name="inwardchallanno" 
+		type="java.lang.String" 
+		column="InwardChallanNo"
+		 />
+		 
+		 	<property 
+		name="outwardchallanno" 
+		type="java.lang.String" 
+		column="OutWardChallanNo"
+		 />
+	
+		</class>
+    </hibernate-mapping>

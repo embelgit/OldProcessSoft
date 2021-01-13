@@ -1,0 +1,36 @@
+package com.lib.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.lib.DAO.LibraryDAO;
+import com.lib.pojos.Member;
+@Service
+@Transactional
+public class LibraryServiceImpl implements LibraryService
+{
+	@Autowired
+	private LibraryDAO dao;
+	@Override
+	public String addMember(Member m) 
+	{
+	  Member m1=dao.addMember(m);
+		
+	  if (m1.getMemberId() != null)
+			return "Member added successfully";
+		return "Member registration Failed";
+	}
+	
+
+	@Override
+	public Member isValidUser(Member m)
+	{
+		System.out.println("in b.l of service login user");
+		Member member=dao.isValidUser(m);
+		return member;
+	}
+
+
+}

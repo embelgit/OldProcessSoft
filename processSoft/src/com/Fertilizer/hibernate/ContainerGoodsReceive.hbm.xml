@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.CotainerGoodsReceiveBean" 
+    table="container_purchase" schema="process_soft"
+    >
+    
+    	<id name="pkContainerGoodsReceiveId" type="java.lang.Long" column="Pk_Container_Pur_Id">
+			<generator class="increment" />
+		</id>
+
+		
+		<property
+		name="supplier"
+		type="java.lang.Long"
+		column="fk_Supplier_Id"
+		/>
+		
+		<property
+		name="containerName"
+		type="java.lang.String"
+		column="Container_Name"
+		/>
+		
+		<property
+		name="capacity"
+		type="java.lang.Double"
+		column="Capacity"
+		/>
+		
+		<property
+		name="unit"
+		type="java.lang.String"
+		column="unit"
+		/>
+		
+		<property
+		name="billNum"
+		type="java.lang.String"
+		column="Bill_No"
+		/>
+		
+		<property
+		name="purchaseDate"
+		type="java.sql.Date"
+		column="Purchase_Date"
+		/>
+		
+		<property
+		name="salePrice"
+		type="java.lang.Double"
+		column="Sale_Price"
+		/>
+		
+		<property
+		name="quantity"
+		type="java.lang.Double"
+		column="Quantity"
+		/>
+		
+		<property
+		name="taxPercentage"
+		type="java.lang.Double"
+		column="Gst_Percentage"
+		/>
+		
+		<property
+		name="iGstPercentage"
+		type="java.lang.Double"
+		column="IGst_Percentage"
+		/>
+		
+		<property
+		name="grossTotal"
+		type="java.lang.Double"
+		column="Gross_Total"
+		/>
+		
+		
+		</class>
+    </hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.containerStock" table="container_stock_detail">
+    
+    	<id name="PkContainerStockId" type="java.lang.Long" column="pk_container_stock_id">
+			<generator class="increment" />
+		</id>
+		
+		<property
+        name="containerName"
+        type="java.lang.String"
+        column="container_name"
+        
+        /> 
+        
+        <property
+        name="capacity"
+        type="java.lang.Long"
+        column="capacity"
+        
+        /> 
+        
+        <property
+        name="unit"
+        type="java.lang.String"
+        column="unit"
+        
+        /> 
+        
+        <property
+        name="UpdateDate"
+        type="java.sql.Date"
+        column="updated_date"
+        length="19"
+        />
+        
+        
+         <property
+        name="quantity"
+        type="java.lang.Double"
+        column="quantity"
+       
+        /> 
+        
+		</class>
+    </hibernate-mapping>

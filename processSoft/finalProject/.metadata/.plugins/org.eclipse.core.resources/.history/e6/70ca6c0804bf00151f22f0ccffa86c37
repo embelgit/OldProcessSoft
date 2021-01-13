@@ -1,0 +1,75 @@
+package com.lib.pojos;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="author_table")
+public class Author
+{
+	private Integer authorId;
+	private String authorName;
+	private String authorType;
+	
+	public Author() 
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+    public Author(Integer authorId, String authorName, String authorType)
+    {
+		super();
+		this.authorId = authorId;
+		this.authorName = authorName;
+		this.authorType = authorType;
+	}
+
+    @Id
+    @GeneratedValue
+    @Column(name="author_id", length=10)
+	public Integer getAuthorId()
+	{
+		return authorId;
+	}
+
+	public void setAuthorId(Integer authorId)
+	{
+		this.authorId = authorId;
+	}
+	 @Column(name="author_name", length=30)
+	public String getAuthorName()
+	{
+		return authorName;
+	}
+
+	public void setAuthorName(String authorName) 
+	{
+		this.authorName = authorName;
+	}
+	 @Column(name="author_type", length=30)
+	public String getAuthorType()
+	{
+		return authorType;
+	}
+
+	public void setAuthorType(String authorType) 
+	{
+		this.authorType = authorType;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Author [authorId=" + authorId + ", authorName=" + authorName
+				+ ", authorType=" + authorType + "]";
+	}
+    
+    
+	
+	
+
+}

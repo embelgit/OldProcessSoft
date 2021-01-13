@@ -1,0 +1,106 @@
+package com.lib.pojos;
+
+import java.io.Serializable;
+
+import javax.persistence.*;
+
+import java.util.Date;
+
+@Entity
+@Table(name="BOOKREQUEST_TABLE")
+@NamedQuery(name="BookrequestTable.findAll", query="SELECT b FROM BookrequestTable b")
+public class Bookrequest  {
+	private static final long serialVersionUID = 1L;
+	private Integer request_id; 
+	private Date issueDate;
+	private Date requestDate;
+	private Date returnDate;
+	private String status;
+	private Book book;
+	private Member member;
+
+	public Bookrequest()
+	{
+		
+	}
+
+	@Id
+	@SequenceGenerator(name="SEQ_GEN" ,sequenceName="seq_bookrequest" )
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQ_GEN")
+	@Column(name="REQUEST_ID")
+	public Integer getRequest_id() {
+		return request_id;
+	}
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="ISSUE_DATE")
+	public Date getIssueDate() {
+		return this.issueDate;
+	}
+
+	public void setIssueDate(Date issueDate) {
+		this.issueDate = issueDate;
+	}
+
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="REQUEST_DATE")
+	public Date getRequestDate() {
+		return this.requestDate;
+	}
+
+	public void setRequestDate(Date requestDate) {
+		this.requestDate = requestDate;
+	}
+
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="RETURN_DATE")
+	public Date getReturnDate() {
+		return this.returnDate;
+	}
+
+	public void setReturnDate(Date returnDate) {
+		this.returnDate = returnDate;
+	}
+
+
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	//bi-directional many-to-one association to BookTable
+	@ManyToOne
+
+	public Book getBook()
+	{
+		return book;
+	}
+
+	public void setBook(Book book)
+	{
+		this.book = book;
+	}
+
+
+	//bi-directional many-to-one association to BookTable
+	@ManyToOne
+	
+	public Member getMember() 
+	{
+		return member;
+	}
+
+	public void setMember(Member member)
+	{
+		this.member = member;
+	}
+
+
+   
+
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.PurchaseReturn" 
+    table="purchase_return" schema="process_soft"
+    >
+    
+    	<id name="pk_purchase_return_id" type="java.lang.Long" column="pk_purchase_return_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="fk_gr_id" type="java.lang.Long" column="fk_gr_id" />
+		<property name="billno" type="java.lang.Long" column="bill_number" />
+		<property name="suppliername" type="java.lang.String" column="suppliername" />
+		<property name="date" type="java.util.Date" column="return_date" />		 
+		<property name="purchase_date" type="java.util.Date" column="purchase_date" />
+		<property name="productname" type="java.lang.String" column="product_name" />
+		<property name="operation" type="java.lang.String" column="operation" />
+		<property name="quantity" type="java.lang.Double" column="available_quantity" />
+		<property name="Quantity1" type="java.lang.Double" column="return_quantity" />
+		<property name="rate" type="java.lang.String" column="rate" />
+		<property name="discount" type="java.lang.Double" column="discount" />	
+		<property name="gst" type="java.lang.Double" column="gst" />
+		<property name="igst" type="java.lang.Double" column="igst" />
+		<property name="taxAmount" type="java.lang.Double" column="taxAmount" />
+		<property name="unit" type="java.lang.String" column="unit" />
+		<property name="return_amount" type="java.lang.Double" column="return_amount" />
+		<property name="grossTotal" type="java.lang.Double" column="gross_total" />
+		
+		<!-- <property name="GridTotal" type="java.lang.Double" column="GridTotal" /> -->		
+		<!-- <property name="ShopName" type="java.lang.String" column="Shop" /> -->
+	</class>
+    </hibernate-mapping>

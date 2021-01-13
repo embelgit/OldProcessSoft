@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.OutwardReturn" 
+    table="outward_return" schema="process_soft"
+    >
+    
+    	<id name="pkGRDetailsid" type="java.lang.Long" column="pkGRDetailsid">
+			<generator class="increment" />
+		</id>
+
+		<property name="ProductName" type="java.lang.String" column="ProductName" />
+		<property name="hsn" type="java.lang.String" column="hsn" />
+	 	<property name="outretDate" type="java.util.Date" column="date" />
+		<!--	<property name="contactno" type="java.lang.Long" column="contactno" />
+		<property name="city" type="java.lang.String" column="city" /> -->
+		<!-- <property name="gstno" type="java.lang.String" column="gstno" /> -->
+		<!-- <property name="address" type="java.lang.String" column="address" /> -->
+		<property name="Operaation" type="java.lang.String" column="Operaation" />
+		<property name="ChallanNo" type="java.lang.String" column="ChallanNo" />
+		<property name="description" type="java.lang.String" column="description" />
+		<property name="quantity" type="java.lang.Double" column="quantity" />
+		<property name="Rate" type="java.lang.Double" column="Rate" />
+		<property name="OkQuantity" type="java.lang.Double" column="OkQuantity" />
+		<property name="UnprocesQty" type="java.lang.Double" column="UnprocesQty" />
+		<property name="RejQty" type="java.lang.Double" column="RejQty" />
+		<property name="Quantity1" type="java.lang.Double" column="ReturnQty" /> 
+		<property name="SupplierName" type="java.lang.String" column="SupplierName"/>
+		<property name="TotalValue" type="java.lang.Double" column="TotalValue"/>
+		<property name="outwardChallanno" type="java.lang.String" column="outwardChallanno"/>
+		<property name="idno" type="java.lang.String" column="idno"/>
+		<property name="vehicleName" type="java.lang.String" column="vehicleName"/>
+		<property name="InwardDate" type="java.lang.String" column="InwardDate"/>
+		<property name="OutwardDate" type="java.lang.String" column="OutwardDate"/>
+		<property name="boxDescription" type="java.lang.String" column="boxDescription"/>
+		<property name="userId" type="java.lang.Long" column="user_id"></property>
+		<property name="username" type="java.lang.String" column="username"></property>
+		<property name="shopId" type="java.lang.Long" column="shop_id"></property>
+		<property name="shopName" type="java.lang.String" column="shopname"></property>
+			</class>
+    </hibernate-mapping>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!-- InwardProcess4Hibernate.hbm.xml -->
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.InwardProcess4Hibernate" table="inward_process4" schema="process_soft" >
+    
+    	<id name="inwardProcess4Pk" type="java.lang.Long" column="inward_process4_pk">
+			<generator class="increment" />
+		</id>
+		
+		<property 
+		name="purchaseOrderNo" 
+		type="java.lang.String" 
+		column="purchase_order_no" />
+		
+		<property 
+		name="challanNo" 
+		type="java.lang.String" 
+		column="challan_no" />
+		
+		<property name="fkOperationDetailsId" type="java.lang.Long" column="fk_operation_details_id"></property>
+		
+		<property 
+		name="operationName" 
+		type="java.lang.String" 
+		column="operation_name" />
+		
+		<property name="sendToOperationDetailsIdFk" type="java.lang.Long" column="send_to_operation_details_id_fk"></property>
+		
+		<property 
+		name="sendToOperationName" 
+		type="java.lang.String" 
+		column="send_to_operation_name" />
+		
+		<property 
+		name="comment" 
+		type="java.lang.String" 
+		column="comment" />
+		
+        <property name="userId" type="java.lang.Long" column="user_id"></property>
+		<property name="userName" type="java.lang.String" column="username"></property>
+		<property name="shopId" type="java.lang.Long" column="shop_id"></property>
+		<property name="shopName" type="java.lang.String" column="shopname"></property>
+		
+		<property 
+		name="lastUpdateDate" 
+		type="java.util.Date" 
+		column="last_update_date" />
+		
+		</class>
+    </hibernate-mapping>

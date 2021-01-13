@@ -1,0 +1,43 @@
+package com.lib.DAO;
+
+
+
+import java.util.List;
+
+import com.lib.pojos.Author;
+import com.lib.pojos.Book;
+import com.lib.pojos.Bookrequest;
+import com.lib.pojos.Category;
+import com.lib.pojos.Member;
+import com.lib.pojos.Publisher;
+
+
+
+
+public interface LibraryDAO 
+{
+  List<Member> memberList();
+  List<Category> categoryList();
+  List<Author> authorList();
+  List<Publisher> publisherList();
+  List<Book> bookList();
+  Member addMember(Member m);
+  Author addAuthor(Author a);
+  Publisher addPublisher(Publisher p);
+  Category addCategory(Category c);
+  Book addBook(Book b);
+  Member isValidUser(Member m);
+  Member updateMember(Member m);
+  Member changePassword(Member m); 
+  void deleteBook(Integer id);
+  Book updateBook(Book bk);
+  Book getBook(Integer id);
+  Category getCategory(Integer id);
+  Author getAuthor(Integer id);
+  Publisher getPublisher(Integer id);
+  void deleteMember(Integer id);
+  Bookrequest requestBook(Bookrequest req);
+  
+  
+ 
+}

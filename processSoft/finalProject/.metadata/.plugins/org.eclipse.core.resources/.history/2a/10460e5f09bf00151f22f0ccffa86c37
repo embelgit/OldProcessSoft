@@ -1,0 +1,104 @@
+
+package com.lib.pojos;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="TMember")
+public class Member 
+{
+	
+	private Integer memberId;
+	private String memberName;
+	private long phoneNo;
+	private String userName;
+	private String password;
+	private String emailId;
+	private String cpassword;
+	public Member()
+	{
+		super();
+	}
+	
+	public Member(Integer memberId, String memberName, long phoneNo,
+		String userName,String password,	String emailId) 
+	{
+		super();
+		this.memberId = memberId;
+		this.memberName = memberName;
+		this.phoneNo = phoneNo;
+		this.userName=userName;
+		this.password=password;
+		this.emailId = emailId;
+	}
+    @Id
+    @GeneratedValue
+	public Integer getMemberId() 
+	{
+		return memberId;
+	}
+	public void setMemberId(Integer memberId)
+	{
+		this.memberId = memberId;
+	}
+	@Column(name = "Member_name", length = 20)
+	public String getMemberName() 
+	{
+		return memberName;
+	}
+	public void setMemberName(String memberName)
+	{
+		this.memberName = memberName;
+	}
+	@Column(name = "Phone_No", length = 20)
+	public long getPhoneNo()
+	{
+		return phoneNo;
+	}
+	public void setPhoneNo(long phoneNo) 
+	{
+		this.phoneNo = phoneNo;
+	}
+	
+
+	@Column(name = "username", length = 20)
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	@Column(name = "password", length = 20)
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Column(name = "EmailId", length = 20)
+	public String getEmailId() 
+	{
+		return emailId;
+	}
+	public void setEmailId(String emailId)
+	
+	{
+		this.emailId = emailId;
+	}
+
+	@Override
+	public String toString() {
+		return "Member [memberId=" + memberId + ", memberName=" + memberName
+				+ ", phoneNo=" + phoneNo + ", userName=" + userName
+				+ ", password=" + password + ", emailId=" + emailId + "]";
+	}
+}

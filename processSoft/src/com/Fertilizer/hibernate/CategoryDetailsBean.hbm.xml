@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23 May, 2018 7:09:41 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.Fertilizer.hibernate.CategoryDetailsBean" table="CATEGORYDETAILSBEAN">
+        <id name="catId" type="long">
+            <column name="CATID" />
+            <generator class="assigned" />
+        </id>
+        <property name="categoryName" type="java.lang.String">
+            <column name="CATEGORYNAME" />
+        </property>
+    </class>
+</hibernate-mapping>

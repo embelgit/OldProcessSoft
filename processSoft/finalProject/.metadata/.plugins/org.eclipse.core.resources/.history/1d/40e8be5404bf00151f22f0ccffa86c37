@@ -1,0 +1,104 @@
+package com.lib.pojos;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Tbookrequest")
+public class BookRequest
+{
+	private Member memberId;
+	private Book bookId;
+	private Date requestDate;
+	private Date issueDate;
+	private Date returnDate;
+	private String status;
+	public BookRequest() 
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public BookRequest(Member memberId, Book bookId, Date requestDate,
+			Date issueDate, Date returnDate, String status) 
+	{
+		super();
+		this.memberId = memberId;
+		this.bookId = bookId;
+		this.requestDate = requestDate;
+		this.issueDate = issueDate;
+		this.returnDate = returnDate;
+		this.status = status;
+	}
+	@Id
+	@GeneratedValue
+	@Column(name="member_id",length=10)
+	public Member getMemberId() 
+	{
+		return memberId;
+	}
+	public void setMemberId(Member memberId)
+	{
+		this.memberId = memberId;
+	}
+	@Column(name="book_id",length=20)
+	public Book getBookId() 
+	{
+		return bookId;
+	}
+	public void setBookId(Book bookId) 
+	{
+		this.bookId = bookId;
+	}
+	@Column(name="request_date",length=10)
+	public Date getRequestDate()
+	{
+		return requestDate;
+	}
+	public void setRequestDate(Date requestDate) 
+	{
+		this.requestDate = requestDate;
+	}
+	@Column(name="issue_date",length=10)
+	public Date getIssueDate() 
+	{
+		return issueDate;
+	}
+	public void setIssueDate(Date issueDate) 
+	{
+		this.issueDate = issueDate;
+	}
+	@Column(name="return_date",length=10)
+	public Date getReturnDate() 
+	{
+		return returnDate;
+	}
+	public void setReturnDate(Date returnDate) 
+	{
+		this.returnDate = returnDate;
+	}
+	@Column(name="status",length=10)
+	public String getStatus() 
+	{
+		return status;
+	}
+	public void setStatus(String status) 
+	{
+		this.status = status;
+	}
+	@Override
+	public String toString()
+	{
+		return "BookRequest [memberId=" + memberId + ", bookId=" + bookId
+				+ ", requestDate=" + requestDate + ", issueDate=" + issueDate
+				+ ", returnDate=" + returnDate + ", status=" + status + "]";
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,221 @@
+package com.lib.DAO;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import com.lib.pojos.Author;
+import com.lib.pojos.Book;
+import com.lib.pojos.Bookrequest;
+import com.lib.pojos.Category;
+import com.lib.pojos.Member;
+import com.lib.pojos.Publisher;
+
+
+@Repository
+@Transactional
+public class LibraryDAOImp implements LibraryDAO
+{
+	@Autowired
+	private SessionFactory sf;
+	@Override
+	public Member addMember(Member m) 
+	{
+		sf.getCurrentSession().persist(m);
+		
+		return m;
+	}
+	
+	@Override
+	public Member isValidUser(Member m)
+	{
+		
+			System.out.println("inside dao");
+
+			return (Member) sf
+					.getCurrentSession()
+					.createQuery(
+							"select m from Member m where m.userName=:em and m.password=:pa")
+					.setParameter("em", m.getUserName()).setParameter("pa", m.getPassword())
+					.uniqueResult();
+		
+	}
+
+	@Override
+	public Author addAuthor(Author a)
+	{
+	
+		sf.getCurrentSession().persist(a);
+		return a;
+	}
+
+	@Override
+	public Publisher addPublisher(Publisher p)
+	{
+	
+		sf.getCurrentSession().persist(p);
+		return p;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Member> memberList() 
+	{
+		return sf.getCurrentSession().createQuery("select m from Member m")
+				.list();
+		
+	}
+
+	@Override
+	public Member updateMember(Member m)
+	{
+	  sf.getCurrentSession().update(m);
+	  return m;
+	}
+
+	@Override
+	public Member changePassword(Member m)
+	{
+	     sf.getCurrentSession().update(m);
+		return m;
+	}
+
+	@Override
+	public Category addCategory(Category c) 
+	{
+		sf.getCurrentSession().persist(c);
+		return c;
+	}
+
+	@Override
+	public Book addBook(Book b) 
+	{
+		sf.getCurrentSession().persist(b);
+		return b;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Book> bookList() 
+	{
+		
+		return sf.getCurrentSession().createQuery("select b from Book b").list();
+	}
+
+	@Override
+	public void deleteBook(Integer id) 
+	{
+
+		Book bk=new Book();
+		bk.setBookId(id);
+		
+		sf.getCurrentSession().delete(bk);
+		System.out.println("deleted successfully");
+		
+	}
+
+	@Override
+	public Book updateBook(Book bk)
+	{
+	
+		System.out.println("in dao update "+bk);
+		 sf.getCurrentSession().update(bk);
+		 return bk;
+	}
+
+	@Override
+	public Book getBook(Integer id) 
+	{
+		
+		return (Book) sf.getCurrentSession().get(Book.class, id);
+	}
+
+	@Override
+	public void deleteMember(Integer id)
+	{
+		Member m=new Member();
+		m.setMemberId(id);
+		
+		sf.getCurrentSession().delete(m);
+		System.out.println("deleted successfully");
+		
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Category> categoryList() 
+	{
+		
+		
+		return sf.getCurrentSession().createQuery("select C from Category C").list();
+	}
+
+	@Override
+	public Category getCategory(Integer id) 
+	{
+		// TODO Auto-generated method stub
+		return (Category) sf.getCurrentSession().get(Category.class, id);
+	}
+
+	@Override
+	public Author getAuthor(Integer id) 
+	{
+		// TODO Auto-generated method stub
+		return (Author) sf.getCurrentSession().get(Author.class, id);
+	}
+
+	@Override
+	public Publisher getPublisher(Integer id) 
+	{
+		// TODO Auto-generated method stub
+		return (Publisher) sf.getCurrentSession().get(Publisher.class, id);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Author> authorList()
+	{
+		return sf.getCurrentSession().createQuery("select A from Author A").list();
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Publisher> publisherList()
+	{
+		return sf.getCurrentSession().createQuery("select P from Publisher P").list();
+	}
+
+	@Override
+	public Bookrequest requestBook(Bookrequest req)
+	{
+		
+		System.out.println("Inside add book in dao layer");
+	    sf.getCurrentSession().persist(req);
+		return req;
+	}
+
+	@Override
+	public Bookrequest getRequest(Integer id)
+	{
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,105 @@
+package com.lib.pojos;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Tbook")
+public class Book
+{
+	private Integer bookId;
+	private Category category;
+	private Author author;
+	private String bookName;
+	private Publisher publisher;
+	private Long ISBN;
+	private Integer noOfCoppies;
+	private String type;
+	public Book()
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Id
+	@GeneratedValue
+	@Column(name="book_id",length=10)
+	public Integer getBookId() 
+	{
+		return bookId;
+	}
+	public void setBookId(Integer bookId)
+	{
+		this.bookId = bookId;
+	}
+   
+    @ManyToOne
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+    @ManyToOne
+	public Author getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(Author author) {
+		this.author = author;
+	}
+    @ManyToOne
+	public Publisher getPublisher() {
+		return publisher;
+	}
+
+	public void setPublisher(Publisher publisher) {
+		this.publisher = publisher;
+	}
+
+	@Column(name="book_name",length=20)
+	public String getBookName()
+	{
+		return bookName;
+	}
+	public void setBookName(String bookName)
+	{
+		this.bookName = bookName;
+	}
+
+	@Column(name="isbn",length=10)
+	public Long getISBN() 
+	{
+		return ISBN;
+	}
+	public void setISBN(Long iSBN)
+	{
+		ISBN = iSBN;
+	}
+	@Column(name="no_of_coppies",length=10)
+	public Integer getNoOfCoppies() 
+	{
+		return noOfCoppies;
+	}
+	public void setNoOfCoppies(Integer noOfCoppies) 
+	{
+		this.noOfCoppies = noOfCoppies;
+	}
+	
+	@Column(name="type",length=10)
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	
+	
+	
+
+}

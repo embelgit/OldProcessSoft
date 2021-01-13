@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.shopDetailsBean" 
+    table="shop_details" schema="process_soft"
+    >
+    
+    	<id name="pk_shop_id" type="java.lang.Long" column="pk_shop_id">
+			<generator class="increment" />
+		</id>
+
+		<property name="shopId" type="java.lang.Long" column="Shop_id"
+			not-null="true" length="128" />
+			
+			
+		<property 
+		name="shopName" 
+		type="java.lang.String" 
+		column="shop_name"
+		not-null="true" 
+		length="128" />
+		
+		<!-- <property 
+		name="subcategoryName" 
+		type="java.lang.String" 
+		column="sub_cat_name"
+		not-null="true" 
+		length="128" /> -->
+		
+		
+		
+		</class>
+    </hibernate-mapping>

@@ -1,0 +1,32 @@
+package com.lib.service;
+
+import java.util.List;
+
+
+
+
+
+
+import com.lib.pojos.Author;
+import com.lib.pojos.Book;
+import com.lib.pojos.Category;
+import com.lib.pojos.Member;
+import com.lib.pojos.Publisher;
+
+
+
+
+public interface LibraryService 
+{
+	List<MemberTable> memberList();
+	List<BookTable>  bookList();
+	String addMember(MemberTable m);
+	MemberTable isValidUser(MemberTable m);
+	String addAuthor(AuthorTable a);
+	String addPublisher(PublisherTable p);
+	String addCategory(CategoryTable c);
+	String addBook(BookTable b);
+	MemberTable updateMember(MemberTable m);
+	MemberTable changePassword(MemberTable m);
+
+}

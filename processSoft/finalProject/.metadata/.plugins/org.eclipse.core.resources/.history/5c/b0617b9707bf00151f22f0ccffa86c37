@@ -1,0 +1,30 @@
+package com.lib.DAO;
+
+
+
+import java.util.List;
+
+
+import com.lib.pojos.AuthorTable;
+
+import com.lib.pojos.BookTable;
+
+import com.lib.pojos.CategoryTable;
+
+import com.lib.pojos.MemberTable;
+
+import com.lib.pojos.PublisherTable;
+
+public interface LibraryDAO 
+{
+  List<MemberTable> memberList();
+  List<BookTable> bookList();
+  MemberTable addMember(MemberTable m);
+  AuthorTable addAuthor(AuthorTable a);
+  PublisherTable addPublisher(PublisherTable p);
+  CategoryTable addCategory(CategoryTable c);
+  BookTable addBook(BookTable b);
+  MemberTable isValidUser(MemberTable m);
+  MemberTable updateMember(MemberTable m);
+  MemberTable changePassword(MemberTable m); 
+}

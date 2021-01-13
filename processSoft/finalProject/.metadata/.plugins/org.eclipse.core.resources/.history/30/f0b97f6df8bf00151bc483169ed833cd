@@ -1,0 +1,427 @@
+package com.lib.controller;
+
+
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
+
+
+
+
+
+
+
+
+
+
+import com.lib.pojos.Author;
+import com.lib.pojos.Book;
+import com.lib.pojos.Bookrequest;
+import com.lib.pojos.Category;
+import com.lib.pojos.Member;
+import com.lib.pojos.Publisher;
+import com.lib.service.LibraryService;
+@Controller
+@SessionAttributes
+//@RequestMapping("/bookshop")
+public class LibraryControllerImpl 
+{
+   @Autowired
+	private LibraryService service;
+	public LibraryControllerImpl() 
+	{
+		System.out.println("in constr of " + getClass().getName());
+	}
+	
+	@RequestMapping("/Admin")
+	public String showAdmin()
+	{
+		return "Admin";
+	}
+	@RequestMapping("/user")
+	public String showuser()
+	{
+		return "user";
+	}
+	@RequestMapping("/home")
+	public String showHome()
+	{
+		return "HomePage";
+	}
+	
+	@RequestMapping("/list")
+	public String showMember(Model map)
+	{
+		System.out.println("in list members...");
+		map.addAttribute("member_list", service.memberList());
+		return "list";
+	}
+	
+	@RequestMapping("/Booklist")
+	public String showBookList(Model map)
+	{
+		System.out.println("in list members...");
+		map.addAttribute("book_list", service.bookList());
+		return "booklist";
+	}
+	@RequestMapping("/UserBooklist")
+	public String showUserBookList(Model map)
+	{
+		
+		map.addAttribute("book_list", service.bookList());
+		return "userbooklist";
+	}
+	@RequestMapping("/reg")
+	
+	public String showRegForm(Model map)
+	{
+		System.out.println("in show reg form");
+		
+		map.addAttribute("member123", new Member());
+		
+		return "register";
+	}
+	
+	@RequestMapping(value="/reg",method=RequestMethod.POST)
+	
+	public String processRegForm(@ModelAttribute("member123") Member m)
+	{
+		System.out.println("in process reg form "+m);
+		
+		service.addMember(m);
+		return "redirect:/login";
+	}
+	
+	@RequestMapping("/author")
+	public String showAuthor(Model map)
+	{
+       System.out.println("in show author form");
+		
+		map.addAttribute("author123", new Author());
+		
+		return "author";
+	}
+	@RequestMapping(value="/author",method=RequestMethod.POST)
+	public String processAuthor(@ModelAttribute("author123") Author a)
+	{
+		System.out.println("in process author form "+a);
+		service.addAuthor(a);
+		return "Admin";
+	}
+	@RequestMapping("/publisher")
+	public String showPublisher(Model map)
+	{
+       System.out.println("in show publisher form");
+		
+		map.addAttribute("publisher123", new Publisher());
+		
+		return "publisher";   
+		
+	}
+    @RequestMapping(value="/publisher",method=RequestMethod.POST)
+	public String processPublisher(@ModelAttribute("publisher123") Publisher p)
+	{
+		System.out.println("in process author form "+p);
+		service.addPublisher(p);
+		return "Admin";
+	}
+	
+    @RequestMapping("/login")
+	public String showLoginForm(Model map)
+	{
+		System.out.println("login form");
+		map.addAttribute("userlogin", new Member());
+		return "login";
+	}
+
+    Member currentUser= new Member();
+	@RequestMapping(value="/login",method=RequestMethod.POST)
+	public ModelAndView processLoginForm(@ModelAttribute("userlogin") Member member,HttpSession httpSession)
+	{
+		System.out.println("login process");
+		Member mem=service.isValidUser(member);
+		if(mem != null)
+		{
+			currentUser= mem;
+			
+			httpSession.setAttribute("currentUser", mem);
+			if(mem.getUserName().equalsIgnoreCase("nikhilrote"))
+			{
+				
+			
+				String message = "HELLO "+currentUser.getMemberName();
+
+				
+				System.out.println("valid");
+				return new ModelAndView("Admin", "message", message);   
+				
+
+		
+			}
+			else
+			{
+				String message = "HELLO "+currentUser.getMemberName();
+				
+				return new ModelAndView("user", "message", message);   
+				
+
+			}
+		}
+		else
+		{
+			System.out.println("invalid");
+			
+			 return new ModelAndView("invalid", "message","sorry");  
+		}
+		
+	}
+	
+	
+	
+	@RequestMapping("/editprofile")
+	public String showEditProfileForm(Model map)
+	{
+		map.addAttribute("editProfile", new Member());
+		map.addAttribute("currentUser", currentUser);
+		return "edit";
+	}
+
+	@RequestMapping(value="/editprofile",method=RequestMethod.POST)
+	public ModelAndView processEditProfileForm(@ModelAttribute("editProfile") Member m,HttpServletRequest request)
+	{
+		System.out.println("MMMMMMMMM"+m);
+		Member currentUser=(Member)request.getSession().getAttribute("currentUser");
+		m.setMemberId(currentUser.getMemberId());
+		m.setPassword(currentUser.getPassword());
+		System.out.println("MMMMMMMMM"+m);
+		System.out.println("Privious Current User"+currentUser);
+		currentUser=m;
+		request.getSession().setAttribute("currentUser", currentUser);
+		Member currentUser1=(Member)request.getSession().getAttribute("currentUser");
+		System.out.println("Current User after update"+currentUser1);
+		System.out.println("Current User after update"+currentUser);
+		service.updateMember(m);
+		String message="Profile Updated Successfully";
+		return new ModelAndView("user", "message",message);
+	}
+
+	
+
+@RequestMapping("/changePassword")
+	public String showChangePasswordForm(Model map)
+	{
+		map.addAttribute("userChangePassword", new Member());
+		return "changePassword";
+	}
+
+@RequestMapping(value="/changePassword",method=RequestMethod.POST)
+	public ModelAndView processChangePasswordForm(@ModelAttribute("userlogin") Member m,HttpServletRequest request)
+	{
+		//User currentUser=(User)httpSession.getAttribute("currentUser");
+		System.out.println(currentUser.getEmailId());
+		request.getSession().getAttribute("");
+		//User currentUser=(User)request.getSession().getAttribute("currentUser");
+	    //${currentUser}
+		System.out.println(""+currentUser.getMemberName());
+		String oldpassword=request.getParameter("oldpassword");
+		System.out.println("Request parameter : "+oldpassword);
+		System.out.println();
+		if(currentUser.getPassword().equals(oldpassword))
+		{
+			if(m.getPassword().equals(m.getCpassword()))
+			{
+				currentUser.setPassword(m.getPassword());
+				Member mem=service.changePassword(currentUser);
+				if(mem.getPassword().equals(mem.getPassword()))
+				{
+					System.out.println("valid");
+					String message="Password Changed Successfully";
+					return new ModelAndView("user", "message",message); 
+				}
+				else
+				{
+					String message="Failed to change Password";
+					return new ModelAndView("Errorpage", "message",message);
+				}
+			}
+			else
+			{
+				String message="New Password Mismatch";
+				return new ModelAndView("Errorpage", "message",message);
+			}
+		}
+		else
+		{
+			String message="Invalid OldPassword";
+			return new ModelAndView("Errorpage", "message",message);
+		}
+		
+	}
+
+@RequestMapping("/category")
+public String showCategory(Model map)
+{
+   System.out.println("in show publisher form");
+	
+	map.addAttribute("category123", new Category());
+	
+	return "category";   
+	
+}
+@RequestMapping(value="/category",method=RequestMethod.POST)
+public String processCategory(@ModelAttribute("category123") Category c)
+{
+	System.out.println("in process author form "+c);
+	service.addCategory(c);
+	return "Admin";
+}
+
+@RequestMapping("/book")
+public String showBook(Model map)
+{
+   System.out.println("in show book form");
+	
+	map.addAttribute("book123", new Book());
+
+	map.addAttribute("category",service.categoryList());
+	map.addAttribute("author", service.authorList());
+	map.addAttribute("publisher",service.publisherList());
+	return "book";   
+}
+@RequestMapping(value = "/deletemember/{id}", method = RequestMethod.GET)
+public String deleteMember(@PathVariable int id)
+{
+	System.out.println("delete member"+id);
+	service.deleteMbr(id);
+	return "redirect:/list";
+}
+
+
+
+
+@RequestMapping(value = "/deletebook/{id}", method = RequestMethod.GET)
+public String deleteBook(@PathVariable int id)
+{
+	System.out.println("delete member"+id);
+	service.deletebook(id);
+	return "redirect:/Booklist";
+}
+
+
+@RequestMapping(value="/book",method=RequestMethod.POST)
+public String processBook(@ModelAttribute("book123") Book b)
+{
+	Category cat=service.getCategory(b.getCategory().getCategoryId());
+	Author author=service.getAuthor(b.getAuthor().getAuthorId());
+	Publisher publish=service.getPublisher(b.getPublisher().getPublisherId());
+
+	b.setCategory(cat);
+	b.setAuthor(author);
+	b.setPublisher(publish);
+	System.out.println("in process book form "+b);
+	service.addBook(b);
+	return "Admin";
+}
+
+
+
+@RequestMapping(value = "/update/{id1}")
+public String showUpdateForm(@PathVariable int id1, Model map) {
+	System.out.println("in show update form " + id1 + " " + map);
+	
+	Book bk = service.getBook(id1);
+	System.out.println(bk);
+	map.addAttribute("book123", bk);
+
+	map.addAttribute("category",service.categoryList());
+	map.addAttribute("author", service.authorList());
+	map.addAttribute("publisher",service.publisherList());
+	return "book";
+}
+
+@RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
+public String processUpdateForm(@PathVariable int id,
+		@ModelAttribute("book123") Book bk) {
+	System.out.println("in process update form " + bk);
+	
+	bk.setBookId(id);
+	
+	System.out.println("Updated member " + service.updateBook(bk));
+	return "redirect:/Booklist";
+}
+
+
+
+
+
+
+
+@RequestMapping("/requestbook/{id1}")
+	public String showBookrequestForm(@PathVariable int id1,Model map,HttpSession session)
+	{
+	 System.out.println(" in request form");
+		System.out.println("id1");
+	
+		System.out.println("in show book hostel form");
+		map.addAttribute("bookrequest123", new Bookrequest());
+		
+		map.addAttribute("bookrequest", service.getBook(id1));
+		
+	
+		return "bookrequest";
+	}
+
+
+@RequestMapping(value="/requestbook/{id1}{count}",method=RequestMethod.POST)
+public String processBookrequestForm(@PathVariable int id1,int count,@ModelAttribute("bookDetail123") Bookrequest req,HttpSession session)
+{
+	System.out.println("id1");
+
+	Book bk= new Book();
+	
+	System.out.println("in process boking hostel"+req);
+	
+	bk.setBookId(id1);
+    req.setBook(bk);
+	 
+	//bk.setNoOfCoppies(count);
+	service.requestBook(req);
+
+	return "redirect:/UserBooklist";
+}
+
+
+
+
+@RequestMapping(value = "/request/{id1}")
+public String showbookDetail(@PathVariable int id1, Model map)
+{
+	System.out.println("in show update form " + id1 + " " + map);
+
+	map.addAttribute("requestlist",service.getRequestList(id1));
+	return "requestDetails";
+}
+
+
+@RequestMapping("/logoutuser")
+public String showLogoutForm(Model map,HttpSession session)
+{
+	
+	Member currentUser=(Member)session.getAttribute("currentUser");
+	map.addAttribute("logoutUser", currentUser);
+	session.removeAttribute("currentUser");
+	return "logoutuser";
+}
+
+
+
+}

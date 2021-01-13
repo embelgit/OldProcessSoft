@@ -1,0 +1,9 @@
+package com.lib.DAO;
+
+import com.lib.pojos.Member;
+
+public interface LibraryDAO 
+{
+  Member addMember(Member m);
+  Member isValidUser(Member m);
+}

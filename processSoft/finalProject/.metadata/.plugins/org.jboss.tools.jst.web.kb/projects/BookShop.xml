@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-beans-4.0.6.RELEASE.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-dbcp.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-util-scan.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/commons-dbcp-1.4.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/jasper.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/hibernate-core-4.1.9.Final.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/servlet-api.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/classmate-0.8.0.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-util.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/javassist-3.17.1-GA.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-tx-4.0.6.RELEASE.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-i18n-fr.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/hibernate-validator-5.1.1.Final.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/jboss-logging-3.1.0.GA.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/el-api.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/websocket-api.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/dom4j-1.6.1.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/ecj-4.4.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-spdy.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/log4j-1.2.16.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/antlr-2.7.7.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/catalina-tribes.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/catalina.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-jdbc-4.0.6.RELEASE.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-api.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-coyote.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-core-4.0.6.RELEASE.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-orm-4.0.6.RELEASE.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-webmvc-4.0.6.RELEASE.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-spring-webmvc-4.0.6.RELEASE.jar/meta-inf/spring-form.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-spring-webmvc-4.0.6.RELEASE.jar/meta-inf/spring.tld" project="BookShop"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-jdbc.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/slf4j-log4j12-1.6.4.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/jstl-1.2.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0-rt.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0-rt.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fn.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/permittedtaglibs.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/scriptfree.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0-rt.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0-rt.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0.tld" project="BookShop"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x.tld" project="BookShop"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/hibernate-commons-annotations-4.0.1.Final.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/validation-api-1.1.0.Final.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/jcl-over-slf4j-1.6.1.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-aop-4.0.6.RELEASE.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-websocket.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-context-4.0.6.RELEASE.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/aopalliance-1.0.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-jni.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/jsp-api.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/commons-pool-1.5.4.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/ojdbc6.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/catalina-ha.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-i18n-ja.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/tomcat-i18n-es.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/annotations-api.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/catalina-storeconfig.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/catalina-ant.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/jasper-el.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-expression-4.0.6.RELEASE.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-web-4.0.6.RELEASE.jar"/>
+  <path value="C:/apache-tomcat-8.0.18/lib/ojdbc6.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/slf4j-api-1.6.4.jar"/>
+  <path value="G:/AdvanceJava/j2ee-day10-eveHibernet/day10_help/spring4-web-hibernate4-jars/spring-context-support-4.0.6.RELEASE.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core"/>
+  <el>
+   <linked-el length="27" name="%0" offset="1447" path="%1"/>
+   <linked-el length="25" name="%2" offset="1010" path="%3"/>
+   <linked-el length="25" name="%2" offset="1011" path="%4"/>
+   <linked-el length="18" name="%5" offset="917" path="%6"/>
+   <linked-el length="41" name="%7" offset="573" path="%8"/>
+   <linked-el length="14" name="%9" offset="849" path="%3"/>
+   <linked-el length="49" name="%9" offset="1186" path="%3"/>
+   <linked-el length="45" name="%9" offset="1107" path="%3"/>
+   <linked-el length="70" name="%9" offset="1107" path="%4"/>
+   <linked-el length="14" name="%9" offset="850" path="%4"/>
+   <linked-el length="18" name="%10" offset="783" path="%11"/>
+   <linked-el length="50" name="%10" offset="1043" path="%11"/>
+   <linked-el length="55" name="%10" offset="955" path="%11"/>
+   <linked-el length="17" name="%12" offset="883" path="%11"/>
+   <linked-el length="45" name="%13" offset="947" path="%14"/>
+   <linked-el length="25" name="%15" offset="1010" path="%3"/>
+   <linked-el length="25" name="%15" offset="1011" path="%4"/>
+   <linked-el length="24" name="%16" offset="1053" path="%17"/>
+   <linked-el length="19" name="%18" offset="937" path="%4"/>
+   <linked-el length="19" name="%18" offset="936" path="%3"/>
+   <linked-el length="70" name="%18" offset="1107" path="%4"/>
+   <linked-el length="28" name="%19" offset="1092" path="%17"/>
+   <linked-el length="28" name="%20" offset="1800" path="%1"/>
+   <linked-el length="24" name="%21" offset="1053" path="%17"/>
+   <linked-el length="139" name="%22" offset="1359" path="%6"/>
+   <linked-el length="16" name="%23" offset="906" path="%4"/>
+   <linked-el length="16" name="%23" offset="905" path="%3"/>
+   <linked-el length="31" name="%24" offset="1051" path="%4"/>
+   <linked-el length="31" name="%24" offset="1050" path="%3"/>
+   <linked-el length="39" name="%25" offset="1026" path="%8"/>
+   <linked-el length="38" name="%25" offset="727" path="%8"/>
+   <linked-el length="38" name="%25" offset="878" path="%8"/>
+   <linked-el length="41" name="%25" offset="573" path="%8"/>
+   <linked-el length="12" name="%26" offset="878" path="%3"/>
+   <linked-el length="12" name="%26" offset="879" path="%4"/>
+   <linked-el length="25" name="%27" offset="971" path="%4"/>
+   <linked-el length="25" name="%27" offset="970" path="%3"/>
+   <linked-el length="24" name="%28" offset="871" path="%17"/>
+   <linked-el length="36" name="%29" offset="619" path="%14"/>
+   <linked-el length="45" name="%30" offset="831" path="%14"/>
+   <linked-el length="27" name="%31" offset="796" path="%4"/>
+   <linked-el length="27" name="%31" offset="795" path="%3"/>
+   <linked-el length="36" name="%32" offset="1057" path="%14"/>
+   <linked-el length="38" name="%32" offset="442" path="%14"/>
+   <linked-el length="25" name="%33" offset="971" path="%4"/>
+   <linked-el length="25" name="%33" offset="970" path="%3"/>
+   <linked-el length="45" name="%34" offset="947" path="%14"/>
+   <linked-el length="20" name="%35" offset="816" path="%11"/>
+   <linked-el length="39" name="%36" offset="1026" path="%8"/>
+   <linked-el length="20" name="%37" offset="910" path="%17"/>
+   <linked-el length="23" name="%38" offset="979" path="%6"/>
+   <linked-el length="17" name="%39" offset="851" path="%11"/>
+   <linked-el length="28" name="%40" offset="1092" path="%17"/>
+   <linked-el length="21" name="%40" offset="982" path="%17"/>
+   <linked-el length="22" name="%40" offset="945" path="%17"/>
+   <linked-el length="20" name="%40" offset="910" path="%17"/>
+   <linked-el length="24" name="%40" offset="1053" path="%17"/>
+   <linked-el length="24" name="%40" offset="871" path="%17"/>
+   <linked-el length="17" name="%40" offset="1018" path="%17"/>
+   <linked-el length="28" name="%41" offset="1092" path="%17"/>
+   <linked-el length="49" name="%42" offset="1186" path="%3"/>
+   <linked-el length="25" name="%42" offset="971" path="%4"/>
+   <linked-el length="16" name="%42" offset="906" path="%4"/>
+   <linked-el length="19" name="%42" offset="937" path="%4"/>
+   <linked-el length="31" name="%42" offset="1050" path="%3"/>
+   <linked-el length="14" name="%42" offset="849" path="%3"/>
+   <linked-el length="25" name="%42" offset="1010" path="%3"/>
+   <linked-el length="31" name="%42" offset="1051" path="%4"/>
+   <linked-el length="45" name="%42" offset="1107" path="%3"/>
+   <linked-el length="16" name="%42" offset="905" path="%3"/>
+   <linked-el length="25" name="%42" offset="970" path="%3"/>
+   <linked-el length="19" name="%42" offset="936" path="%3"/>
+   <linked-el length="25" name="%42" offset="1011" path="%4"/>
+   <linked-el length="70" name="%42" offset="1107" path="%4"/>
+   <linked-el length="14" name="%42" offset="850" path="%4"/>
+   <linked-el length="12" name="%42" offset="878" path="%3"/>
+   <linked-el length="12" name="%42" offset="879" path="%4"/>
+   <linked-el length="18" name="%43" offset="915" path="%11"/>
+   <linked-el length="29" name="%44" offset="815" path="%17"/>
+   <linked-el length="139" name="%45" offset="1359" path="%6"/>
+   <linked-el length="22" name="%45" offset="946" path="%6"/>
+   <linked-el length="23" name="%45" offset="979" path="%6"/>
+   <linked-el length="18" name="%45" offset="917" path="%6"/>
+   <linked-el length="17" name="%45" offset="894" path="%6"/>
+   <linked-el length="29" name="%46" offset="727" path="%11"/>
+   <linked-el length="36" name="%47" offset="1057" path="%14"/>
+   <linked-el length="38" name="%47" offset="442" path="%14"/>
+   <linked-el length="25" name="%48" offset="1620" path="%1"/>
+   <linked-el length="37" name="%49" offset="370" path="%50"/>
+   <linked-el length="38" name="%51" offset="442" path="%14"/>
+   <linked-el length="45" name="%52" offset="831" path="%14"/>
+   <linked-el length="18" name="%53" offset="783" path="%11"/>
+   <linked-el length="20" name="%53" offset="816" path="%11"/>
+   <linked-el length="17" name="%53" offset="851" path="%11"/>
+   <linked-el length="17" name="%53" offset="883" path="%11"/>
+   <linked-el length="18" name="%53" offset="915" path="%11"/>
+   <linked-el length="50" name="%53" offset="1043" path="%11"/>
+   <linked-el length="55" name="%53" offset="955" path="%11"/>
+   <linked-el length="37" name="%54" offset="370" path="%50"/>
+   <linked-el length="17" name="%55" offset="894" path="%6"/>
+   <linked-el length="17" name="%56" offset="1018" path="%17"/>
+   <linked-el length="22" name="%57" offset="946" path="%6"/>
+   <linked-el length="36" name="%58" offset="1057" path="%14"/>
+   <linked-el length="38" name="%59" offset="878" path="%8"/>
+   <linked-el length="22" name="%60" offset="945" path="%17"/>
+   <linked-el length="10" name="%61" offset="348" path="%62"/>
+   <linked-el length="10" name="%61" offset="364" path="%63"/>
+   <linked-el length="10" name="%61" offset="503" path="%64"/>
+   <linked-el length="10" name="%61" offset="488" path="%14"/>
+   <linked-el length="34" name="%65" offset="723" path="%14"/>
+   <linked-el length="45" name="%65" offset="947" path="%14"/>
+   <linked-el length="45" name="%65" offset="831" path="%14"/>
+   <linked-el length="36" name="%65" offset="619" path="%14"/>
+   <linked-el length="34" name="%66" offset="723" path="%14"/>
+   <linked-el length="39" name="%67" offset="1026" path="%8"/>
+   <linked-el length="29" name="%67" offset="815" path="%17"/>
+   <linked-el length="45" name="%67" offset="831" path="%14"/>
+   <linked-el length="36" name="%67" offset="619" path="%14"/>
+   <linked-el length="38" name="%67" offset="878" path="%8"/>
+   <linked-el length="27" name="%67" offset="795" path="%3"/>
+   <linked-el length="25" name="%67" offset="1620" path="%1"/>
+   <linked-el length="27" name="%67" offset="796" path="%4"/>
+   <linked-el length="34" name="%67" offset="723" path="%14"/>
+   <linked-el length="45" name="%67" offset="947" path="%14"/>
+   <linked-el length="37" name="%67" offset="370" path="%50"/>
+   <linked-el length="29" name="%67" offset="727" path="%11"/>
+   <linked-el length="38" name="%67" offset="727" path="%8"/>
+   <linked-el length="27" name="%67" offset="1447" path="%1"/>
+   <linked-el length="28" name="%67" offset="1800" path="%1"/>
+   <linked-el length="41" name="%67" offset="573" path="%8"/>
+   <linked-el length="21" name="%68" offset="982" path="%17"/>
+   <linked-el length="38" name="%69" offset="727" path="%8"/>
+   <linked-el length="31" name="%70" offset="1051" path="%4"/>
+   <linked-el length="31" name="%70" offset="1050" path="%3"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="requestScope.category" value="%0"/>
+  <alias path="book.author" value="%2"/>
+  <alias path="jdbc.url" value="%5"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/edit.jsp" value="%8"/>
+  <alias path="requestScope.currentUser.memberName" value="%7"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/bookrequest.jsp" value="%14"/>
+  <alias path="book.bookId" value="%9"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/logoutuser.jsp" value="%50"/>
+  <alias path="member.memberId" value="%10"/>
+  <alias path="member.emailId" value="%12"/>
+  <alias path="requestScope.bookrequest.author.authorName" value="%13"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/requestDetails.jsp" value="%17"/>
+  <alias path="book.author.authorName" value="%15"/>
+  <alias path="request.book" value="%16"/>
+  <alias path="book.noOfCoppies" value="%18"/>
+  <alias path="request.member" value="%19"/>
+  <alias path="requestScope.publisher" value="%20"/>
+  <alias path="request.book.bookName" value="%21"/>
+  <alias path="jdbc.dialect" value="%22"/>
+  <alias path="book.bookName" value="%23"/>
+  <alias path="book.publisher.publisherName" value="%24"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/booklist.jsp" value="%3"/>
+  <alias path="requestScope.currentUser" value="%25"/>
+  <alias path="book.ISBN" value="%26"/>
+  <alias path="book.category.category" value="%27"/>
+  <alias path="request.bookrequestId" value="%28"/>
+  <alias path="requestScope.bookrequest.bookName" value="%29"/>
+  <alias path="requestScope.bookrequest.category.category" value="%30"/>
+  <alias path="requestScope.book_list" value="%31"/>
+  <alias path="sessionScope" value="%32"/>
+  <alias path="book.category" value="%33"/>
+  <alias path="requestScope.bookrequest.author" value="%34"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/Errorpage.jsp" value="%62"/>
+  <alias path="member.memberName" value="%35"/>
+  <alias path="requestScope.currentUser.userName" value="%36"/>
+  <alias path="request.issueDate" value="%37"/>
+  <alias path="jdbc.password" value="%38"/>
+  <alias path="member.phoneNo" value="%39"/>
+  <alias path="request" value="%40"/>
+  <alias path="request.member.memberName" value="%41"/>
+  <alias path="book" value="%42"/>
+  <alias path="member.userName" value="%43"/>
+  <alias path="requestScope.requestlist" value="%44"/>
+  <alias path="jdbc" value="%45"/>
+  <alias path="requestScope.member_list" value="%46"/>
+  <alias path="sessionScope.currentUser" value="%47"/>
+  <alias path="requestScope.author" value="%48"/>
+  <alias path="requestScope.logoutUser.memberName" value="%49"/>
+  <alias path="sessionScope.currentUser.memberName" value="%51"/>
+  <alias path="requestScope.bookrequest.category" value="%52"/>
+  <alias path="member" value="%53"/>
+  <alias path="requestScope.logoutUser" value="%54"/>
+  <alias path="jdbc.driver" value="%55"/>
+  <alias path="request.status" value="%56"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/book.jsp" value="%1"/>
+  <alias path="jdbc.username" value="%57"/>
+  <alias path="sessionScope.currentUser.memberId" value="%58"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/list.jsp" value="%11"/>
+  <alias path="requestScope.currentUser.emailId" value="%59"/>
+  <alias path="request.requestDate" value="%60"/>
+  <alias path="message" value="%61"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/user.jsp" value="%64"/>
+  <alias path="requestScope.bookrequest" value="%65"/>
+  <alias path="requestScope.bookrequest.bookId" value="%66"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/userbooklist.jsp" value="%4"/>
+  <alias path="requestScope" value="%67"/>
+  <alias path="request.returnDate" value="%68"/>
+  <alias path="requestScope.currentUser.phoneNo" value="%69"/>
+  <alias path="book.publisher" value="%70"/>
+  <alias path="/BookShop/WebContent/WEB-INF/views/Admin.jsp" value="%63"/>
+  <alias path="/BookShop/resource/hibernate-persistence.xml" value="%6"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsp/jstl/core">
+   <prefix>c</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsp/jstl/fmt">
+   <prefix>fmt</prefix>
+  </uri>
+  <uri value="http://www.springframework.org/tags">
+   <prefix>spring</prefix>
+  </uri>
+  <uri value="http://www.springframework.org/tags/form">
+   <prefix>form</prefix>
+  </uri>
+ </uris>
+</kb-project>

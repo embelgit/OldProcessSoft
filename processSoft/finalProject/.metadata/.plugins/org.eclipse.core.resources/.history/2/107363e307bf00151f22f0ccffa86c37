@@ -1,0 +1,112 @@
+package com.lib.DAO;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+
+
+
+
+
+import com.lib.pojos.Author;
+import com.lib.pojos.Book;
+import com.lib.pojos.Category;
+import com.lib.pojos.Member;
+import com.lib.pojos.Publisher;
+
+
+@Repository
+@Transactional
+public class LibraryDAOImp implements LibraryDAO
+{
+	@Autowired
+	private SessionFactory sf;
+	@Override
+	public MemberTable addMember(MemberTable m) 
+	{
+		sf.getCurrentSession().persist(m);
+		
+		return m;
+	}
+	
+	@Override
+	public MemberTable isValidUser(MemberTable m)
+	{
+		
+			System.out.println("inside dao");
+
+			return (MemberTable) sf
+					.getCurrentSession()
+					.createQuery(
+							"select m from Member m where m.userName=:em and m.password=:pa")
+					.setParameter("em", m.getUsername()).setParameter("pa", m.getPassword())
+					.uniqueResult();
+		
+	}
+
+	@Override
+	public AuthorTable addAuthor(AuthorTable a)
+	{
+	
+		sf.getCurrentSession().persist(a);
+		return a;
+	}
+
+	@Override
+	public PublisherTable addPublisher(PublisherTable p)
+	{
+	
+		sf.getCurrentSession().persist(p);
+		return p;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<MemberTable> memberList() 
+	{
+		return sf.getCurrentSession().createQuery("select m from Member m")
+				.list();
+		
+	}
+
+	@Override
+	public MemberTable updateMember(MemberTable m)
+	{
+	  sf.getCurrentSession().update(m);
+	  return m;
+	}
+
+	@Override
+	public MemberTable changePassword(MemberTable m)
+	{
+	     sf.getCurrentSession().update(m);
+		return m;
+	}
+
+	@Override
+	public CategoryTable addCategory(CategoryTable c) 
+	{
+		sf.getCurrentSession().persist(c);
+		return c;
+	}
+
+	@Override
+	public BookTable addBook(BookTable b) 
+	{
+		sf.getCurrentSession().persist(b);
+		return b;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<BookTable> bookList() 
+	{
+		
+		return sf.getCurrentSession().createQuery("select b from Book b").list();
+	}
+
+}

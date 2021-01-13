@@ -1,0 +1,12 @@
+package com.lib.service;
+
+import com.lib.pojos.Member;
+
+
+
+public interface LibraryService 
+{
+	String addMember(Member m);
+	Member isValidUser(Member m);
+
+}

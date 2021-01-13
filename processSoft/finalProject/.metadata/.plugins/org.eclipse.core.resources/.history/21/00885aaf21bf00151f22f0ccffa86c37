@@ -1,0 +1,123 @@
+package com.lib.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.lib.DAO.LibraryDAO;
+import com.lib.pojos.Author;
+import com.lib.pojos.Book;
+import com.lib.pojos.Category;
+import com.lib.pojos.Member;
+import com.lib.pojos.Publisher;
+
+@Service
+@Transactional
+public class LibraryServiceImpl implements LibraryService
+{
+	@Autowired
+	private LibraryDAO dao;
+	@Override
+	public String addMember(Member m) 
+	{
+	  Member m1=dao.addMember(m);
+		
+	  if (m1.getMemberId() != null)
+			return "Member added successfully";
+		return "Member registration Failed";
+	}
+	
+
+	@Override
+	public Member isValidUser(Member m)
+	{
+		System.out.println("in b.l of service login user");
+		Member member=dao.isValidUser(m);
+		return member;
+	}
+
+
+	@Override
+	public String addAuthor(Author a)
+	{
+		Author author=dao.addAuthor(a);
+		if(author.getAuthorId() !=null)
+			return "author added successfully";
+		return "Failed";
+	}
+
+
+	@Override
+	public String addPublisher(Publisher p) 
+	{
+		Publisher publisher=dao.addPublisher(p);
+		if(publisher.getPublisherId() !=null)
+			return "publisher added successfully";
+		return "Failed";
+	}
+
+
+	@Override
+	@Transactional(readOnly=true)
+	public List<Member> memberList() 
+	{
+	
+		System.out.println("in b.l of service ");
+		return dao.memberList();
+	}
+
+
+	@Override
+	public Member updateMember(Member m) 
+	{
+		Member member=dao.updateMember(m);
+		return member;
+	}
+
+
+	@Override
+	public Member changePassword(Member m) 
+	{
+	    Member member=dao.changePassword(m); 
+		return member;
+	}
+
+
+	@Override
+	public String addCategory(Category c)
+	{
+		Category cat=dao.addCategory(c);
+		if(cat.getCategoryId() !=null)
+			return "category added successfully";
+		return "Failed";
+	}
+
+
+	@Override
+	public String addBook(Book b)
+	{
+	
+		
+		Book book=dao.addBook(b);
+		if(book.getBookId() !=null)
+			return "book added successfully";
+		return "Failed";
+	}
+
+
+	@Override
+	@Transactional
+	public List<Book> bookList() 
+	{
+		System.out.println("in b.l of service ");
+		return dao.bookList();
+	}
+
+
+	
+
+
+}

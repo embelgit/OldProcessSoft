@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23 May, 2018 7:09:41 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.Fertilizer.hibernate.BarcodeDetailsBean" table="BARCODEDETAILSBEAN">
+        <id name="fkProductId" type="java.lang.Long">
+            <column name="FKPRODUCTID" />
+            <generator class="assigned" />
+        </id>
+        <property name="pkBarcodeId" type="java.lang.Long">
+            <column name="PKBARCODEID" />
+        </property>
+        <property name="barcodeNumber" type="java.lang.Long">
+            <column name="BARCODENUMBER" />
+        </property>
+        <many-to-one name="productDetailsBean" class="com.Fertilizer.hibernate.ProductDetailsBean" fetch="join">
+            <column name="PRODUCTDETAILSBEAN" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
