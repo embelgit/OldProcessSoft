@@ -108,7 +108,7 @@
 									<i class="	glyphicon glyphicon-hand-right"></i>
 							
 						</span>
-             				 <input id="IdNo" name="IdNo " placeholder="Identity Number" class="form-control input-md" type="text" onkeypress="return isNumber(event)" />
+             				 <input id="IdNo1" name="IdNo1 " placeholder="Identity Number" class="form-control input-md" type="text" onkeypress="return isNumber(event)" />
             		</div>
 				</div> 
 				
@@ -174,13 +174,13 @@
           <div class="row form-group">
           
               
-            	<label class="col-md-2 control-label" for="contactNo"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("contactNumber") %> <%}%> <%if(abc.equals("english")){%>Contact Number<%}%><sup>*</sup></label>
+            	<label class="col-md-2 control-label" for="contactNo1"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("contactNumber") %> <%}%> <%if(abc.equals("english")){%>Contact Number<%}%><sup>*</sup></label>
             		<div class="col-md-3">
     					<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-phone"></i>
 							</span>
-             				 <input id="contactNo" maxlength="10" name="contactNo" placeholder="Contact Number" class="form-control input-md " onkeypress="phoneno()" type="text">
+             				 <input id="contactNo1" maxlength="10" name="contactNo1" placeholder="Contact Number" class="form-control input-md " onkeypress="phoneno()" type="text">
            				</div>
 					</div>
             
@@ -207,34 +207,34 @@
             		</div>
             	</div>
 
-           <label class="col-md-2 control-label" for="city"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("city") %> <%}%> <%if(abc.equals("english")){%>City<%}%><sup>*</sup></label>
+           <label class="col-md-2 control-label" for="city1"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("city") %> <%}%> <%if(abc.equals("english")){%>City<%}%><sup>*</sup></label>
            		<div class="col-md-3">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-map-marker"></i>
 						</span>
- 			            <input id="city" name="city" placeholder="city" class="form-control input-md" onkeypress="characters()" type="text">
+ 			            <input id="city1" name="city1" placeholder="city" class="form-control input-md" onkeypress="characters()" type="text">
             		</div>
 				</div>
           </div>
 
 			<div class="row form-group">
-            	<label class="col-md-2 control-label" for="tinNo"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("tin") %> <%}%> <%if(abc.equals("english")){%>GST No<%}%><sup>*</sup></label>
+            	<label class="col-md-2 control-label" for="tinNo1"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("tin") %> <%}%> <%if(abc.equals("english")){%>GST No<%}%><sup>*</sup></label>
             		<div class="col-md-3">
 		  				<div class="input-group">
 							<span class="input-group-addon">
 								<i class="glyphicon glyphicon-font"></i>
 							</span>
-              				<input id="tinNo" name="tinNo" placeholder="GST No" class="form-control input-md " type="text" onkeypress="return isNumber(event)" />
+              				<input id="tinNo1" name="tinNo1" placeholder="GST No" class="form-control input-md " type="text" onkeypress="return isNumber(event)" />
            				</div>
            			 </div>
-           			 <label class="col-md-2 control-label" for="address"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("address") %> <%}%> <%if(abc.equals("english")){%>Address<%}%></label>
+           			 <label class="col-md-2 control-label" for="address1"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("address") %> <%}%> <%if(abc.equals("english")){%>Address<%}%></label>
            		<div class="col-md-3">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="glyphicon glyphicon-map-marker"></i>
 						</span>
- 			            <input id="address" name="address" placeholder="Address" class="form-control input-md " type="text">
+ 			            <input id="address1" name="address1" placeholder="Address" class="form-control input-md " type="text">
             		</div>
 				</div>
           	</div>
