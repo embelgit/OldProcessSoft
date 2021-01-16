@@ -142,7 +142,7 @@ function editSupplier(){
 </head>
 <body >
    <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading"align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("poDetails") %> <%}%> <%if(abc.equals("english")){%>Goods Receive<%}%></h2>
 			  	</div>
 			 
@@ -153,6 +153,7 @@ function editSupplier(){
 		     </div>	
     </div>
       <div class="container" >
+      <div class="col-sm-offset-1">
         <form class="form-horizontal" method="post" action="" name="spld1" ><!-- Value of 'name' attribute is used in  supplierDetails.js  -->
           <fieldset>
        			<div class="row form-group">
@@ -398,13 +399,14 @@ function editSupplier(){
 
           <div class="form-group row">
             <div class="col-md-11 text-center">
-       			<input style=" height: 65px; width: 150px; font-size: 25" type="button" value="Submit" id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="valforGrDetails()" /> 
-        		<input style=" height: 65px; width: 150px; font-size: 25" type="button" value="Cancel" id="cancel" name="btn" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" onclick="location.reload()" /> 
+       			<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="Submit" id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="valforGrDetails()" /> 
+        		<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="Cancel" id="cancel" name="btn" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" onclick="location.reload()" /> 
            		<!-- <input style=" height: 65px; width: 180; font-size: 25" type="button" value="PO List" id="listBtn" class="btn btn-primary" onclick="supplierlist()" /> --> 
             </div>
           </div>
          </fieldset>
        </form>
+    </div>
     </div>
     
     

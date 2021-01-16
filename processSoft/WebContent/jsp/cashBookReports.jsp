@@ -88,7 +88,7 @@
 	<div class="col-md-12">
 		<h3>Left Tabs</h3>
 		<hr />
-		<div class="col-md-2">
+		<div class="col-md-2" style="margin-top:40px">
 			<ul class="nav nav-tabs tabs-left">
 				<li class="active"><a href="#home" data-toggle="tab">Vendor
 						Payment Reports</a></li>
@@ -108,7 +108,7 @@
 
 				<div class="tab-pane active" id="home">
 					<div class="row">
-						<div align="center">
+						<div class="bill-heading" align="center">
 							<h2 class="form-name style_heading">Vendor Payment Reports</h2>
 						</div>
 
@@ -1301,7 +1301,7 @@
 				<!----- 	Employee Payment reports ------>
 				<div class="tab-pane" id="messages">
 					<div class="row">
-						<div align="center">
+						<div class="bill-heading" align="center">
 							<h2 class="form-name style_heading">Employee Payment Reports</h2>
 						</div>
 
@@ -1502,7 +1502,7 @@
 
 				<div class="tab-pane" id="settings">
 					<div class="row">
-						<div align="center">
+						<div class="bill-heading" align="center">
 							<h2 class="form-name style_heading">Expenditure Payment
 								Reports</h2>
 						</div>

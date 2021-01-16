@@ -50,9 +50,9 @@
 </head>
 <body>
 
-	<div class="container col-md-offset-1" style="float: left">
+	<div class="container">
 		<div class="row">
-			<div align="center" style="margin-top: 75px">
+			<div align="center" style="margin-top: 120px">
 				<h2 class="form-name style_heading">Sale Return Report</h2>
 			</div>
 
@@ -146,7 +146,7 @@
 								<div class="col-md-3">
 									<div class="input-group">
 										<div align="center">
-											<input type="button" id="btn" name="save"
+											<input type="button" id="btn" name="save" style="margin: 0 15px;"
 												class="btn btn-lg btn-success btn-md button_hw button_margin_right"
 												onclick="saleReturnVendorNameWiseValidation()" value="Search" />
 										</div>
@@ -154,7 +154,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="table-responsive" style="width: 90%; align-self: center; ">
+						<div class="table-responsive" style="width: 90%;margin-left: 42px;">
 							<table
 								class="table table-bordered table-striped table-condensed cf"
 								id="VendorTbl" class="display"
@@ -262,7 +262,7 @@
 								<div class="col-md-3">
 									<div class="input-group">
 										<div align="center">
-											<input type="button" id="btn" name="save"
+											<input type="button" id="btn" name="save" style="margin: 0 21px;"
 												class="btn btn-lg btn-success btn-md button_hw button_margin_right"
 												onclick="PoReturnReportAsPerRangeWise()" value="Search" />
 										</div>
@@ -371,9 +371,9 @@
 							</div>
 							
 						<div class="row form-group">
-							<div class="col-md-3 ">
+							<div class="col-md-3">
 								<div class="input-group">
-									<input type="button" id="btn" name="save"
+									<input type="button" id="btn" name="save" style="margin: 0 21px;"
 										class="btn btn-lg btn-success btn-md button_hw button_margin_right"
 										onclick="PoReturnReportAsPerVendorNameWise()" value="Search" />
 								</div>

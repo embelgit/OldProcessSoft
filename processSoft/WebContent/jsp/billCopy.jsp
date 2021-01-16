@@ -59,10 +59,10 @@
 
 <script src="/processSoft/staticContent/js/billCopy.js"></script>
 </head>
-
-<div class="container col-md-offset-1" style="float: left">
+<body>
+<div class="container">
 	<div class="row">
-		<div align="center" style="margin-top: 75px">
+		<div align="center" style="margin-top: 120px">
 			<h2 class="form-name style_heading">Bill Copy</h2>
 		</div>
 
@@ -76,8 +76,8 @@
 
 <div class="tab-pane active" id="home">
 	<ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#BillCopy"><h4
-					style="color: blue">Bill Copy</h4></a></li>
+		<li class="active" style="margin-bottom:10px;"><a data-toggle="tab" href="#BillCopy"><h4
+					style="color: blue;">Bill Copy</h4></a></li>
 	</ul>
 </div>
 
@@ -85,7 +85,7 @@
 
 <!-- BillCopy  Pilling  -->
 
-
+ <div class="col-sm-offset-2">
 <form class="form-horizontal" method="post" action=""
 	name="saleReportForm">
 	<fieldset>
@@ -130,11 +130,13 @@
 					</select>
 				</div>
 			</div>
-
+</div>
+<br>
+<br>
 			<div class="row form-group">
-				<div class="col-md-3">
+				<div class="col-md-6">
 					<div class="input-group">
-						<div align="center">
+						<div class="print-btn" align="center">
 							<input type="button" id="btn" name="save"
 								class="btn btn-lg btn-success btn-md button_hw button_margin_right"
 								onclick="BillCopy()" value="Print" />
@@ -142,6 +144,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		
 	</fieldset>
 </form>
+</div>
+</body>

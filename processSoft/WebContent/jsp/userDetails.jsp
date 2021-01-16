@@ -80,7 +80,7 @@
 	</script>
 	</head>
  <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">User Details</h2>
 			  	</div>
 			 
@@ -90,7 +90,8 @@
 				  		<hr style="border-top-color:#c1b1b1;">
 		     </div>	
     </div>
-      <div class="container" >
+      <div class="container">
+      <div class="col-sm-offset-2">
         <form class="form-horizontal" method="post" action="" name="usd"><!-- Value of 'name' attribute is used in userDetails.js  -->
           <fieldset>
           		<div class="row form-group">
@@ -279,23 +280,28 @@
             			</div>
             		</div>
 			</div>
-			
+			<br>
+			<br>
  			<div class="form-group row">
             	<div class="col-md-10 text-center">
             		 <!--  userDetails() function is implemented in  userDetails.js -->
             		 
-            		 <input style=" height: 65px; width: 180; font-size: 25" type="button" id="save" name="btn" style="font-size: 25" class="btn btn-large btn-success button-height-width"  onclick="return regUserDetails();" value="Submit">
-		            <input style=" height: 65px; width: 180; font-size: 25" type="reset" style="font-size: 25" class="btn btn-large btn-danger  button-height-width" id="save" name="btn" value="Cancel" onclick="reset()">
+            		 <input style=" font-size: 20px;width: 100px;
+                      height: 40px;padding: 0 10px;" type="button" id="save" name="btn" class="btn btn-large btn-success button-height-width"  onclick="return regUserDetails();" value="Submit">
+		            <input style=" font-size: 20px;width: 100px;
+                      height: 40px;padding: 0 10px;" type="reset" class="btn btn-large btn-danger  button-height-width" id="save" name="btn" value="Cancel" onclick="reset()">
             		 
             	<!-- 	 
     	          <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="regUserDetails()"><h4> Submit</h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
-        	    <input type="button" id="btn1" style="font-size: 25" class="btn btn-large btn-success button-height-width" name="btn1" onclick="openLogin()" value="Login">
+        	    <input type="button" id="btn1" style="font-size: 20px;width: 100px;
+                      height: 40px;padding: 0 10px;" class="btn btn-large btn-success button-height-width" name="btn1" onclick="openLogin()" value="Login">
         	    
         	    </div>
           	</div>
 		</fieldset>
       </form>
+      </div>
     </div>
     
    <%--  <%@include file="commons/newFooter.jsp" %> --%>

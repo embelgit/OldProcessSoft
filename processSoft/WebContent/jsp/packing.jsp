@@ -169,7 +169,7 @@ System.out.println(todayDate);
 <body>
 	<!-- onload="getProductName(); -->
 	<div class="row header_margin_top">
-		<div align="center">
+		<div class="bill-heading" align="center">
 			<br>
 			<h2 class="form-name style_heading">Outward Processing</h2>
 			<%--  <h3 align="right" style="color: red; margin-right: 50px;">Bill No :: <%out.println(BillNo); %></h3> --%>
@@ -181,7 +181,8 @@ System.out.println(todayDate);
 			<hr style="border-top-color: #c1b1b1;">
 		</div>
 	</div>
-	<div class="container col-sm-offset-2" style="padding-right: 128px">
+	<div class="container ">
+	<div class="col-sm-offset-2">
 		<form class="form-horizontal" method="post" action="" name="pk">
 			<fieldset>
 				<div class="row form-group">
@@ -461,20 +462,21 @@ System.out.println(todayDate);
 						</div>
 					</div>
 				</div>
-
+               <br>
 
 				<div class="form-group row">
-					<div class="col-md-10 text-center">
-						<input type="button" id="save" name="btn" style="font-size: 25"
+					<div class="col-md-11 text-center">
+						<input type="button" id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;"
 							class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"
-							onclick="outwardRecieve()" value="Submit"> <input
-							id="save" name="btn" style="font-size: 25"
+							onclick="outwardRecieve()" value="Submit"> 
+						<input id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;"
 							class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"
 							type="reset" onclick="window.location.reload()" value="Cancel">
 					</div>
 				</div>
 			</fieldset>
 		</form>
+		</div>
 	</div>
 	<!-- -------------- popup window for Supplier  ------------------------------ -->
 	<!-- The Modal -->

@@ -81,7 +81,7 @@
 				<!---------- 	Category Wise Sale reports -------------->
 				<div class="tab-pane active" id="home">
 					<div class="row">
-						<div align="center">
+						<div class="bill-heading" align="center">
 							<h2 class="form-name style_heading">GST Purchase Report</h2>
 						</div>
 
@@ -92,12 +92,12 @@
 						</div>
 					</div>
 
-					<ul class="nav nav-tabs" style="margin-top: -41px;">
+					<!-- <ul class="nav nav-tabs" style="margin-top: -41px;"> -->
 						<!-- <li class="active"><a data-toggle="tab"
 							href="#RangeWisePurchaseReport"><h4 style="color: blue">Range Wise</h4></a></li> -->
 				<!-- 		<li><a data-toggle="tab" href="#supplierBetweenTwoDate"><h4
 									style="color: blue">Range</h4></a></li> -->
-					</ul>
+					<!-- </ul> -->
 
 					<div class="tab-content" style="float: left">
 						<div id="RangeWisePurchaseReport" class="tab-pane active">
@@ -297,7 +297,7 @@
 				<!---------- 	GST Sale reports -------------->
 				<div class="tab-pane" id="GSTSale">
 					<div class="row">
-						<div align="center">
+						<div class="bill-heading" align="center">
 							<h2 class="form-name style_heading">GST Sale Reports</h2>
 						</div>
 
@@ -309,7 +309,7 @@
 							href="#RangeWiseSaleReport"><h4 style="color: blue">Range
 									Wise</h4></a></li>  -->
 						<!-- <li class="active"><a data-toggle="tab" href="#supplierSingleDate"><h4 style="color: blue">Datewise</h4></a></li> -->
-						<li><a data-toggle="tab" href="#WhosaleCustInRangeSaleReport"><h4
+						<li><a data-toggle="tab" href="#WhosaleCustInRangeSaleReport"><h4>
 									style="color: blue">Range</h4></a></li>
 					</ul>
 

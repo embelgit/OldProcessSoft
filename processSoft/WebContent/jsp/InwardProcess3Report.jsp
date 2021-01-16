@@ -23,7 +23,7 @@
 		<title>Inward Process 3 Report</title>
 		
   			<div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			    <%
 			InwardProcess3Dao dao2 = new InwardProcess3Dao();
    			List operaionNameList =dao2.getInwardProcess3Operaion();
@@ -128,9 +128,10 @@
 			</tbody>
 		</table>
 	</div>
+	<br>
 	
 	<div class="wrapper" align="center">
-		<input type="button" value="Back" id="listBtn" style="font-size: 25" class="btn btn-primary  btn-large  button-height-width" onclick="Back()" /> 
+		<input type="button" value="Back" id="listBtn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-primary  btn-large  button-height-width" onclick="Back()" /> 
 <!-- 		<input type="button" value="Delete Vendor" style="font-size: 25" id="deleteVenderDtlBtn" class="btn btn-primary  btn-large  button-height-width" onclick="deletSupplier()" /> -->
 	</div>	
 </body>

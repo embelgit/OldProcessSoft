@@ -76,7 +76,7 @@ function checkForDuplicateSupplierIdEntry(){
 
 </head>
 <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Measuring Units</h2>
 			  	</div>
 			 
@@ -87,6 +87,7 @@ function checkForDuplicateSupplierIdEntry(){
 		     </div>	
     </div>
 	<div class="container" >
+	<div class="col-sm-offset-1">
         <form class="form-horizontal" method="post" action="" name="munits"><!-- Value of 'name' attribute is used in customerDetails.js  -->
           <fieldset>
 			<div class="row form-group">
@@ -152,14 +153,14 @@ function checkForDuplicateSupplierIdEntry(){
            		 	</div>
            		 </div>
            		 <br>
-           		 <br>
+           		
            		 <div class="form-group row">
 		            <div class="col-md-11 text-center">
 		            <!--  "customerDetails()" function is implemented in customerDetails.js  -->
 	           		 
-	           		<input type="button" id="save" name="btn" style="font-size: 25;width: 130px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="AddMeasuringUnit()" value="Submit">
-	           		<input id="save" name="btn" style="font-size: 25;width: 130px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
-	           		<input type="button" style=" font-size: 25;width: 130px;" value="List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="measuringUnitsList()" />
+	           		<input type="button" id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="AddMeasuringUnit()" value="Submit">
+	           		<input id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
+	           		<input type="button" style=" font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" value="List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="measuringUnitsList()" />
 		            <!-- <input type="button" style=" font-size: 25" value="Edit" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="editExpenditure()" /> -->
 		            	
 	           		<!--  <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addUnit()"><h4> Submit</h4></button>
@@ -169,5 +170,6 @@ function checkForDuplicateSupplierIdEntry(){
          		</div>
            	</fieldset>
           </form>
+          </div>
          </div>
        <%@include file="commons/newFooter.jsp" %>

@@ -92,9 +92,9 @@
 <body>
 
 
-	<div class="container col-md-offset-1" style="float: left">
+	<div class="container ">
 		<div class="row">
-			<div align="center" style="margin-top: 75px">
+			<div align="center" style="margin-top: 120px">
 				<h2 class="form-name style_heading">With Po Inward Process Report</h2>
 			</div>
 

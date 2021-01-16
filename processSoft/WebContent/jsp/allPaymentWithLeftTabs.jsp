@@ -153,10 +153,10 @@ SupplierPaymentDao data = new SupplierPaymentDao();
     <div  class="col-md-12">
         <h3>Left Tabs</h3>
         <hr/>
-        <div class="col-md-2">
+        <div class="col-md-2 " style="margin-top:30px">
             <!-- required for floating -->
             <!-- Nav tabs -->
-            <ul class="nav nav-tabs tabs-left">
+            <ul class="nav nav-tabs tabs-left mt-6">
                 <li class="active"><a href="#home" data-toggle="tab"   onclick="home1()" >Vendor Payment</a></li>
                  
                
@@ -170,7 +170,7 @@ SupplierPaymentDao data = new SupplierPaymentDao();
         
           <div class="row form-group">
 		      <div id="heading">
-		      <div align="center">
+		      <div class="bill-heading" align="center">
 			  			<h2 class="form-name style_heading">Vendor  Payment</h2><br><br>
 			  			
 			  			  <div align="right" style="margin-right: 100px;">
@@ -212,8 +212,7 @@ SupplierPaymentDao data = new SupplierPaymentDao();
 			</h3> --%>
 		</div>
 			  		</div>
-			  	<div class="row">
-			  	 &nbsp &nbsp
+			  	<div class="row">&nbsp &nbsp
 			  	</div>	
 			  	<div class="row">
 			  	 &nbsp &nbsp
@@ -253,7 +252,7 @@ SupplierPaymentDao data = new SupplierPaymentDao();
 			</div>   	
         </div>
             
-            
+         
             
             
 			
@@ -587,14 +586,15 @@ SupplierPaymentDao data = new SupplierPaymentDao();
 												</div>
 												</div>
 								</div>
+			          <br>
 			          
 			<div class="form-group row">
 			  <div class="col-md-12 text-center">
 			   		<!-- <button id="btn1" name="btn1" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="supplierPayment(); return false;"><h4> Submit</h4></button>
               		<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
 			  
-			  		<input type="button" id="btn1" name="btn1" style="font-size: 25" class="btn btn-large btn-success button-height-width"  onclick="supplierPayment(); return false;" value="Submit">
-		            <input type="reset" id="btn1" style="font-size: 25" class="btn btn-large btn-danger   button-height-width" name="btn1" value="Cancel">
+			  		<input type="button" id="btn1" name="btn1" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-success button-height-width"  onclick="supplierPayment(); return false;" value="Submit">
+		            <input type="reset" id="btn1" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-danger   button-height-width" name="btn1" value="Cancel">
 			  
 			   </div>
 	 		</div>       	    
@@ -603,24 +603,21 @@ SupplierPaymentDao data = new SupplierPaymentDao();
  
   <!-- ----------vendor wise payment----------------------- -->
   
-  
     	 <div class="tab-pane" id="vendorhome">
-    	
-    	
        		<form  method="post" action="" name="spmtvendor">
        	
        			<div class="row">
          		  <div class="row form-group">
 		      
-		      <div align="center">
+		      <div class="bill-heading" align="center">
 			  			<!-- <h2 class="form-name style_heading">Vendor  Payment</h2> -->
 			  		</div>
-			  	<div class="row">
+			 <!--  	<div class="row">
 			  	 &nbsp &nbsp
 			  	</div>	
 			  	<div class="row">
 			  	 &nbsp &nbsp
-			  	</div>
+			  	</div> -->
 			  	
 			  
 
@@ -923,8 +920,8 @@ SupplierPaymentDao data = new SupplierPaymentDao();
 			   		<!-- <button id="btn1" name="btn1" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="supplierPayment(); return false;"><h4> Submit</h4></button>
               		<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
 			  
-			  		<input type="button" id="btn2" name="btn1" style="font-size: 25" class="btn btn-large btn-success button-height-width"  onclick="supplierPaymentv(); return false;" value="Submit">
-		            <input type="reset" id="btn1" style="font-size: 25" class="btn btn-large btn-danger   button-height-width" name="btn1" value="Cancel">
+			  		<input type="button" id="btn2" name="btn1" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-success button-height-width"  onclick="supplierPaymentv(); return false;" value="Submit">
+		            <input type="reset" id="btn1" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-danger   button-height-width" name="btn1" value="Cancel">
 			  
 			   </div>
 	 		</div>       	    
@@ -1192,8 +1189,8 @@ SupplierPaymentDao data = new SupplierPaymentDao();
 			           	 	<!-- <button id="btn2" name="btn2" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="customerPaymentValidation(); return false;"><h4> Submit</h4></button>
               				<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
 			            
-			            <input type="button" id="btn2" name="btn2" style="font-size: 25" class="btn btn-large btn-success button-height-width"  onclick="customerPaymentValidation(); return false;" value="Submit">
-		            	<input type="reset" id="btn2" style="font-size: 25" class="btn btn-large btn-danger   button-height-width" name="btn2" value="Cancel">
+			            <input type="button" id="btn2" name="btn2" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-success button-height-width"  onclick="customerPaymentValidation(); return false;" value="Submit">
+		            	<input type="reset" id="btn2" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-danger   button-height-width" name="btn2" value="Cancel">
 			            </div>
 			      </div>       	    
 			 </form>
@@ -1204,7 +1201,7 @@ SupplierPaymentDao data = new SupplierPaymentDao();
            <div class="tab-pane" id="messages">
            		<form class="form-horizontal" method="post" action="" name="emp">
    	    	 <div class="row">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Employee Payment</h2><br>
 			  	</div>
 			 
@@ -1459,8 +1456,8 @@ SupplierPaymentDao data = new SupplierPaymentDao();
               	<!-- <button id="btn3" name="btn3" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="EmployeeValidation(); return false;"><h4> Submit</h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
             
-            <input type="button" id="btn3" name="btn3" style="font-size: 25" class="btn btn-large btn-success button-height-width"  onclick="EmployeeValidation(); return false;" value="Submit">
-		    <input type="reset" id="btn2" style="font-size: 25" class="btn btn-large btn-danger   button-height-width" name="btn2" value="Cancel">
+            <input type="button" id="btn3" name="btn3" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-success button-height-width"  onclick="EmployeeValidation(); return false;" value="Submit">
+		    <input type="reset" id="btn2" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-danger   button-height-width" name="btn2" value="Cancel">
             </div>
           </div>       	    
  	 </form> 
@@ -1472,7 +1469,7 @@ SupplierPaymentDao data = new SupplierPaymentDao();
        <div class="tab-pane" id="settings">
 		<form method="post" action="" name="expensePaymentForm">
 			<div class="row">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Expenditure Payment</h2><br>
 			  	</div>
 			 
@@ -1652,15 +1649,15 @@ SupplierPaymentDao data = new SupplierPaymentDao();
 					</div>
 			
 			</div>	
-					
+	<br>				
 				
 		<div class="form-group row">
             <div class="col-md-12 text-center">
              	<!-- <button id="save" name="btn4" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="expensePaymentValidation(); return false;"><h4> Submit</h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
             
-            <input type="button" id="save" name="expensePaymentBtn" style="font-size: 25" class="btn btn-large btn-success button-height-width"  onclick="expensePaymentValidation(); return false;" value="Submit">
-		    <input type="reset" id="btn2" style="font-size: 25" class="btn btn-large btn-danger   button-height-width" name="btn4" value="Cancel">
+            <input type="button" id="save" name="expensePaymentBtn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-success button-height-width"  onclick="expensePaymentValidation(); return false;" value="Submit">
+		    <input type="reset" id="btn2" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-danger   button-height-width" name="btn4" value="Cancel">
             </div>
         </div> 
 			
@@ -1670,6 +1667,7 @@ SupplierPaymentDao data = new SupplierPaymentDao();
    </div>
   </div>
  </div>
+</div>
 </div>
 </body>	
 

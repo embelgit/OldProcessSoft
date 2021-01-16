@@ -68,9 +68,9 @@
 <script src="/processSoft/staticContent/js/saleReports.js"></script>
 </head>
 
-<div class="container col-md-offset-1" style="float: left">
+<div class="container">
 	<div class="row">
-		<div align="center" style="margin-top: 75px">
+		<div align="center" style="margin-top: 120px">
 			<h2 class="form-name style_heading">Sale Report</h2>
 		</div>
 
@@ -310,7 +310,7 @@
 							<div class="col-md-3">
 								<div class="input-group">
 									<div align="center">
-										<input type="button" id="btn" name="save"
+										<input type="button" id="btn" name="save" style="margin: 0 21px;"
 											class="btn btn-lg btn-success btn-md button_hw button_margin_right"
 											onclick="saleReportBetweenTwoDatesAsPerCat()" value="Search" />
 									</div>
@@ -443,7 +443,7 @@
 							<div class="col-md-2">
 								<div class="input-group">
 									<div align="center">
-										<input type="button" id="btn" name="save"
+										<input type="button" id="btn" name="save" style="margin: 0 21px;"
 											class="btn btn-lg btn-success btn-md button_hw button_margin_right"
 											onclick="saleReportForSingleDateAsPerChallenNo()"
 											value="Search" />
@@ -577,7 +577,7 @@
 							<div class="col-md-2">
 								<div class="input-group">
 									<div align="center">
-										<input type="button" id="btn" name="save"
+										<input type="button" id="btn" name="save" style="margin: 0 21px;"
 											class="btn btn-lg btn-success btn-md button_hw button_margin_right"
 											onclick="saleReportAsPerInwordChallenNo()" value="Search" />
 									</div>
@@ -674,7 +674,7 @@
 						<div class="col-md-3s">
 							<div class="input-group">
 								<input type="button" id="btn" name="save"
-									class="btn btn-lg btn-success btn-md button_hw button_margin_right"
+									class="btn btn-lg btn-success btn-md button_hw button_margin_right"style="margin: 0 21px;"
 									onclick="saleReportAsPerShopNameWise()" value="Search" />
 							</div>
 						</div>
@@ -772,7 +772,7 @@
 						</div>
 						<div class="row form-group">
 						<div class="input-group">
-								<input type="button" id="btn" name="save" class="btn btn-lg btn-success btn-md button_hw button_margin_right" onclick="saleReportAsPerShopNameWiseInward()" value="Search">
+								<input type="button" id="btn" name="save" style="margin: 0 21px;" class="btn btn-lg btn-success btn-md button_hw button_margin_right" onclick="saleReportAsPerShopNameWiseInward()" value="Search">
 							</div>
 					</div>
 					</div>
@@ -871,7 +871,7 @@
 						<div class="col-md-3">
 							<div class="input-group">
 								<input type="button" id="btn" name="save"
-									class="btn btn-lg btn-success btn-md button_hw button_margin_right"
+									class="btn btn-lg btn-success btn-md button_hw button_margin_right" style="margin: 0 21px;"
 									onclick="saleReportAsPerShopNameWiseOutward()" value="Search" />
 							</div>
 						</div>
@@ -967,7 +967,7 @@
 									<div align="center">
 										<input type="button" id="btn" name="save"
 											class="btn btn-lg btn-success btn-md button_hw button_margin_right"
-											 onclick="saleReportAsBillNoWise()" value="Search" />
+											 style="margin: 0 21px;" onclick="saleReportAsBillNoWise()" value="Search" />
 									</div>
 								</div>
 							</div>

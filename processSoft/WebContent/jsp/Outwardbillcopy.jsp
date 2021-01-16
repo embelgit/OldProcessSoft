@@ -60,9 +60,9 @@
 <script src="/processSoft/staticContent/js/billCopy.js"></script>
 </head>
 
-<div class="container col-md-offset-1" style="float: left">
+<div class="container">
 	<div class="row">
-		<div align="center" style="margin-top: 75px">
+		<div align="center" style="margin-top: 120px">
 			<h2 class="form-name style_heading">Outward Bill Copy</h2>
 		</div>
 
@@ -76,7 +76,8 @@
 
 <div class="tab-pane active" id="home">
 	<ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#BillCopy"><h4
+		<li class="active"><a data-toggle="tab" href="#BillCopy">
+		<h4
 					style="color: blue">Outward Bill Copy</h4></a></li>
 	</ul>
 </div>

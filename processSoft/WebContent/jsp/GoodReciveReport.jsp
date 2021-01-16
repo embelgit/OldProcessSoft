@@ -50,7 +50,7 @@
 	</script>
 <body id="dt_example" style="min-height:300px;">
 	<div class="row">
-		<div align="center" style="margin-top: 75px">
+		<div align="center" style="margin-top: 120px">
 			<h2 class="form-name style_heading">Good Receive Report</h2>
 		</div>
 		<div class="row">

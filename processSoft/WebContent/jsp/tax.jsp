@@ -43,7 +43,7 @@ function taxlist()
 </script>
 </head>
  <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Tax Detail</h2>
 			  	</div>
 			 
@@ -54,6 +54,7 @@ function taxlist()
 		     </div>	
     </div>
 <div class="container" >
+<div class="col-sm-offset-1">
         <form class="form-horizontal" method="post" action="" name="txc"><!-- Value of 'name' attribute is used in  taxCreation.js  -->
           <fieldset>
           		<div class="row form-group">
@@ -122,21 +123,22 @@ function taxlist()
 					</div>
 				</div>
 				<br>
-				<br>
+				
 				<div class="form-group row">
            			<div class="col-md-12 text-center">
            			 <!--  txCreation() function is implemented in  taxCreation.js -->
-					<input type="button" id="saveTaxDetails" name="btn" style="font-size: 25;width: 130px;" class="btn btn-large btn-success   button-height-width"  onclick="addtax() " value="Submit">
-					<input id="reset" name="btn" style="font-size: 25;width: 130px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
+					<input type="button" id="saveTaxDetails" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-success   button-height-width"  onclick="addtax() " value="Submit">
+					<input id="reset" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
 					
-					<input style="  font-size: 25;width: 130px;" type="button" value="Tax List" id="listBtn" class="btn btn-primary btn-large  button-height-width " onclick="taxlist()" /> 
-              		<input style="  font-size: 25;width: 130px;" type="button" value="Edit" id="editBtn" class="btn btn-primary  btn-large  button-height-width" onclick="editTax()" /> 
+					<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="Tax List" id="listBtn" class="btn btn-primary btn-large  button-height-width " onclick="taxlist()" /> 
+              		<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="Edit" id="editBtn" class="btn btn-primary  btn-large  button-height-width" onclick="editTax()" /> 
 <!--              	 <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addTax()"><h4> Submit</h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
             		</div>
           		</div>
 			</fieldset>
 		</form>
+		</div>
 	</div>
 	
 	<%@include file="commons/newFooter.jsp" %>

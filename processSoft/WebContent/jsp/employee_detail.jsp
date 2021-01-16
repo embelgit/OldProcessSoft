@@ -19,8 +19,9 @@
 				}
           		</script>
 	</head>
+	<body>
   	<div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Employee Details</h2>
 			  	</div>
 			 
@@ -31,6 +32,7 @@
 		     </div>	
     </div>
       <div class="container " >
+      <div class="col-sm-offset-1">
         <form class="form-horizontal" method="post" action="" name="empd"><!-- Value of 'name' attribute is used in employeeDetails.js  -->
           <fieldset>
           		<div class="row form-group">
@@ -192,19 +194,19 @@
             		</div>
 			</div>
 			<br>
-			<br>
+		
  			<div class="form-group row">
             	<div class="col-md-11 text-center">
             	<!--  "employeedetails()" function is implemented in employeeDetails.js  -->
     	          	
-    	          	 <input type="button" id="save" name="btn" style="font-size: 25;width: 180px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="employeedetails()" value="Submit">
-	           		 <input id="save" name="btn" style="font-size: 25;width: 180px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
+    	          	 <input type="button" id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="employeedetails()" value="Submit">
+	           		 <input id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
     	          	
     	          	
     	          	<!-- <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="employeedetails()"><h4> Submit</h4></button>
               		<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
-        	    	<input style="font-size: 25; height: 65px; width: 180px;" type="button" value="Employee List" id="listBtn" class="btn btn-primary" onclick="employeelist()" /> 
-              	<input style=" font-size: 25;height: 65px;width: 180px;" type="button" value="Edit" id="listBtn" class="btn btn-primary" onclick="editEmployee()" /> 
+        	    	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="List" id="listBtn" class="btn btn-primary" onclick="employeelist()" /> 
+              	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="Edit" id="listBtn" class="btn btn-primary" onclick="editEmployee()" /> 
         	    </div>
           	</div>
 
@@ -212,6 +214,8 @@
 		</fieldset>
       </form>
     </div>
+    </div>
+    </body>
     
     <%@include file="commons/newFooter.jsp" %>
 <%-- <%@include file="commons/footer.jsp" %> --%>

@@ -52,10 +52,10 @@ function openBilling() {
 </head>
 
 <body onload="getProductName()">
-	<div class="container col-md-offset-2" style="float: left">
+	<div class="container ">
 
 		<div class="row">
-			<div align="center" style="margin-top: 75px">
+			<div  align="center" style="margin-top: 120px">
 				<h2 class="form-name style_heading">Stock Reports</h2>
 			</div>
 
@@ -105,7 +105,7 @@ function openBilling() {
 							<div class="col-md-3">
 								<div class="input-group">
 
-									<input type="button" id="btn" name="save"
+									<input type="button" id="btn" name="save" 
 										class="btn btn-lg btn-success btn-md button_hw button_margin_right"
 										onclick="StockDetailsReportAsPerProductName()" value="Search" />
 
@@ -139,7 +139,7 @@ function openBilling() {
 						</table>
 						<div class="row form-group buttons_margin_top ">
 							<div align="center">
-								<input type="button" id="btn" style="font-size: 25"
+								<input type="button" id="btn" style="font-size: 20px;font-weight: 500;padding: 0 7px;width: 145px;height: 45px;"
 									class="btn btn-large btn-success button-height-width"
 									name="btn" onclick="openBilling()" value="Back To Billing">
 							</div>
@@ -228,7 +228,7 @@ function openBilling() {
 						</table>
 						<div class="row form-group buttons_margin_top ">
 							<div align="center">
-								<input type="button" id="btn" style="font-size: 25"
+								<input type="button" id="btn" style="font-size: 20px;font-weight: 500;padding: 0 7px;width: 145px;height: 45px;"
 									class="btn btn-large btn-success button-height-width"
 									name="btn" onclick="openBilling()" value="Back To Billing">
 								<!-- <input type="button" id="btn" style="font-size: 25"

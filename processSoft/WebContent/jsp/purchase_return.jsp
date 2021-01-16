@@ -56,8 +56,9 @@
      		</script>
     
 </head>
+<body>
  <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Purchase Return</h2>
 			  	</div>
 			 
@@ -67,7 +68,7 @@
 				  		<hr style="border-top-color:#c1b1b1;">
 		     </div>	
     </div>
-    
+    <!-- <div class="col-sm-offset-1"> -->
     <form class="form-horizontal" method="post" action="" name="PurchaseReturn">
           <fieldset>
    <div class="container" >
@@ -202,15 +203,15 @@
             <div class="form-group row">
             	<div class="col-md-8 col-md-offset-2 text-center">
             		<!-- <input type="button" id="btn" style="font-size: 25" class="btn btn-large btn-success button-height-width" name="btn" onclick=" returntPurchase(); returntMinusFromStockPurchase();" value="Submit"> -->
-            		<input type="button" id="save" style="font-size: 25" class="btn btn-large btn-success button-height-width" name="btn" onclick="returntPurchaseValidation(); " value="Submit">
+            		<input type="button" id="save" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-success button-height-width" name="btn" onclick="returntPurchaseValidation(); " value="Submit">
             		
-		            <input type="reset" id="btn1" style="font-size: 25" class="btn btn-large btn-danger   button-height-width" name="btn1" value="Cancel">
+		            <input type="reset" id="btn1" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-danger   button-height-width" name="btn1" value="Cancel">
            		</div>
           	</div>
 		</fieldset>
        </form>
-    
-     
+    <!-- </div> -->
+     </body>
      <%@include file="commons/newFooter.jsp" %>
      
      <%-- <%@include file="commons/footer.jsp" %> --%>

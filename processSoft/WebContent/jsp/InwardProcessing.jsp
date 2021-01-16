@@ -476,8 +476,8 @@ function hamaliExpenseAddingToGross(){
 <body onload="inwardprocessing(),getContainerName();">
 
 	<div class="d-none d-print-block" style=" padding-top: 65px;">
-		<div align="center">
-			<h2   class="form-name style_heading" >Inward Processing</h2>
+		<div class="bill-heading" align="center">
+			<h2 class="form-name style_heading" >Inward Processing</h2>
 
 			<%-- <h3 align="right" style="color: red; margin-right: 50px;">
 				Bill No ::
@@ -507,6 +507,7 @@ function hamaliExpenseAddingToGross(){
 	
 		 <div class="tab-content">
 		<div id="oilPurchase" class="tab-pane active ">
+		<div class="col-sm-offset-1">
 			<form class="form-horizontal" method="post" action=""
 				name="goodsReceiveForm">
 				
@@ -715,19 +716,20 @@ function hamaliExpenseAddingToGross(){
 							</div>
 						</div>
 					</div>
-
+                    <br>
 					<div class="form-group row">
 						<div class="col-md-8 col-md-offset-2 text-center">
-							<input type="button" id="btn" style="font-size: 25"
+							<input type="button" id="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;"
 								class="btn btn-large btn-success button-height-width" name="btn"
 								onclick="addValGoodsRecieve()" value="Submit"> <input
-								type="reset" style="font-size: 25"
+								type="reset" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;"
 								class="btn btn-large btn-danger  button-height-width" id="save"
 								name="btn" value="Cancel" onclick="location.reload()">
 						</div>
 					</div>
 				</fieldset>
 			</form>
+		</div>
 		</div>
 	
 		
@@ -1079,6 +1081,7 @@ function hamaliExpenseAddingToGross(){
  <!-- With Out Po Details Form  -->
  <div id="PoDetails">
  <div  class="tab-pane  ">
+ <div class="col-sm-offset-1">
 			<form class="form-horizontal" method="post" action=""
 				name="goodsReceiveFormWithoutPO">
 				
@@ -1332,19 +1335,20 @@ function hamaliExpenseAddingToGross(){
 							</div>
 						</div>
 					</div>
-
+                    <br>
 					<div class="form-group row">
 						<div class="col-md-8 col-md-offset-2 text-center">
-							<input type="button" id="saveGoodsRecieveWithoutPOBtn" style="font-size: 25"
+							<input type="button" id="saveGoodsRecieveWithoutPOBtn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;"
 								class="btn btn-large btn-success button-height-width" name="btn"
 								onclick="addValGoodsRecieveWithoutPO()" value="Submit"> <input
-								type="reset" style="font-size: 25"
+								type="reset" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;"
 								class="btn btn-large btn-danger  button-height-width" id="save"
 								name="btn" value="Cancel" onclick="location.reload()">
 						</div>
 					</div>
 				</fieldset>
 			</form>
+		</div>
 		</div>
  </div>
  

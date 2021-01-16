@@ -23,7 +23,7 @@
 		<title>Goods Receive Stock</title>
 		
   			<div class="row header_margin_top">
-			    <div align="center">			    
+			    <div class="bill-heading"  align="center">			    
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("godownDetails") %> <%}%> <%if(abc.equals("english")){%> Goods Receive Stock <%}%> </h2>
 			  	</div>		 
     </div>

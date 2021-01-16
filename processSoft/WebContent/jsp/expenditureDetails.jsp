@@ -86,9 +86,10 @@ function taxlist()
 			} 
 
 </script>
+<body>
 
 <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Expenditure Detail</h2>
 			  	</div>
 			 
@@ -99,7 +100,8 @@ function taxlist()
 		     </div>	
     </div>
 	<div class="container" >
-        <form id="expenseDetails" class="form-horizontal" method="post" action="" name="expenseDetails"><!-- Value of 'name' attribute is used in customerDetails.js  -->
+	<div class="col-sm-offset-3">
+	        <form id="expenseDetails" class="form-horizontal" method="post" action="" name="expenseDetails"><!-- Value of 'name' attribute is used in customerDetails.js  -->
           <fieldset>
 			<div class="row form-group">
            	 		<div class="col-md-6">
@@ -140,17 +142,19 @@ function taxlist()
            		 <br>
            		 <br>
            		 <div class="form-group row">
-		            <div class="col-md-12 text-center">
-		            	<input type="button"  id="submitBtn" name="btn" style="font-size: 25;width: 200px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addExpenseDetails()" value="Submit">
-		            	<input id="save" name="btn" style="font-size: 25 ;width: 200px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
-	           		 	<input type="button" style=" font-size: 25; width: 200px;" value="Expenditure List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="expenditureList()" />
-		            	<input type="button" style=" font-size: 25;width: 200px;" value="Edit" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="editExpenditure()" />
+		            <div class="col-md-9 text-center">
+		            	<input type="button"  id="submitBtn" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addExpenseDetails()" value="Submit">
+		            	<input id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
+	           		 	<input type="button" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" value="List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="expenditureList()" />
+		            	<input type="button" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" value="Edit" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="editExpenditure()" />
 		            	<!-- <button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
 	           		 </div>
          		</div>
            	</fieldset>
           </form>
          </div>
+         </div>
+         </body>
          
          <%@include file="commons/newFooter.jsp" %>
          

@@ -59,8 +59,9 @@ function goToOoutward() {
 			}
 </script>
 </head>
+<body>
 <div class="row header_margin_top">
-	<div align="center">
+	<div class="bill-heading" align="center">
 		<%
 			InwardProcess2Dao dao2 = new InwardProcess2Dao();
    			List operaionNameList =dao2.getInwardProcess2Operaion();
@@ -85,7 +86,8 @@ function goToOoutward() {
 		<hr style="border-top-color:#c1b1b1;">
 	</div>
 </div>
-<div class="container col-sm-offset-2" >
+<div class="container " >
+<div class="col-sm-offset-1 ">
 	<form class="form-horizontal" method="post" action="" name="txc"><!-- Value of 'name' attribute is used in  taxCreation.js  -->
 		<fieldset>
  			<div class="row form-group">
@@ -180,16 +182,17 @@ function goToOoutward() {
             	</div>
 				</div>
 			</div>
+			<br>
 			<div class="form-group row">
            		<div class="col-md-12 text-center">
            			 <!--  txCreation() function is implemented in  taxCreation.js -->
-					<input type="button" id="saveInwardProcess2DetailsBtn" name="btn" style="font-size: 25" class="btn btn-large btn-success   button-height-width" onclick="validationInwardProcess2Details()" value="Submit">
-					<input id="reset" name="btn" style="font-size: 25" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
+					<input type="button" id="saveInwardProcess2DetailsBtn" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-success   button-height-width" onclick="validationInwardProcess2Details()" value="Submit">
+					<input id="reset" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
 					
-					<input style="  font-size: 25" type="button" value="List" id="inwardProcess2ListBtn" class="btn btn-primary btn-large  button-height-width " onclick="InwardProcess2List()" /> 
+					<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="List" id="inwardProcess2ListBtn" class="btn btn-primary btn-large  button-height-width " onclick="InwardProcess2List()" /> 
 <!--               		<input style="  font-size: 25" type="button" value="Edit" id="editBtn" class="btn btn-primary  btn-large  button-height-width" onclick="editTax()" /> -->
-              		<input style="  font-size: 25" type="button" value="Inward" id="inwardBtn" class="btn btn-primary  btn-large  button-height-width" onclick="goToInward()" />              		
-              		<input style="  font-size: 25" type="button" value="Outward" id="outwardBtn" class="btn btn-primary  btn-large  button-height-width" onclick="goToOoutward()" />
+              		<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="Inward" id="inwardBtn" class="btn btn-primary  btn-large  button-height-width" onclick="goToInward()" />              		
+              		<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="Outward" id="outwardBtn" class="btn btn-primary  btn-large  button-height-width" onclick="goToOoutward()" />
 <!--              	 <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addTax()"><h4> Submit</h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
             	</div>
@@ -197,6 +200,8 @@ function goToOoutward() {
 		</fieldset>
 	</form>
 </div>
+</div>
+</body>
 	
 	<%@include file="commons/newFooter.jsp" %>
 	

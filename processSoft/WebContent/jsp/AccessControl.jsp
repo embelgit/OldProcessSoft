@@ -81,7 +81,7 @@
 	</head>
  
  <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Access Control</h2>
 </div>
  </div>
@@ -92,8 +92,9 @@
 		     </div>	
     </div>
     
-      <div class="container" >
-        <form class="form-horizontal" method="post" action="" name="usd"><!-- Value of 'name' attribute is used in userDetails.js  -->
+      <div class="container "  >
+       <div class="col-sm-offset-2">
+        <form class="form-horizontal " method="post" action="" name="usd" ><!-- Value of 'name' attribute is used in userDetails.js  -->
           <fieldset>
           		<div class="row form-group">
            	 		<div class="col-md-6">
@@ -209,19 +210,25 @@
             		</div>
 				
 			</div>
+			<br>
+			<br>
 			
  			<div class="form-group row">
             	<div class="col-md-10 text-center">
             		 <!--  userDetails() function is implemented in  userDetails.js -->
             		
-            		 <input type="button" id="save" name="btn" style="font-size: 25" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="AddAccessControlDetails()" value="Submit">
-		             <input id="save" name="btn" style="font-size: 25" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
-		             <input id="btn1" name="btn" style="font-size: 25" class="btn btn-large btn-success glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="openLogin()" value="Login">
+            		 <input type="button" id="save" name="btn" style="font-size: 20px;width: 100px;
+                      height: 40px;padding: 0 10px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="AddAccessControlDetails()" value="Submit">
+		             <input id="save" name="btn" style="font-size: 20px;width: 100px;
+                      height: 40px;padding: 0 10px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
+		             <input id="btn1" name="btn" style="font-size: 20px;width: 100px;
+                      height: 40px;padding: 0 10px;" class="btn btn-large btn-success glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="openLogin()" value="Login">
         	   		 <!-- <input type="button" id="btn1"  class="btn btn-large btn-success button-height-width" name="btn1" onclick="openLogin()" value="Login"> -->
         	    </div>
           	</div>
 		</fieldset>
       </form>
+      </div>
     </div>
      <%
       }else

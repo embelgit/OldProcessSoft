@@ -66,9 +66,9 @@
 <body>
 
 
-	<div class="container col-md-offset-1" style="float: left">
+	<div class="container">
 		<div class="row">
-			<div align="center" style="margin-top: 75px">
+			<div align="center" style="margin-top: 120px">
 				<h2 class="form-name style_heading">Outward Process Report</h2>
 			</div>
 
@@ -80,15 +80,15 @@
 		</div>
 	</div>
 	<ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#Challannowise"><h4
+		<li class="active"><a data-toggle="tab" href="#Challannowise"><h4>
 					style="color: blue">Challan No Wise</h4></a></li>
-		<li><a data-toggle="tab" href="#TwoDatewise"><h4
+		<li><a data-toggle="tab" href="#TwoDatewise"><h4>
 					style="color: blue">Datewise</h4></a></li>
-		<li><a data-toggle="tab" href="#productNameWise"><h4
+		<li><a data-toggle="tab" href="#productNameWise"><h4>
 					style="color: blue">Product Name Wise</h4></a></li>
-		<li><a data-toggle="tab" href="#vendorNameWise"><h4
+		<li><a data-toggle="tab" href="#vendorNameWise"><h4>
 					style="color: blue">Vendor Name Wise</h4></a></li>
-		<li><a data-toggle="tab" href="#ShopNameWise"><h4
+		<li><a data-toggle="tab" href="#ShopNameWise"><h4>
 					style="color: blue">Shop Name Wise</h4></a></li>
 
 	</ul>

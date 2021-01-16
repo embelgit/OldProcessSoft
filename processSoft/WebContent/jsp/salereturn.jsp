@@ -45,7 +45,7 @@
 </head>
 	
 	  <div class="row header_margin_top">
-				    <div align="center">
+				    <div class="bill-heading"  align="center">
 				  		<h2 class="form-name style_heading">Sale Return</h2>
 				  	</div>
 			 
@@ -111,8 +111,8 @@
               			<!-- <button id="save" name="save" class="btn btn-large btn-success" onclick="saleReturn()"> Submit</button>
               			<button class="btn btn-large btn-danger" type="reset"> Cancel </button>
               			 -->
-              			<input type="button" id="save" name="save" style="font-size: 25" class="btn btn-large btn-success button-height-width"  onclick="saleReturn_new()" value="Submit">
-		            <input type="button" id="btn1" style="font-size: 25" class="btn btn-large btn-danger   button-height-width" onclick="openSaleReturn()" name="btn1" value="Cancel">
+              			<input type="button" id="save" name="save" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-success button-height-width"  onclick="saleReturn_new()" value="Submit">
+		            <input type="button" id="btn1" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-danger   button-height-width" onclick="openSaleReturn()" name="btn1" value="Cancel">
           	  		</div>
          		 </div>       	    
          	 </fieldset>

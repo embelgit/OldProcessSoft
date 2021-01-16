@@ -68,9 +68,9 @@
 </head>
 <body>
 
-	<div class="container col-md-offset-1" style="float: left">
+	<div class="container ">
 		<div class="row">
-			<div align="center" style="margin-top: 75px">
+			<div align="center" style="margin-top: 120px">
 				<h2 class="form-name style_heading">Outward Return Report</h2>
 			</div>
 
@@ -297,7 +297,7 @@
 								<div class="col-md-3">
 									<div class="input-group">
 										<div align="center">
-											<input type="button" id="btn" name="save"
+											<input type="button" id="btn" name="save" style="margin: 0 21px;"
 												class="btn btn-lg btn-success btn-md button_hw button_margin_right"
 												onclick="OutwardReturnReportAsPerRangeWise()" value="Search" />
 										</div>

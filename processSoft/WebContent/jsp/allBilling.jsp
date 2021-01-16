@@ -396,7 +396,7 @@ function editProductDetails() {
 
 <body onload="getProductName();getProductNameForCredit();">
 	<div class="row header_margin_top">
-		<div align="center">
+		<div class="bill-heading" align="center">
 			<h2 class="form-name style_heading">Billing</h2>
 		</div>
 
@@ -425,7 +425,7 @@ function editProductDetails() {
 
 		<!--         For credit Customer   -->
 
-		<div id="CreditCustDetail">
+		<div id="CreditCustDetail col-sm-offset-3">
 			<form class="form-horizontal" method="post" action="" name="creditFertiBill1">
 				<fieldset>
 					<div class="row form-group">
@@ -476,7 +476,7 @@ function editProductDetails() {
 								<span class="input-group-addon"> <i
 									class="	glyphicon glyphicon-hand-right"></i>
 								</span> <input  type="text" id="billNo" name="billNo" placeholder="Bill No" 
-									class="form-control input-md "  >
+									class="form-control input-md">
 							</div>
 						</div>
 
@@ -527,7 +527,7 @@ function editProductDetails() {
 								<span class="input-group-addon"> <i
 									class="glyphicon glyphicon-user"></i>
 								</span> 
-								<input type="text" id="custName" name="custName"
+								<input type="text" id="custName" name="custName" 
 									class="form-control input-md" placeholder="VendorCode" >
 
 							</div>
@@ -989,11 +989,11 @@ function editProductDetails() {
 
 					<div class="row form-group buttons_margin_top ">
 					<div align="center">
-						<input type="button" id="printBillBtn" style="font-size: 25"
+						<input type="button" id="printBillBtn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;"
 							class="btn btn-large btn-success button-height-width" name="printBillBtn" onclick="fertilizerBillForCreditCustomer()" value="Print Bill">
-						<input type="reset" style="font-size: 25" class="btn btn-large btn-danger  button-height-width" id="save"
+						<input type="reset" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" class="btn btn-large btn-danger  button-height-width" id="save"
 								name="btn" value="Cancel" onclick="window.location.reload()">
-						<input type="button" id="btn" style="font-size: 25"
+						<input type="button" id="btn" style="font-size: 20px;font-weight: 500;padding: 0 1px;width: 130px;height: 45px;"
 								class="btn btn-large btn-success button-height-width" name="btn" onclick="openStockReport()" value="Stock Report">
 							<!-- <button id="btn" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="creditCustFertilizerBill()"><h4> Submit</h4></button>
               		<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button>
@@ -1178,13 +1178,13 @@ function editProductDetails() {
           <div class="form-group row">
             <div class="col-md-11 text-center">
        <!--  supplierDetail() function is implemented in  supplierDetails.js -->
-       <input style="  font-size: 25" type="button" value="Submit" id="saveSupplierDetailsBtn" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="supplierDetail()" /> 
-        <input style=" font-size: 25" type="button" value="Cancel" id="save" name="btn" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" onclick="refreshPage()" /> 
+       <input style="  font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" value="Submit" id="saveSupplierDetailsBtn" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="supplierDetail()" /> 
+        <input style=" font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" value="Cancel" id="save" name="btn" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" onclick="refreshPage()" /> 
        
               	<%-- <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="supplierDetail()"><h4><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("submit") %> <%}%> <%if(abc.equals("english")){%>Submit<%}%> </h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("cancel") %> <%}%> <%if(abc.equals("english")){%>Cancel<%}%> </h4> </button> --%>
-            	<input style=" font-size: 25" type="button" value="Vendor List" id="supplierListBtn" class="btn btn-primary  btn-large  button-height-width " onclick="supplierlist()" /> 
-              	<input style=" font-size: 25" type="button" value="Edit" id="supplierEditBtn" class="btn btn-primary  btn-large  button-height-width" onclick="editSupplier()" /> 
+            	<input style=" font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" value="Vendor List" id="supplierListBtn" class="btn btn-primary  btn-large  button-height-width " onclick="supplierlist()" /> 
+              	<input style=" font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" value="Edit" id="supplierEditBtn" class="btn btn-primary  btn-large  button-height-width" onclick="editSupplier()" /> 
             </div>
           </div>
          </fieldset>
@@ -1564,15 +1564,15 @@ function editProductDetails() {
 				</div> 
 			</div>--%>
 		<!-- <div class="row form-group">
-		
+		 
 		</div> -->
 		
 		<div class="form-group row">
             <div class="col-md-11 text-center">
-             	<input style="  font-size: 25" type="button" id="submitProductDtlBtn" name="btn" value="Submit" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="productDetails()" /> 
-             	<input style="  font-size: 25" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset" id="save" name="btn" value="Cancel" onclick="refreshPage()" /> 
-            	<input style="  font-size: 25" type="button" value="Product List" id="productListBtn" class="btn btn-primary btn-large button-height-width" onclick="productDetailslist()" /> 
-              	<input style="  font-size: 25" type="button" value="Edit" id="EditProductDtlBtn" class="btn btn-primary btn-large button-height-width " onclick="editProductDetails()" /> 
+             	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" id="submitProductDtlBtn" name="btn" value="Submit" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="productDetails()" /> 
+             	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset" id="save" name="btn" value="Cancel" onclick="refreshPage()" /> 
+            	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" value="Product List" id="productListBtn" class="btn btn-primary btn-large button-height-width" onclick="productDetailslist()" /> 
+              	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" value="Edit" id="EditProductDtlBtn" class="btn btn-primary btn-large button-height-width " onclick="editProductDetails()" /> 
             </div>
           </div>
 		</fieldset>

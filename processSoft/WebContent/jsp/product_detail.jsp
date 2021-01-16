@@ -141,7 +141,7 @@ function taxlist()
 </script>
 </head>
  <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("productDetails") %> <%}%> <%if(abc.equals("english")){%>Product Details<%}%></h2>
 			  	</div>
 			 
@@ -153,6 +153,7 @@ function taxlist()
 		     </div>	
     </div>
  	<div class="container">
+ 	<div class="col-sm-offset-1">
         <form id="productDtl" class="form-horizontal" method="post" action="" name="prd"><!-- Value of 'name' attribute is used in  productDetail.js  -->
           <fieldset>
 			 	<div class="row form-group">
@@ -506,14 +507,15 @@ function taxlist()
 		
 		<div class="form-group row">
             <div class="col-md-11 text-center">
-             	<input style="  font-size: 25;width: 156px;" type="button" id="submitProductDtlBtn" name="btn" value="Submit" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="productDetails()" /> 
-             	<input style="  font-size: 25;width: 156px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset" id="save" name="btn" value="Cancel" onclick="reset()" /> 
-            	<input style="  font-size: 25;width: 156px;" type="button" value="Product List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="productlist()" /> 
-              	<input style="  font-size: 25;width: 156px;" type="button" value="Edit" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="editProduct()" /> 
+             	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" id="submitProductDtlBtn" name="btn" value="Submit" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="productDetails()" /> 
+             	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset" id="save" name="btn" value="Cancel" onclick="reset()" /> 
+            	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" value="Product List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="productlist()" /> 
+              	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" value="Edit" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="editProduct()" /> 
             </div>
           </div>
 		</fieldset>
        </form>
+</div>
 </div>
 
 <!-- -------------- popup window for Tax Details  ------------------------------ -->

@@ -24,7 +24,7 @@
 		<title>Inward Process 2 Report</title>
 		
   			<div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			    <%
 			InwardProcess2Dao dao2 = new InwardProcess2Dao();
    			List operaionNameList =dao2.getInwardProcess2Operaion();

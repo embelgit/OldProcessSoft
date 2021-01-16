@@ -60,9 +60,9 @@
 <script src="/processSoft/staticContent/js/billCopy.js"></script>
 </head>
 
-<div class="container col-md-offset-1" style="float: left">
+<div class="container ">
 	<div class="row">
-		<div align="center" style="margin-top: 75px">
+		<div align="center" style="margin-top: 120px">
 			<h2 class="form-name style_heading">Outward Return Bill Copy</h2>
 		</div>
 

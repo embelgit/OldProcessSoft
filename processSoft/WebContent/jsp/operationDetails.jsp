@@ -18,8 +18,9 @@ function editExpenditure() {
 } 
 </script>
 </head>
+<body>
 <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Operation Details</h2>
 			  	</div>
 			 
@@ -30,6 +31,7 @@ function editExpenditure() {
 		     </div>	
     </div>
 	<div class="container" >
+	<div class=col-sm-offset-1>
         <form  id="operationDetails" class="form-horizontal" method="post" action="" name="operationDetails"><!-- Value of 'name' attribute is used in customerDetails.js  -->
           <fieldset>
 			<div class="row form-group">
@@ -68,12 +70,11 @@ function editExpenditure() {
            		 	</div>
            		 </div>
            		 <br>
-           		 <br>
            		 <div class="form-group row">
 		            <div class="col-md-11 text-center">
-		            <input type="button"  id="submitBtn" name="btn" style="font-size: 25;width: 156px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addOperationDetails()" value="Submit">
-		            <input   id="save" name="btn" style="font-size: 25;width: 156px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
-	           		<input type="button" style=" font-size: 25;width: 156px;" value="List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="operationDetailsList()" />
+		            <input type="button"  id="submitBtn" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addOperationDetails()" value="Submit">
+		            <input   id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
+	           		<input type="button" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" value="List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="operationDetailsList()" />
 		            <!-- <input type="button" style=" font-size: 25" value="Edit" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="editOperation()" /> -->
 		            
 	           		 	<!-- <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addExpense()"><h4> Submit</h4></button>
@@ -82,7 +83,9 @@ function editExpenditure() {
          		</div>
            	</fieldset>
           </form>
+          </div>
          </div>
+         </body>
          
         <%--  <%@include file="commons/newFooter.jsp" %> --%>
          

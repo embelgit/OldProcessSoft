@@ -89,4 +89,12 @@ input[type=reset]:hover {
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow:         3px 3px 5px 6px #ccc;
   }
-   
+  .bill-heading {
+    margin-top: 52px;
+}
+.print-btn {
+    /* display: inline-block; */
+    /* margin-top: -2px; */
+    /* align-items: center; */
+    margin-left: 300px;
+}

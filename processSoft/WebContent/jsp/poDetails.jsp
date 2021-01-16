@@ -167,7 +167,7 @@ function getEditProductDetails() {
 </head>
 <body>
 	<div class="row header_margin_top">
-		<div align="center">
+		<div class="bill-heading" align="center">
 			<h2 class="form-name style_heading">
 				<%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("poDetails") %>
 				<%}%>
@@ -182,6 +182,7 @@ function getEditProductDetails() {
 		</div>
 	</div>
 	<div class="container">
+	<div class="col-sm-offset-1">
 		<form class="form-horizontal" method="post" action="" name="spld1">
 			<!-- Value of 'name' attribute is used in  supplierDetails.js  -->
 			<fieldset>
@@ -471,18 +472,19 @@ function getEditProductDetails() {
 						</div>
 					</div>
 				</div>
-
+               <br>
 				<div class="form-group row">
 					<div class="col-md-11 text-center">
-						<input style="height: 65px; width: 180; font-size: 25" type="button" value="Submit" id="save" name="btn"
+						<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="Submit" id="save" name="btn"
 							class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="valforPoDetails()" />
-						<input style="height: 65px; width: 180; font-size: 25" type="button" value="Cancel" id="cancel" name="btn"
+						<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 100px;height: 45px;" type="button" value="Cancel" id="cancel" name="btn"
 							class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" onclick="reset()" />
 						<!-- <input style=" height: 65px; width: 180; font-size: 25" type="button" value="PO List" id="listBtn" class="btn btn-primary" onclick="supplierlist()" /> -->
 					</div>
 				</div>
 			</fieldset>
 		</form>
+	</div>
 	</div>
 	
 	<!-- -------------- popup window for Supplier  ------------------------------ -->
