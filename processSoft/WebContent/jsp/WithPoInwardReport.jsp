@@ -209,6 +209,7 @@
 
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="inwardtableForReport" class="display"
@@ -232,6 +233,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -319,6 +321,7 @@
                  </div>
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="inwardtableForReportDatewise" class="display"
@@ -342,6 +345,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -437,6 +441,7 @@
 
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="inwardtableForReportproductNameWise" class="display"
@@ -460,6 +465,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -555,6 +561,7 @@
 
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="inwardtableForReportvendorNameWise" class="display"
@@ -578,6 +585,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -639,6 +647,7 @@
 
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="inwardtableForReportShopNameWise" class="display"
@@ -662,6 +671,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>

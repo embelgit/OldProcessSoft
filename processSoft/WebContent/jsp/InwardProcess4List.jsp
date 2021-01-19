@@ -23,7 +23,7 @@
 		<title>Inward Process 4 List</title>
 		
   			<div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			    <%
 			InwardProcess4Dao dao2 = new InwardProcess4Dao();
    			List operaionNameList =dao2.getInwardProcess4Operaion();
@@ -90,7 +90,7 @@
 	InwardProcess4Dao dao=new InwardProcess4Dao();
 	List list12=dao.getInwardProcess4List(request);
 	%>	
-	<div id="date">
+	<div id="date" style="margin-left:10px;">
 		<label id="demo"></label>
 		<script>
 			var date = new Date();
@@ -99,6 +99,7 @@
 	</div>
 
 	<div id="demo_jui">
+	<div class="table-list">
 		<table id="list" class="display" border="1">
 			<thead>
 				<tr>
@@ -127,10 +128,11 @@
 				%>
 			</tbody>
 		</table>
+		</div>
 	</div>
-	
+	<br>
 	<div class="wrapper" align="center">
-		<input type="button" value="Back" id="listBtn" style="font-size: 25" class="btn btn-primary  btn-large  button-height-width" onclick="Back()" /> 
+		<input type="button" value="Back" id="listBtn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-primary  btn-large  button-height-width" onclick="Back()" /> 
 <!-- 		<input type="button" value="Delete Vendor" style="font-size: 25" id="deleteVenderDtlBtn" class="btn btn-primary  btn-large  button-height-width" onclick="deletSupplier()" /> -->
 	</div>	
 </body>

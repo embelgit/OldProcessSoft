@@ -25,15 +25,15 @@
 </script> 
 
 </head>
- <div class="row header_margin_top">
-			    <div align="center">
+    <div class="row header_margin_top">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Edit Tax Detail</h2>
 			  	</div>
 			 
     </div>
      <div class="row">
 		     <div class="col-sm-offset-1 col-md-10">
-				  		<hr style="border-top-color:#c1b1b1;">
+				  	<hr style="border-top-color:#c1b1b1;">
 		     </div>	
     </div>
 <div class="container col-sm-offset-2" >
@@ -96,9 +96,9 @@
 				<div class="form-group row">
            			<div class="col-md-10 text-center">
 
-					<input type="button" id="save2" name="btn" style="font-size: 25" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="editTax()" value="Update">
-					<input id="reset" name="btn1" style="font-size: 25" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
- 					<input style=" height: 65px; width: 180; font-size: 25" type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
+					<input type="button" id="save2" name="btn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="editTax()" value="Update">
+					<input id="reset" name="btn1" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
+ 					<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
 
             		</div>
           		</div>

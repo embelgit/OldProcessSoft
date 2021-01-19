@@ -425,7 +425,8 @@ function editProductDetails() {
 
 		<!--         For credit Customer   -->
 
-		<div id="CreditCustDetail col-sm-offset-3">
+		<div id="CreditCustDetail ">
+		<div class="col-sm-offset-1">
 			<form class="form-horizontal" method="post" action="" name="creditFertiBill1">
 				<fieldset>
 					<div class="row form-group">
@@ -1002,6 +1003,7 @@ function editProductDetails() {
 					</div>
 				</fieldset>
 			</form>
+			</div>
 		</div>
 	</div>
 	

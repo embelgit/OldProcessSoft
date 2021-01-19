@@ -20,7 +20,7 @@
 	<head>
 		<title>Expenditure List</title>
 		<div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("godownDetails") %> <%}%> <%if(abc.equals("english")){%>Expenditure List<%}%> </h2>
 			  	</div>
     </div>		
@@ -66,7 +66,7 @@
 	ExpenditureDetailsDao dao = new ExpenditureDetailsDao();
 	List list12=dao.getExpenditureList(request);	
 	%>
-	<div id="date" align="right">
+	<div id="date" align="right" style="margin-right:10px;">
 		<label id="demo"></label>
 		<script>
 			var date = new Date();
@@ -74,6 +74,7 @@
 		</script>
 	</div>
 	<div id="demo_jui">
+	<div class=" table-list">
 		<table id="list" class="display" border="1">
 			<thead>
 				<tr>
@@ -95,10 +96,12 @@
 				%>
 			</tbody>
 		</table>
+		</div>
 	</div>
+	<br>
 	<div class="wrapper" align="center">
-		<input type="button" style="  font-size: 25"  value="Back" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="Back()" /> 
-		<input type="button" style="  font-size: 25"  value="Delete Expense" id="listBtn2" class="btn btn-primary btn-large button-height-width" onclick="deletExpenditure()" />
+		<input type="button" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;"  value="Back" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="Back()" /> 
+		<input type="button" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;"  value="Delete" id="listBtn2" class="btn btn-primary btn-large button-height-width" onclick="deletExpenditure()" />
 	</div>
 </body>
 </html>

@@ -76,7 +76,7 @@
 
 <div class="tab-pane active" id="home">
 	<ul class="nav nav-tabs">
-		<li class="active" style="margin-bottom:10px;"><a data-toggle="tab" href="#BillCopy"><h4
+		<li class="active" ><a data-toggle="tab" href="#BillCopy"><h4
 					style="color: blue;">Bill Copy</h4></a></li>
 	</ul>
 </div>

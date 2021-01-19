@@ -80,15 +80,15 @@
 		</div>
 	</div>
 	<ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#Challannowise"><h4>
+		<li class="active"><a data-toggle="tab" href="#Challannowise"><h4
 					style="color: blue">Challan No Wise</h4></a></li>
-		<li><a data-toggle="tab" href="#TwoDatewise"><h4>
+		<li><a data-toggle="tab" href="#TwoDatewise"><h4
 					style="color: blue">Datewise</h4></a></li>
-		<li><a data-toggle="tab" href="#productNameWise"><h4>
+		<li><a data-toggle="tab" href="#productNameWise"><h4
 					style="color: blue">Product Name Wise</h4></a></li>
-		<li><a data-toggle="tab" href="#vendorNameWise"><h4>
+		<li><a data-toggle="tab" href="#vendorNameWise"><h4
 					style="color: blue">Vendor Name Wise</h4></a></li>
-		<li><a data-toggle="tab" href="#ShopNameWise"><h4>
+		<li><a data-toggle="tab" href="#ShopNameWise"><h4
 					style="color: blue">Shop Name Wise</h4></a></li>
 
 	</ul>
@@ -187,6 +187,7 @@
 
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="OutwardtableForReport" class="display"
@@ -214,6 +215,7 @@
 							</tfoot>
 
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -303,6 +305,7 @@
 					</div>
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="outwardtableForReportDatewise" class="display"
@@ -330,6 +333,7 @@
 							</tfoot>
 
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -426,6 +430,7 @@
 
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="OutwardtableForReportproduct" class="display"
@@ -453,6 +458,7 @@
 							</tfoot>
 
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -549,6 +555,7 @@
 
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="OutwardtableForReportvendor" class="display"
@@ -576,6 +583,7 @@
 							</tfoot>
 
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -639,6 +647,7 @@
 
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="OutwardShop" class="display"
@@ -666,6 +675,7 @@
 							</tfoot>
 
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>

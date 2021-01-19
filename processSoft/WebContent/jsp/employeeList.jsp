@@ -58,8 +58,8 @@
 		
 		
 		
-		<div class="row">
-				    <div align="center">
+		<div class="row header_margin_top">
+				    <div class="bill-heading" align="center">
 				  		<h2 class="form-name style_heading">Employee List</h2>
 				  	</div>
 				 	
@@ -75,7 +75,7 @@
 	List list12=dao.getEmployeeList();
 	%>
 	
-	<div id="date">
+	<div id="date" style="margin-left:10px;">
 		<label id="demo"></label>
 		<script>
 			var date = new Date();
@@ -84,6 +84,7 @@
 	</div>
 
 	<div id="demo_jui">
+	<div class=" table-list">
 		<table id="list" class="display" border="1">
 			<thead>
 				<tr>
@@ -125,10 +126,12 @@
 				%>
 			</tbody>
 		</table>
+		</div>
 	</div>
 	
+	<br>
 	<div class="wrapper" align="center">
-		<input type="button" value="Back"  style="font-size: 25" id="listBtn" class="btn btn-primary btn-large  button-height-width" onclick="Back()" /> 
+		<input type="button" value="Back"  style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" id="listBtn" class="btn btn-primary btn-large  button-height-width" onclick="Back()" /> 
 	</div>
 	
 </body>

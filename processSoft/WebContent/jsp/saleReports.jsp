@@ -199,6 +199,7 @@
 					</div>
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="sale1" class="display"
@@ -232,6 +233,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -319,6 +321,7 @@
 						</div>
 					</div>
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="saleBetTwoDates" class="display"
@@ -355,6 +358,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -453,6 +457,7 @@
 						</div>
 					</div>
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="saleChalan" class="display"
@@ -487,6 +492,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -586,6 +592,7 @@
 						</div>
 					</div>
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="saleChalaninw" class="display"
@@ -620,6 +627,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -683,6 +691,7 @@
 					
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="saleRepShp" class="display"
@@ -718,6 +727,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 
 				</fieldset>
@@ -780,6 +790,7 @@
 					
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="saleRepShp1" class="display"
@@ -815,6 +826,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 
 				</fieldset>
@@ -882,6 +894,7 @@
 					
 
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="saleow" class="display"
@@ -916,6 +929,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 
 				</fieldset>
@@ -974,6 +988,7 @@
 						</div>
 					</div>
 					<div class="table-responsive">
+					<div class="table-list">
 						<table
 							class="table table-bordered table-striped table-condensed cf"
 							id="billReport" class="display"
@@ -995,6 +1010,7 @@
 								</tr>
 							</tfoot>
 						</table>
+						</div>
 					</div>
 				</fieldset>
 			</form>
@@ -1009,6 +1025,5 @@
 
 
 
-</div>
-</div>
+
 <%@include file="commons/newFooter.jsp"%>

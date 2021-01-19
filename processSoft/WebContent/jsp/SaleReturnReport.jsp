@@ -271,6 +271,7 @@
 							</div>
 						</div>
 						<div class="table-responsive">
+						<div class="table-list">
 							<table
 								class="table table-bordered table-striped table-condensed cf"
 								id="VendorTblRange" class="display"
@@ -298,6 +299,7 @@
 									</tr>
 								</tfoot>
 							</table>
+							</div>
 						</div>
 
 					</fieldset>
@@ -383,6 +385,7 @@
 
 
 						<div class="table-responsive">
+						<div class="table-list">
 							<table
 								class="table table-bordered table-striped table-condensed cf"
 								id="ShopTbl" class="display"
@@ -410,6 +413,7 @@
 									</tr>
 								</tfoot>
 							</table>
+							</div>
 						</div>
 
 					</fieldset>

@@ -21,7 +21,7 @@ function Back(){
 </script>
 </head>
 		 	<div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("godownDetails") %> <%}%> <%if(abc.equals("english")){%>Delete Vendor Name <%}%> </h2>
 			  	</div>
 			 
@@ -73,9 +73,9 @@ function Back(){
 				<div class="form-group row">
 		            <div class="col-md-10 text-center">
 		           <!--  "catDetails()" function is implemented in categoryDetails.js -->
-       <input type="button"  id="venderDeleteBtn" name="btn" style="font-size: 25" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="delSupplier()" value="Submit">
-       <input  id="save" name="btn" style="font-size: 25" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()" value="Cancel">
-       <input type="button" value="Back" style="font-size: 25" id="listBtn" class="btn btn-primary  btn-large  button-height-width" onclick="Back()" />
+       <input type="button"  id="venderDeleteBtn" name="btn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="delSupplier()" value="Submit">
+       <input  id="save" name="btn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()" value="Cancel">
+       <input type="button" value="Back" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" id="listBtn" class="btn btn-primary  btn-large  button-height-width" onclick="Back()" />
               	
               	<%-- <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="GoDetails()"><h4><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("submit") %> <%}%> <%if(abc.equals("english")){%>Submit<%}%> </h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> --%>

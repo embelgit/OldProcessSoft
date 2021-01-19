@@ -246,13 +246,13 @@
           <div class="form-group row">
             <div class="col-md-11 text-center">
        <!--  supplierDetail() function is implemented in  supplierDetails.js -->
-       <input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" value="Submit" id="saveSupplierDetailsBtn" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="supplierDetail()" /> 
-        <input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" value="Cancel" id="save" name="btn" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" onclick="location.reload()" /> 
+       <input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="Submit" id="saveSupplierDetailsBtn" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="supplierDetail()" /> 
+        <input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="Cancel" id="save" name="btn" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" onclick="location.reload()" /> 
        
               	<%-- <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="supplierDetail()"><h4><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("submit") %> <%}%> <%if(abc.equals("english")){%>Submit<%}%> </h4></button>
               	<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("cancel") %> <%}%> <%if(abc.equals("english")){%>Cancel<%}%> </h4> </button> --%>
-            	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" value="Vendor List" id="listBtn" class="btn btn-primary  btn-large  button-height-width " onclick="supplierlist()" /> 
-              	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" value="Edit" id="listBtn" class="btn btn-primary  btn-large  button-height-width" onclick="editSupplier()" /> 
+            	<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="List" id="listBtn" class="btn btn-primary  btn-large  button-height-width " onclick="supplierlist()" /> 
+              	<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="Edit" id="listBtn" class="btn btn-primary  btn-large  button-height-width" onclick="editSupplier()" /> 
             </div>
           </div>
          </fieldset>

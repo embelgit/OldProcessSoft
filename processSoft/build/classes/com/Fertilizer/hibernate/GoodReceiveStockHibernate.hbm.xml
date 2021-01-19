@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!-- GoodReceiveStockHibernate.hbm.xml -->
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.GoodReceiveStockHibernate" table="good_receive_stock" schema="process_soft" >
+    
+    	<id name="pkGoodReceiveStockId" type="java.lang.Long" column="pk_good_receive_stock_id">
+			<generator class="increment" />
+		</id>
+		
+		<property 
+		name="fkProductId" 
+		type="java.lang.Long" 
+		column="fk_product_id" />
+		
+		<property 
+		name="productName" 
+		type="java.lang.String" 
+		column="product_name" />
+		
+<!-- 		<property name="sendToOperationDetailsIdFk" type="java.lang.Long" column="send_to_operation_details_id_fk"></property> -->
+		
+        <property name="userId" type="java.lang.Long" column="user_id"></property>
+		<property name="userName" type="java.lang.String" column="username"></property>
+		<property name="shopId" type="java.lang.Long" column="shop_id"></property>
+		<property name="shopName" type="java.lang.String" column="shopname"></property>
+		
+		<property 
+		name="lastUpdateDate" 
+		type="java.util.Date" 
+		column="last_update_date" />
+		
+		</class>
+    </hibernate-mapping>

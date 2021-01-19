@@ -20,7 +20,7 @@
 	
 	</head>
   	<div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Edit Employee Details</h2>
 			  	</div>
 			 
@@ -30,7 +30,8 @@
 				  		<hr style="border-top-color:#c1b1b1;">
 		     </div>	
     </div>
-      <div class="container col-sm-offset-2" >
+      <div class="container " >
+      <div class="col-sm-offset-1">
         <form class="form-horizontal" method="post" action="" name="empd1"><!-- Value of 'name' attribute is used in employeeDetails.js  -->
           <fieldset>
        			 <div class="row form-group">
@@ -176,25 +177,27 @@
             		</div>
 				</div>
 			</div>
-			
+			<br>
+			<br>
  			<div class="form-group row">
-            	<div class="col-md-10 text-center">
+            	<div class="col-md-11 text-center">
             	<!--  "employeedetails()" function is implemented in employeeDetails.js  -->
     	          	
-    	          	 <input type="button" id="save" name="btn" style="font-size: 25" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="editEmployee()" value="Submit">
-	           		 <input id="save" name="btn" style="font-size: 25" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
+    	          	 <input type="button" id="save" name="btn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="editEmployee()" value="Submit">
+	           		 <input id="save" name="btn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
     	          	
     	          	
     	          	<!-- <button id="save" name="btn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="updateEmployeeDetails()"><h4> Update</h4></button>
               		<button class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()"><h4> Cancel</h4> </button> -->
         	    	<!-- <input type="button" value="Back" id="listBtn" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="Back()" />  -->
-        	    	<input style=" height: 65px; width: 180; font-size: 25" type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
+        	    	<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
         	    </div>
           	</div>
 
 
 		</fieldset>
       </form>
+      </div>
     </div>
     
     <%@include file="commons/newFooter.jsp" %>

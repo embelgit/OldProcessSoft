@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.CustomerBillBean1" 	
+    table="bill_details" schema="process_soft"
+    >
+    
+    	<id name="pk_customer_id" type="java.lang.Long" column="pk_customer_id">
+			<generator class="increment" />
+		</id>
+		
+		 <property name="supplier1" type="java.lang.Long" column="fk_supplier_id" length="20"/> 
+		<property name="productName" type="java.lang.String" column="product_Name" />
+		<property name="hsn" type="java.lang.String" column="hsn" />
+		<property name="okquantity" type="java.lang.Double" column="okquantity" />
+		<property name="gst" type="java.lang.Long" column="gst" />
+		<property name="Igst" type="java.lang.Long" column="Igst" />
+		<property name="taxamount" type="java.lang.Long" column="tax_amount" />
+		<property name="buyPrice" type="java.lang.Double" column="buy_Price" />
+		<property name="description" type="java.lang.String" column="description" />
+		<property name="total" type="java.lang.Double" column="total" />
+		<property name="gridTotal" type="java.lang.Double" column="grid_Total" />
+		<property name="creditcustomer" type="java.lang.String" column="creditcustomer" />
+		<property name="custname" type="java.lang.String" column="custname" />  
+		<property name="contactNo1" type="java.lang.Long" column="contact_No" />
+		<property name="gstNo2" type="java.lang.String" column="gst_No" />
+		<property name="initialPayment" type="java.lang.Long" column="initial_Payment" />
+		<property name="gstForExpense1" type="java.lang.Double" column="gstFor_Expense" />
+		<property name="totalWithExpense1" type="java.lang.Double" column="totalWith_Expense" />
+		<property name="paymentMode2" type="java.lang.String" column="payment_Mode" />
+		<property name="outwardchallanno" type="java.lang.String" column="outwardchallan_no" />
+		<!-- <property name="saleDate2" type="java.util.Date" column="sale_Date" /> -->
+		<property name="saleDate" type="java.lang.String" column="sale_Date" />
+		<property name="custgstno" type="java.lang.Long" column="custgstno" />
+		<property name="discount1" type="java.lang.Double" column="discount" />
+		<property name="discountAmount1" type="java.lang.Double" column="discount_Amount" />
+		<property name="hamaliExpence3" type="java.lang.Double" column="hamali_Expence" />
+		<property name="hamaliExpence1" type="java.lang.Double" column="hamaliExpence" />	
+		<property name="grossTotal1" type="java.lang.Double" column="gross_Total" />
+		<property name="address" type="java.lang.String" column="address" />
+		<property name="suppliername" type="java.lang.String" column="supplier_name" />
+		<property name="billNo" type="java.lang.String" column="bill_no" /> 
+		<property name="billNo1" type="java.lang.String" column="bill_no1" />
+		<property name="operation" type="java.lang.String" column="Operation" />
+		<property name="InwardChallanNo" type="java.lang.String" column="InwardChallanNo" />
+		<property name="vehicle" type="java.lang.String" column="vehicle" />
+		<property name="userId" type="java.lang.Long" column="user_id"></property>
+		<property name="username" type="java.lang.String" column="username"></property>
+		<property name="shopId" type="java.lang.Long" column="shop_id"></property>
+		<property name="shopName" type="java.lang.String" column="shopname"></property>
+		</class>
+    </hibernate-mapping>

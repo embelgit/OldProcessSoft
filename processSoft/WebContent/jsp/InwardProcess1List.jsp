@@ -102,8 +102,8 @@
 	List list12=dao.getInwardProcess1List(request);
 	%>
 	
-	<div id="date">
-		<label id="demo"></label>
+	<div id="date" style="margin-left:10px">
+		<label id="demo" ></label>
 		<script>
 			var date = new Date();
 			document.getElementById("demo").innerHTML = date.toDateString();
@@ -111,6 +111,7 @@
 	</div>
 
 	<div id="demo_jui">
+	<div class="table-list">
 		<table id="list" class="display" border="1">
 			<thead>
 				<tr>
@@ -139,10 +140,12 @@
 				%>
 			</tbody>
 		</table>
+		</div>
 	</div>
+	<br>
 	
 	<div class="wrapper" align="center">
-		<input type="button" value="Back" id="listBtn" style="font-size: 25" class="btn btn-primary  btn-large  button-height-width" onclick="Back()" /> 
+		<input type="button" value="Back" id="listBtn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-primary  btn-large  button-height-width" onclick="Back()" /> 
 <!-- 		<input type="button" value="Delete Vendor" style="font-size: 25" id="deleteVenderDtlBtn" class="btn btn-primary  btn-large  button-height-width" onclick="deletSupplier()" /> -->
 	</div>	
 </body>

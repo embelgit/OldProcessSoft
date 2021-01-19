@@ -309,7 +309,7 @@
 							href="#RangeWiseSaleReport"><h4 style="color: blue">Range
 									Wise</h4></a></li>  -->
 						<!-- <li class="active"><a data-toggle="tab" href="#supplierSingleDate"><h4 style="color: blue">Datewise</h4></a></li> -->
-						<li><a data-toggle="tab" href="#WhosaleCustInRangeSaleReport"><h4>
+						<li><a data-toggle="tab" href="#WhosaleCustInRangeSaleReport"><h4
 									style="color: blue">Range</h4></a></li>
 					</ul>
 

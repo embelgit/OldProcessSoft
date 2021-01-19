@@ -49,21 +49,22 @@
 			});
 	</script>
 <body id="dt_example" style="min-height:300px;">
-	<div class="row">
+	<div class="row header_margin_top">
 		<div align="center" style="margin-top: 120px">
 			<h2 class="form-name style_heading">Good Receive Report</h2>
 		</div>
+	</div>	
 		<div class="row">
-			<div class="col-sm-offset-1 col-md-10">
-				<hr style="border-top-color:#c1b1b1;">
-			</div>
+		     <div class="col-sm-offset-1 col-md-10">
+				 <hr style="border-top-color:#c1b1b1;">
+		     </div>	
 		</div>
-	</div>		    
+		    
 	<%
 	PoDetailsDao dao=new PoDetailsDao();
 	List list12=dao.getGoodReciveDetails();
 	%>
-	<div id="date">
+	<div id="date" style="margin-left:10px">
 		<label id="demo"></label>
 		<script>
 			var date = new Date();
@@ -71,6 +72,7 @@
 		</script>
 	</div>
 	<div id="demo_jui">
+	<div class="table-list">
 		<table id="list" class="display" border="1">
 			<thead>
 				<tr>
@@ -111,6 +113,7 @@
 				%>
 			</tbody>
 		</table>
+		</div>
 	</div>
 	<div class="wrapper" align="center">
 		<!-- <input type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" />  -->

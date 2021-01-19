@@ -82,7 +82,7 @@ function taxlist()
 </script>
 
 <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading">Edit Expenditure Detail</h2>
 			  	</div>
 			 
@@ -92,7 +92,8 @@ function taxlist()
 				  		<hr style="border-top-color:#c1b1b1;">
 		     </div>	
     </div>
-	<div class="container col-sm-offset-2" >
+	<div class="container " >
+	<div class="col-sm-offset-3">
         <form class="form-horizontal" method="post" action="" id="updateExpenseDetails" name="updateExpenseDetails"><!-- Value of 'name' attribute is used in customerDetails.js  -->
           <fieldset>
 			<div class="row form-group">
@@ -127,7 +128,7 @@ function taxlist()
             			</div>
            		 	</div>
            		 </div>
-           		 <div class="row form-group">
+           		<!--  <div class="row form-group">
            			<label class="col-md-3 control-label" for="expenseName">Expenditure Name<sup>*</sup></label>  
            	 		<div class="col-md-3">
 						<div class="input-group">
@@ -137,21 +138,23 @@ function taxlist()
 							<input type="text" id="NewExpenseName" class="form-control"  onkeypress="return isAlphabetsWithSpace(event)"/>
             			</div>
            		 	</div>
-           		 </div>
+           		 </div> -->
+           		 <br>
            		 <div class="form-group row">
-		            <div class="col-md-10 text-center">
+		            <div class="col-md-8 text-center">
 		            	<!-- <input type="button"  id="save" name="btn" style="font-size: 25" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="addExpenseDetails()" value="Submit">
 		            	<input id="save" name="btn" style="font-size: 25" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width"  type="reset"  onclick="reset()" value="Cancel">
 	           		 	<input type="button" style=" font-size: 25" value="Expenditure List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="expenditureList()" />
 		            	<input type="button" style=" font-size: 25" value="Edit" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="editExpenditure()" /> -->
 		            	
-		            	<input style="font-size: 25" id="UpdateBtn" name="UpdateBtn" value="Update" style="font-size: 25" class="btn btn-large btn-success   button-height-width"  onclick="updateExpenseDtlValidation()"/>
-              			<input  style="font-size: 25" class="btn btn-large btn-danger glyphicon  button-height-width"  type="reset"  onclick="reset()"/> 
-           				<input style="font-size: 25" type="button" value="Back" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="Back()" />
+		            	<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" id="UpdateBtn" name="UpdateBtn" value="Update" class="btn btn-large btn-success   button-height-width"  onclick="updateExpenseDtlValidation()"/>
+              			<input  style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-danger glyphicon  button-height-width"  type="reset"  onclick="reset()"/> 
+           				<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="Back" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="Back()" />
 		            </div>
          		</div>
            	</fieldset>
           </form>
+          </div>
          </div>
          
          <%@include file="commons/newFooter.jsp" %>

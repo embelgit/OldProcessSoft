@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.InwardBean" 
+    table="inwand_details" schema="process_soft"
+    >
+    
+    	<id name="pk_inward_id" type="java.lang.Long" column="pk_inward_id">
+			<generator class="increment" />
+		</id>
+		
+		<property name="suppliername" type="java.lang.String" column="suppliername"/>
+		<property name="challanno" type="java.lang.String" column="challan_No"/>
+		<property name="pono" type="java.lang.String" column="pono"/>
+		<property name="challadate" type="java.util.Date" column="inwardDate"/>
+		<property name="productname" type="java.lang.String" column="productname"/>
+		<property name="operation" type="java.lang.String" column="operation"/>
+		<property name="poDate" type="java.lang.String" column="PODate"/>
+		<property name="quantity" type="java.lang.Double" column="quantity"/>
+		<property name="GridTotal" type="java.lang.Double" column="GridTotal"/>
+		<property name="dupQuantity" type="java.lang.Double" column="dup_quantity"/>
+		<property name="rate" type="java.lang.Double" column="rate"/>
+		<property name="unit" type="java.lang.String" column="unit"/>
+		<property name="total" type="java.lang.Double" column="total"/>
+		<property name="alltotal" type="java.lang.Double" column="alltotal"/>
+		<property name="grosstotal" type="java.lang.Double" column="grosstotal"/>
+		
+		<property name="hsn" type="java.lang.String" column="hsn"/>
+		
+		<property name="fkOperationDetailsId" type="java.lang.Long" column="fk_operation_details_id"></property>
+		<property name="operationName" type="java.lang.String" column="operation_name"></property>
+		
+		<property name="userId" type="java.lang.Long" column="user_id"></property>
+		<property name="username" type="java.lang.String" column="username"></property>
+		<property name="shopId" type="java.lang.Long" column="shop_id"></property>
+		<property name="shopName" type="java.lang.String" column="shopname"></property>
+		
+		</class>
+    </hibernate-mapping>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.PoDetailsBean" 	
+    table="po_details" schema="process_soft"
+    >
+    
+    	<id name="pk_poDetails_id" type="java.lang.Long" column="pk_po_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property name="idno" type="java.lang.String" column="idno" />
+		<property name="suppliername" type="java.lang.String" column="suppliername" />
+		<property name="date" type="java.util.Date" column="date" />
+		<property name="contactno" type="java.lang.Long" column="contactno" />
+		<property name="city" type="java.lang.String" column="city" />
+		<property name="gstno" type="java.lang.String" column="gstno" />
+		<property name="address" type="java.lang.String" column="address" />
+		<property name="productname" type="java.lang.String" column="productname" />
+		<property name="operation" type="java.lang.String" column="operation" />
+		<property name="quantity" type="java.lang.Double" column="quantity" />
+		<property name="rate" type="java.lang.Double" column="rate" />
+		<property name="unit" type="java.lang.String" column="unit" />
+		<property name="gridTotal" type="java.lang.Double" column="grid_total" />
+		<property name="total" type="java.lang.Double" column="total" />
+		<property name="grosstotal" type="java.lang.Double" column="grosstotal" />
+		<property name="Shop" type="java.lang.String" column="Shop" />
+		
+		<property name="userId" type="java.lang.Long" column="user_id"></property>
+		<property name="username" type="java.lang.String" column="username"></property>
+		<property name="shopId" type="java.lang.Long" column="shop_id"></property>
+		<property name="shopName" type="java.lang.String" column="shopname"></property>
+		
+		</class>
+    </hibernate-mapping>

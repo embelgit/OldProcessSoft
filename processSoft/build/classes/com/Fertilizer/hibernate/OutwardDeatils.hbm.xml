@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.OutwardBean" 	
+    table="outward_details" schema="process_soft"
+    >
+    
+    	<id name="pk_outward_id" type="java.lang.Long" column="pk_outward_id">
+			<generator class="increment" />
+		</id>
+
+
+		
+		<property name="suppliername" type="java.lang.String" column="suppliername" />
+		<property name="hsn" type="java.lang.String" column="hsn" />
+		<property name="challanNo" type="java.lang.String" column="challan_No" />
+		<property name="outwardchallanno" type="java.lang.String" column="outwardchallan_no" />
+		<property name="inwardDate" type="java.util.Date" column="inwardDate" />
+		<property name="outwardDate" type="java.util.Date" column="outward_date" />
+		<property name="productName" type="java.lang.String" column="productName" />
+		<property name="description" type="java.lang.String" column="description" />
+		<property name="rejectedquantity" type="java.lang.Double" column="rejectedquantity" />  
+		<property name="okquantity" type="java.lang.Double" column="okquantity" />
+		<property name="vechicleNo" type="java.lang.String" column="vechicleNo"/>
+		<property name="boxDescripation" type="java.lang.String" column="boxDescripation"/>
+		<property name="unprocessquantity" type="java.lang.Double" column="unprocessquantity" />
+		<property name="unit" type="java.lang.String" column="unit" />
+		<property name="total" type="java.lang.Double" column="total" />
+		<property name="alltotal" type="java.lang.Double" column="alltotal" />
+		<property name="GridTotal" type="java.lang.Double" column="GridTotal" />
+		<property name="grosstotal" type="java.lang.Double" column="grosstotal" />
+		<property name="buyPrice" type="java.lang.Double" column="rate" />
+		<property name="tinNo" type="java.lang.String" column="tinNo" />
+		<property name="IdNo" type="java.lang.String" column="IdNo" />
+		<property name="operation" type="java.lang.String" column="operation" />
+		<property name="dupQuantity" type="java.lang.String" column="dupQuantity"/>
+		<property name="userId" type="java.lang.Long" column="user_id"></property>
+		<property name="username" type="java.lang.String" column="username"></property>
+		<property name="shopId" type="java.lang.Long" column="shop_id"></property>
+		<property name="shopName" type="java.lang.String" column="shopname"></property>
+		</class>
+    </hibernate-mapping>

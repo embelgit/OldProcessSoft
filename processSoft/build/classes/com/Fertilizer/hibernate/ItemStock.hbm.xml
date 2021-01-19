@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23 May, 2018 7:09:41 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.Fertilizer.hibernate.ItemStock" table="ITEMSTOCK">
+        <id name="pkItemStockId" type="java.lang.Long">
+            <column name="PKITEMSTOCKID" />
+            <generator class="assigned" />
+        </id>
+        <property name="stock" type="java.lang.Long">
+            <column name="STOCK" />
+        </property>
+        <property name="fkProductId" type="java.lang.Long">
+            <column name="FKPRODUCTID" />
+        </property>
+        <property name="fkCatId" type="java.lang.Long">
+            <column name="FKCATID" />
+        </property>
+        <property name="fkGodwonId" type="java.lang.Long">
+            <column name="FKGODWONID" />
+        </property>
+        <many-to-one name="productDetailsBean" class="com.Fertilizer.hibernate.ProductDetailsBean" fetch="join">
+            <column name="PRODUCTDETAILSBEAN" />
+        </many-to-one>
+        <many-to-one name="godownEntry" class="com.Fertilizer.hibernate.GodownEntry" fetch="join">
+            <column name="GODOWNENTRY" />
+        </many-to-one>
+        <many-to-one name="categoryDetailsBean" class="com.Fertilizer.hibernate.CategoryDetailsBean" fetch="join">
+            <column name="CATEGORYDETAILSBEAN" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

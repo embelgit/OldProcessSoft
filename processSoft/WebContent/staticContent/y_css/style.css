@@ -98,3 +98,7 @@ input[type=reset]:hover {
     /* align-items: center; */
     margin-left: 300px;
 }
+.table-list{
+margin-left: 10px;
+    margin-right: 10px;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23 May, 2018 7:09:41 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.Fertilizer.hibernate.GodownEntry" table="GODOWNENTRY">
+        <id name="PkGodownId" type="java.lang.Long">
+            <column name="PKGODOWNID" />
+            <generator class="assigned" />
+        </id>
+        <property name="godownName" type="java.lang.String">
+            <column name="GODOWNNAME" />
+        </property>
+    </class>
+</hibernate-mapping>

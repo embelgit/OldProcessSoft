@@ -23,7 +23,7 @@
 
 </head>
 		 	<div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("godownDetails") %> <%}%> <%if(abc.equals("english")){%>Delete Expenditure Name<%}%> </h2>
 			  	</div>
 			 
@@ -70,13 +70,13 @@
             			</div>
            		 	</div>
 				</div>
-				
+				<br>
 		<div class="form-group row">
 		<div class="col-md-10 text-center">
 		           <!--  "catDetails()" function is implemented in categoryDetails.js -->
-       		<input type="button"  id="btn" name="btn" style="font-size: 25" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="deleteExpenditureValidation()" value="Submit">
-       		<input  id="save" name="btn" style="font-size: 25" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()" value="Cancel">
-       		<input style="  font-size: 25" type="button" value="Back" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="Back()" />
+       		<input type="button"  id="btn" name="btn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="deleteExpenditureValidation()" value="Submit">
+       		<input  id="save" name="btn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset"  onclick="reset()" value="Cancel">
+       		<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="Back" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="Back()" />
 		</div>
         </div>
 		</fieldset>

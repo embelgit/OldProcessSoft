@@ -23,7 +23,7 @@
 <title>Tax List</title>
 
 <div class="row header_margin_top">
-<div align="center">
+<div class="bill-heading" align="center">
 	<h2 class="form-name style_heading">Tax List</h2>
 </div>			 
 </div>
@@ -117,8 +117,8 @@ function deletTax(){
 	</div>
 	
 	<div class="wrapper" align="center"  style="margin-top: 40px">
-		<input style="  font-size: 25"  type="button"  value="Back" id="listBtn" class="btn btn-primary  btn-large  button-height-width "  onclick="Back()" /> 
-		<input type="button" id="deleteBtn" style="  font-size: 25" value="Delete Tax" class="btn btn-primary  btn-large  button-height-width " onclick="deletTax()" />
+		<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;"  type="button"  value="Back" id="listBtn" class="btn btn-primary  btn-large  button-height-width "  onclick="Back()" /> 
+		<input type="button" id="deleteBtn" style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" value="Delete" class="btn btn-primary  btn-large  button-height-width " onclick="deletTax()" />
 	</div>
 	
 </body>

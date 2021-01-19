@@ -76,8 +76,8 @@
 	StockDao dao=new StockDao();
 	List list12=dao.getInwardProcess3List(request);
 	%>	
-	<div id="date">
-		<label id="demo"></label>
+	<div id="date" style="margin-left:10px;>
+		<label id="demo" "></label>
 		<script>
 			var date = new Date();
 			document.getElementById("demo").innerHTML = date.toDateString();
@@ -85,6 +85,7 @@
 	</div>
 
 	<div id="demo_jui">
+	<div class="table-list">
 		<table id="list" class="display" border="1">
 			<thead>
 				<tr>
@@ -109,6 +110,7 @@
 				%>
 			</tbody>
 		</table>
+		</div>
 	</div>
 	
 	<div class="wrapper" align="center">

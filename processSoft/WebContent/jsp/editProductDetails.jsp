@@ -23,7 +23,7 @@
   		</script>
 </head>
  <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("productDetails") %> <%}%> <%if(abc.equals("english")){%>Product Details<%}%></h2>
 			  	</div>
 			 
@@ -34,7 +34,8 @@
 				  		<hr style="border-top-color:#c1b1b1;">
 		     </div>	
     </div>
- 	<div class="container col-sm-offset-1">
+ 	<div class="container">
+ 	<div class=" col-sm-offset-1">
         <form class="form-horizontal" method="post" action="" name="prd1"><!-- Value of 'name' attribute is used in  productDetail.js  -->
           <fieldset>
 			 	<div class="row form-group">
@@ -196,18 +197,19 @@
 			
 			</div>
 	
-	
+	<br>
 		
 		<div class="form-group row">
             <div class="col-md-10 text-center">
             
-           		<input style=" height: 65px; width: 180; font-size: 25" type="button" id="UpdateProductDtlBtn" name="btn" value="Update" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="updateProductDetails()" /> 
-             	<input style=" height: 65px; width: 180; font-size: 25" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset" id="save" name="btn" value="Cancel"  onclick="reset()" /> 
-           		<input style=" height: 65px; width: 180; font-size: 25" type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
+           		<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" id="UpdateProductDtlBtn" name="btn" value="Update" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"  onclick="updateProductDetails()" /> 
+             	<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset" id="save" name="btn" value="Cancel"  onclick="reset()" /> 
+           		<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="Back" id="listBtn" class="btn btn-primary" onclick="Back()" /> 
             </div>
           </div>
 		</fieldset>
        </form>
+       </div>
      </div>
  
  	<%@include file="commons/newFooter.jsp" %>

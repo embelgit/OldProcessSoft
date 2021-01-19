@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+
+    <hibernate-mapping>
+    
+    <class name="com.Fertilizer.hibernate.Packing_InfoBean" 
+    table="packing_type" schema="process_soft">
+    
+    	<id name="packing_Id" type="java.lang.Long" column="pk_type_id">
+			<generator class="increment" />
+		</id>
+
+
+		<property 
+		name="packing_Type" 
+		type="java.lang.String" 
+		column="Packing_Type"
+		 />
+		 
+		 <property 
+		name="unit_Id" 
+		type="java.lang.Long" 
+		column="fk_unit_Id"
+		 />
+		 
+		 <property 
+		name="containerName" 
+		type="java.lang.String" 
+		column="Container_Name"
+		 />
+		 
+		 <property 
+		name="extraPacking" 
+		type="java.lang.String" 
+		column="Extra_Packing"
+		 />
+		
+		
+		
+		</class>
+    </hibernate-mapping>

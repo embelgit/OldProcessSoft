@@ -507,10 +507,10 @@ function taxlist()
 		
 		<div class="form-group row">
             <div class="col-md-11 text-center">
-             	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" id="submitProductDtlBtn" name="btn" value="Submit" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="productDetails()" /> 
-             	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset" id="save" name="btn" value="Cancel" onclick="reset()" /> 
-            	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" value="Product List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="productlist()" /> 
-              	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 130px;height: 45px;" type="button" value="Edit" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="editProduct()" /> 
+             	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" id="submitProductDtlBtn" name="btn" value="Submit" class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width" onclick="productDetails()" /> 
+             	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" class="btn btn-large btn-danger glyphicon glyphicon-remove-circle  button-height-width" type="reset" id="save" name="btn" value="Cancel" onclick="reset()" /> 
+            	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" value="List" id="listBtn" class="btn btn-primary btn-large button-height-width" onclick="productlist()" /> 
+              	<input style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;" type="button" value="Edit" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="editProduct()" /> 
             </div>
           </div>
 		</fieldset>

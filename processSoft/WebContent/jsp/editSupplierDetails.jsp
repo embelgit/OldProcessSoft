@@ -13,7 +13,7 @@
 </script>
 </head>
    <div class="row header_margin_top">
-			    <div align="center">
+			    <div class="bill-heading" align="center">
 			  		<h2 class="form-name style_heading"><%if(abc.equals("marathi")){%><%=PropertiesHelper.marathiProperties.getProperty("supplierdetails") %> <%}%> <%if(abc.equals("english")){%>Vendor  Details<%}%></h2>
 			  	</div>
 			 
@@ -23,7 +23,8 @@
 				  		<hr style="border-top-color:#c1b1b1;">
 		     </div>	
     </div>
-      <div class="container col-sm-offset-1" >
+      <div class="container" >
+      <div class="col-sm-offset-1">
         <form class="form-horizontal" method="post" action="" name="spld1"><!-- Value of 'name' attribute is used in  supplierDetails.js  -->
           <fieldset>
           	 <div class="row form-group">
@@ -182,18 +183,20 @@
             		</div>
 				</div>
           	</div> --%>
-           	
+           	<br>
+           	<br>
           <div class="form-group row">
-            <div class="col-md-9 col-md-offset-2 text-center">
-              	<input style="font-size: 25" id="save" name="btn"  value="Update" style="font-size: 25" class="btn btn-large btn-success   button-height-width"  onclick="supplierDetail1()"/>
-              	<input  style="font-size: 25" class="btn btn-large btn-danger glyphicon  button-height-width"  type="reset"  onclick="reset()"/> 
-           		<input style="font-size: 25" type="button" value="Back" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="Back()" />
+            <div class="col-md-7 col-md-offset-2 text-center">
+              	<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" id="save" name="btn"  value="Update" style="font-size: 25" class="btn btn-large btn-success   button-height-width"  onclick="supplierDetail1()"/>
+              	<input  style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" class="btn btn-large btn-danger glyphicon  button-height-width"  type="reset"  onclick="reset()"/> 
+           		<input style="font-size: 20px;width: 110px;height: 40px;padding: 0 9px;" type="button" value="Back" id="listBtn" class="btn btn-primary btn-large button-height-width " onclick="Back()" />
            
             </div>
           </div>
           
           </fieldset>
          </form>
+         </div>
         </div>
          
          <%@include file="commons/newFooter.jsp" %>

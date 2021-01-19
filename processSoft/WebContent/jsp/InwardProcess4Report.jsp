@@ -91,7 +91,7 @@
 	List list12=dao.getInwardProcess4List(request);
 	%>	
 	<div id="date">
-		<label id="demo"></label>
+		<label id="demo" style="margin-left:10px;"></label>
 		<script>
 			var date = new Date();
 			document.getElementById("demo").innerHTML = date.toDateString();
@@ -99,6 +99,7 @@
 	</div>
 
 	<div id="demo_jui">
+	<div class="table-list">
 		<table id="list" class="display" border="1">
 			<thead>
 				<tr>
@@ -127,6 +128,7 @@
 				%>
 			</tbody>
 		</table>
+		</div>
 	</div>
 	<br>
 	<div class="wrapper" align="center">
