@@ -1,3 +1,5 @@
+<%@page import="com.Fertilizer.dao.PackingInfoDao"%>
+<%@page import="com.Fertilizer.hibernate.OutwardStockHibernate"%>
 <%@page import="com.Fertilizer.dao.SupplierDetailsDao"%>
 <%@page import="com.Fertilizer.hibernate.SupplierDetailsBean"%>
 <%@page import="com.Fertilizer.hibernate.Packing_InfoBean"%>
@@ -78,19 +80,16 @@ function openBilling() {
 							<label class="col-md-2 col-md-offset-2 control-label" for="fk_godown_id">Select Product<sup>*</sup></label>
 							<div class="col-md-4">
 								<div class="input-group">
-
-									<span class="input-group-addon"> <i
-										class="	glyphicon glyphicon-hand-right"></i>
-									</span> <select class="form-control" id='proName' name="proName">
+									<span class="input-group-addon"> <i class="	glyphicon glyphicon-hand-right"></i></span>
+									<select class="form-control" id='proName' name="proName">
 									</select>
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="input-group">
-
 									<input type="button" id="btn" name="save" 
 										class="btn btn-lg btn-success btn-md button_hw button_margin_right"
-										onclick="StockDetailsReportAsPerProductName()" value="Search" />
+										onclick="outwardStockDetailsAsPerProductName()" value="Search" />
 								</div>
 							</div>
 						</div>
@@ -101,13 +100,14 @@ function openBilling() {
 									<th>Vendor Name</th>
 									<th>Inward ChallanNo</th>
 									<th>Outward ChallanNo</th>
-									<th>Inward Quantity</th>
-									<th>Outward Quantity</th>
-									<th>Unprocess Quantity</th>
+									<th>Ok Quantity</th>
+									<th>Unprocessed Quantity</th>
+<!-- 									<th>Unprocess Quantity</th> -->
 									<th>Rejected Quantity</th>
-									<th>Already Send Quantity</th>
+<!-- 									<th>Already Send Quantity</th> -->
 									<!-- <th>Returned Quantity</th> -->
-									<th>Balance Quantity</th>
+<!-- 									<th>Balance Quantity</th> -->
+									<th>Last Update Date</th>
 								</tr>
 							</thead>
 							<tfoot>

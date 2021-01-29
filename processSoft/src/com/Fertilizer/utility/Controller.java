@@ -1002,6 +1002,16 @@ public class Controller {
 		helper.addowd(request, response);
 		return toJson("Data Added Successfully");
 	}
+	
+	//getOutwardStockDetailsAsPerProductName
+	public String getOutwardStockDetailsAsPerProductName(HttpServletRequest request, HttpServletResponse response) {
+		packingInfoHelper helper = new packingInfoHelper();
+		List categories = helper.getOutwardStockDetailsAsPerProductName(request, response);
+		Map<String, List> returnMap = new HashMap<String, List>();
+		returnMap.put("list", categories);
+		System.out.println("$$$$$$$$$$$$$$$$" + returnMap);
+		return toJson(returnMap);
+	}
 
 	// Adding Container Goods Receive
 	public String addingContainerGoodsReceive(HttpServletRequest request, HttpServletResponse response)

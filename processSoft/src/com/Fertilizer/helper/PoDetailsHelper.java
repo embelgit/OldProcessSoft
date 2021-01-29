@@ -20,6 +20,8 @@ import com.Fertilizer.bean.SupplierGridBean;
 import com.Fertilizer.bean.SupplierGridBean1;
 import com.Fertilizer.bean.PoGridBean;
 import com.Fertilizer.bean.PurchaseDetailsFromGoodsReceive;
+import com.Fertilizer.bean.StockDetail;
+import com.Fertilizer.dao.GoodsReceiveDao;
 import com.Fertilizer.dao.PoDetailsDao;
 import com.Fertilizer.dao.StockDao;
 import com.Fertilizer.hibernate.GrDetailsBean;
@@ -444,5 +446,6 @@ public class PoDetailsHelper {
 		System.out.println("?????????????????????????}}}}}}}}}}"+expList);
 		return expList;
 	}
+
 	
 }

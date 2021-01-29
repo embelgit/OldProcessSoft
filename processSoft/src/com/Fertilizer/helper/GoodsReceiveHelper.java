@@ -1581,7 +1581,6 @@ public List getStockDetailsAsProductName1(HttpServletRequest request,HttpServlet
 		List<StockDetail> stockList = dao.getStockDetailsAsPerProductName1(proName);
 		
 		return stockList;
-
 }
 
 

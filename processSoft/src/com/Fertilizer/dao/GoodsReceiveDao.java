@@ -2492,57 +2492,54 @@ public List<PurchaseDetailsFromGoodsReceive> geTaxDetailsAsPerCategoryForSingleD
 
 }
 
-
-public List<StockDetail> getStockDetailsAsPerProductName1(String proName) {
-
-	HibernateUtility hbu=null;
-	Session session=null;
-	List<StockDetail> stockList = null;
-	try
-	{
-		hbu = HibernateUtility.getInstance();
-		session = hbu.getHibernateSession();
-		//Query query = session.createSQLQuery("select id.productname,od.suppliername,od.challan_No,od.outwardchallan_no,id.quantity,od.okquantity, id.dup_quantity,od.rejectedquantity,od.unprocessquantity,(id.quantity-dup_quantity-rejectedquantity-unprocessquantity-okquantity) as Available_total from inwand_details id join outward_details od on id.challanno = od.challan_No where od.productName =:proName ORDER BY od.pk_outward_id DESC LIMIT 1");
-		//Query query = session.createSQLQuery("select id.productname,od.suppliername,od.challan_No,od.outwardchallan_no,id.quantity,od.okquantity, id.dup_quantity,od.rejectedquantity,od.unprocessquantity,ior.ReturnQty,(id.quantity-dup_quantity-rejectedquantity-unprocessquantity-od.okquantity) as Available_total,(od.dupQuantity - od.okquantity) as new_total from inwand_details id JOIN outward_details od on id.challan_No = od.challan_No join outward_return ior on od.productName = ior.ProductName WHERE od.productName =:proName GROUP BY pk_outward_id ");
-		Query query = session.createSQLQuery("select id.productname,od.suppliername,od.challan_No,od.outwardchallan_no,id.quantity,od.okquantity, id.dup_quantity,od.rejectedquantity,od.unprocessquantity,(id.quantity-dup_quantity-rejectedquantity-unprocessquantity-okquantity) as Available_total,(od.dupQuantity - od.okquantity) as new_total from inwand_details id join outward_details od on id.challan_No = od.challan_No where od.productName =:proName and id.productname =od.productName  order BY od.pk_outward_id  ");
-		query.setParameter("proName", proName);
-		// query.setParameter("company", company);
-		/* query.setParameter("weight", weight);*/
-	
-		 List<Object[]> list = query.list();
-		stockList = new ArrayList<StockDetail>(0);
-		for (Object[] object : list) {
-		    DecimalFormat df2 = new DecimalFormat(".##");
-			StockDetail reports = new StockDetail();
-			/*reports.setProductName(object[0].toString());
-			reports.setCompanyName(object[1].toString());
-			reports.setWeight((Double)object[2]);
-			reports.setQuantity((Double)object[3]);*/
+	//old
+	public List<StockDetail> getStockDetailsAsPerProductName1(String proName) {
+		
+		HibernateUtility hbu=null;
+		Session session=null;
+		List<StockDetail> stockList = null;
+		try
+		{
+			hbu = HibernateUtility.getInstance();
+			session = hbu.getHibernateSession();
+			//Query query = session.createSQLQuery("select id.productname,od.suppliername,od.challan_No,od.outwardchallan_no,id.quantity,od.okquantity, id.dup_quantity,od.rejectedquantity,od.unprocessquantity,(id.quantity-dup_quantity-rejectedquantity-unprocessquantity-okquantity) as Available_total from inwand_details id join outward_details od on id.challanno = od.challan_No where od.productName =:proName ORDER BY od.pk_outward_id DESC LIMIT 1");
+			//Query query = session.createSQLQuery("select id.productname,od.suppliername,od.challan_No,od.outwardchallan_no,id.quantity,od.okquantity, id.dup_quantity,od.rejectedquantity,od.unprocessquantity,ior.ReturnQty,(id.quantity-dup_quantity-rejectedquantity-unprocessquantity-od.okquantity) as Available_total,(od.dupQuantity - od.okquantity) as new_total from inwand_details id JOIN outward_details od on id.challan_No = od.challan_No join outward_return ior on od.productName = ior.ProductName WHERE od.productName =:proName GROUP BY pk_outward_id ");
+			Query query = session.createSQLQuery("select id.productname,od.suppliername,od.challan_No,od.outwardchallan_no,id.quantity,od.okquantity, id.dup_quantity,od.rejectedquantity,od.unprocessquantity,(id.quantity-dup_quantity-rejectedquantity-unprocessquantity-okquantity) as Available_total,(od.dupQuantity - od.okquantity) as new_total from inwand_details id join outward_details od on id.challan_No = od.challan_No where od.productName =:proName and id.productname =od.productName  order BY od.pk_outward_id  ");
+			query.setParameter("proName", proName);
+			// query.setParameter("company", company);
+			/* query.setParameter("weight", weight);*/
 			
-			reports.setStrproductName(object[0].toString());
-			reports.setStrcompanyName(object[1].toString());
-			reports.setdInwardChallanNo(object[2].toString());
-			reports.setdOutwardChallanNo(object[3].toString());
-			reports.setdInwardQty((Double)object[4]);
-			reports.setdOutwardQty((Double)object[5]);
-			reports.setDbalanceQty(object[6].toString());
-			reports.setRejquantity((Double)object[7]);
-			reports.setUnproquantity((Double)object[8]);
-			
-			reports.setAvaInwQuantity1(df2.format(object[9]));
-			reports.setNewTOtal(object[10].toString());
-			reports.setRejectedQty(0l);
-			System.out.println("hi this is kishor+++++++++++"+(object[9]));
-			stockList.add(reports); 
-	
-		}}
-	catch(Exception e)
-	{
-		e.printStackTrace();	
+			List<Object[]> list = query.list();
+			stockList = new ArrayList<StockDetail>(0);
+			for (Object[] object : list) {
+				DecimalFormat df2 = new DecimalFormat(".##");
+				StockDetail reports = new StockDetail();
+				/*reports.setProductName(object[0].toString());
+				reports.setCompanyName(object[1].toString());
+				reports.setWeight((Double)object[2]);
+				reports.setQuantity((Double)object[3]);*/
+				
+				reports.setStrproductName(object[0].toString());
+				reports.setStrcompanyName(object[1].toString());
+				reports.setdInwardChallanNo(object[2].toString());
+				reports.setdOutwardChallanNo(object[3].toString());
+				reports.setdInwardQty((Double)object[4]);
+				reports.setdOutwardQty((Double)object[5]);
+				reports.setDbalanceQty(object[6].toString());
+				reports.setRejquantity((Double)object[7]);
+				reports.setUnproquantity((Double)object[8]);
+				
+				reports.setAvaInwQuantity1(df2.format(object[9]));
+				reports.setNewTOtal(object[10].toString());
+				reports.setRejectedQty(0l);
+				System.out.println("hi this is kishor+++++++++++"+(object[9]));
+				stockList.add(reports);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();	
+		}
+		return stockList;
 	}
-	return stockList;	
-
-}
 
 
 //sale detail as per payment mode

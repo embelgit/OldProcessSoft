@@ -487,6 +487,107 @@ function StockDetailsReportAsPerProductName(){
 	);
 }
 
+//new Outward Stock
+function outwardStockDetailsAsPerProductName(){
+	var params= {};
+	
+	$("#proName option:selected").each(function() {
+		   selectedVal = $(this).text();
+		});
+	
+	var splitText = selectedVal.split(",");
+	
+	var proName = splitText[0];
+	var company = splitText[1];
+	/*var weight = splitText[2];*/
+	
+	params["proName"]= proName;
+	params["company"]= company;
+	/*params["weight"]= weight;*/
+	
+	params["methodName"] = "getOutwardStockDetailsAsPerProductName";
+
+	$.post('/processSoft/jsp/utility/controller.jsp',params,function(data)
+			{
+		$('#productTable').dataTable().fnClearTable();
+		var jsonData = $.parseJSON(data);
+		var catmap = jsonData.list;
+		
+		if (catmap == "") {
+			//alert("there is no data available for selected field");
+			alert("Stock Is Not Available...!!!");
+			return true;
+		}
+		
+		$(document).ready(function() {
+		 var total =   $('#productTable').DataTable( {
+			 
+			 fnRowCallback : function(nRow, aData, iDisplayIndex){
+	                $("th:first", nRow).html(iDisplayIndex +1);
+	               return nRow;
+	            },
+	            "footerCallback": function ( row, data, start, end, display ) {
+		            var api = this.api(), data;
+		 
+		            // Remove the formatting to get integer data for summation
+		            var intVal = function ( i ) {
+		                return typeof i === 'string' ?
+		                    i.replace(/[\$,]/g, '')*1 :
+		                    typeof i === 'number' ?
+		                        i : 0;
+		            };
+		 
+		         
+		            pageTotal = api
+		                .column( 4 )
+		                .data()
+		                .reduce( function (a, b) {
+		                    return intVal(a) + intVal(b);
+		                }, 0 );
+		 
+		            // Update footer
+		            $( api.column( 4 ).footer() ).html(
+		            		
+		              parseFloat(pageTotal).toFixed(2)
+		               
+		            );
+		            console.log( pageTotal);
+	            
+	        },
+    	
+	            destroy: true,
+		        searching: false,
+		      
+		columns: [
+					{"data": "productName", "width": "5%"},
+					{"data": "supplierName", "width": "5%"},
+					{"data": "challanNo", "width": "5%"},
+					{"data": "outwardChallanNo" , "width": "5%"},
+					{"data": "okQuantity", "width": "5%"},
+					{"data": "unprocessQuantity", "width": "5%"},
+					{"data": "rejectedQuantity", "width": "5%"},
+					{"data": "lastUpdateDate", "width": "5%"},
+					//{"data": "AvaInwQuantity1" , "width": "5%"},
+					/*{"data": "RejectedQty" , "width": "5%"},*/
+					/*{"data": "dbalanceQty" , "width": "5%"},*/
+					//{"data": "NewTOtal" , "width": "5%"},
+					
+					
+		        
+		        ],
+		      
+		    } );
+		} );
+		
+	var mydata = catmap;
+	$('#productTable').dataTable().fnAddData(mydata);
+	
+		}
+	
+	);
+}
+
+
 
 
 /*** +++ Fetching product Name+++ *****/

@@ -13,7 +13,6 @@
 			<generator class="increment" />
 		</id>
 
-
 		<property 
 		name="firstName" 
 		type="java.lang.String" 

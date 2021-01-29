@@ -4,10 +4,8 @@
 <%@page import="com.Fertilizer.hibernate.SupplierDetailsBean"%>
 <%@page import="com.Fertilizer.hibernate.shopDetailsBean"%>
 <%@page import="com.Fertilizer.dao.shopDetailsDao"%>
-<%@page
-	import="com.Fertilizer.hibernate.ExpenseDetailForBillingAndGoodsReceiveBean"%>
-<%@page
-	import="com.Fertilizer.dao.ExpenseDetailForBillingAndGoodsReceiveDao"%>
+<%@page import="com.Fertilizer.hibernate.ExpenseDetailForBillingAndGoodsReceiveBean"%>
+<%@page import="com.Fertilizer.dao.ExpenseDetailForBillingAndGoodsReceiveDao"%>
 <%
 	boolean isHome = false;
 %>
@@ -95,7 +93,6 @@ function editProductDetails() {
 	
 	System.out.println(todayDate);
 	%>
-
 </script>
 <script>
 	/*  	Calculations for cash */
@@ -430,8 +427,7 @@ function editProductDetails() {
 			<form class="form-horizontal" method="post" action="" name="creditFertiBill1">
 				<fieldset>
 					<div class="row form-group">
-						<label class="col-md-2 control-label" for="creditCustomerName">
-							Vendor Name<sup>*</sup>
+						<label class="col-md-2 control-label" for="creditCustomerName">Vendor Name<sup>*</sup>
 						</label>
 						<div class="col-md-3">
 							<div class="input-group">
@@ -558,9 +554,7 @@ function editProductDetails() {
 								</span> <input id="address" name="village1"
 									class="form-control input-md ac_district" type="text">
 							</div>
-						</div>
-
-						
+						</div>						
 					</div>
 
 

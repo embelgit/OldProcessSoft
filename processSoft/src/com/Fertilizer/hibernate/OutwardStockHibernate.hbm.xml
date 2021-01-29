@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" > 
+<!-- OutwardStockHibernate.hbm.xml -->
+    <hibernate-mapping>    
+    <class name="com.Fertilizer.hibernate.OutwardStockHibernate" table="outward_stock_details" schema="process_soft">
+    
+    	<id name="pkOutwardStockId" type="java.lang.Long" column="pk_outward_stock_id">
+			<generator class="increment" />
+		</id>
+		
+		<property name="supplierIdNo" type="java.lang.String" column="supplier_id_no" />
+		<property name="supplierName" type="java.lang.String" column="supplier_name" />
+		<property name="outwardDate" type="java.util.Date" column="outward_date" />
+		<property name="GSTNo" type="java.lang.String" column="gst_no" />
+		<property name="challanNo" type="java.lang.String" column="challan_no" />
+		<property name="inwardDate" type="java.util.Date" column="inward_date" />
+		<property name="outwardChallanNo" type="java.lang.String" column="outward_challan_no" />
+		<property name="vechicleNo" type="java.lang.String" column="vechicle_no" />
+		<property name="description" type="java.lang.String" column="description" />
+		<property name="productName" type="java.lang.String" column="product_name" />
+		<property name="hsnSac" type="java.lang.String" column="hsn_sac"/>
+		<property name="operation" type="java.lang.String" column="operation"/>
+		<property name="okQuantity" type="java.lang.Double" column="ok_quantity" />
+		<property name="rejectedQuantity" type="java.lang.Double" column="rejected_quantity" />
+		<property name="unprocessQuantity" type="java.lang.Double" column="unprocess_quantity" />
+		<property name="duplicateQuantity" type="java.lang.Double" column="duplicate_quantity" />
+		<property name="unitPrice" type="java.lang.Double" column="unit_price" />
+		<property name="boxDescripation" type="java.lang.String" column="box_descripation" />
+		<property name="GridTotal" type="java.lang.Double" column="grid_total" />
+		<property name="total" type="java.lang.Double" column="total" />
+		<property name="grossTotal" type="java.lang.Double" column="gross_total" />
+		<property name="userId" type="java.lang.Long" column="user_id"></property>
+		<property name="username" type="java.lang.String" column="username"></property>
+		<property name="shopId" type="java.lang.Long" column="shop_id"></property>
+		<property name="shopName" type="java.lang.String" column="shopname"></property>
+		<property name="lastUpdateDate" type="java.util.Date" column="last_update_date" />
+	</class>
+    </hibernate-mapping>

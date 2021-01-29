@@ -1993,7 +1993,7 @@ function valforGrDetails()
 					return false;
 				}
 			} else {
-				alert("Please Enter the Contact no");
+				alert("Please Enter the Contact Number");
 				return false;
 			}
 		} else {

@@ -17,6 +17,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import com.Fertilizer.bean.PoGridBean;
+import com.Fertilizer.bean.StockDetail;
 import com.Fertilizer.bean.SupplierGridBean1;
 import com.Fertilizer.dao.GoodsReceiveDao;
 import com.Fertilizer.dao.PackingInfoDao;
@@ -26,6 +27,7 @@ import com.Fertilizer.dao.SupplierDetailsDao;
 import com.Fertilizer.hibernate.CustomerBillBean1;
 import com.Fertilizer.hibernate.InwardBean;
 import com.Fertilizer.hibernate.OutwardBean;
+import com.Fertilizer.hibernate.OutwardStockHibernate;
 import com.Fertilizer.hibernate.PoDetailsBean;
 import com.Fertilizer.hibernate.UserDetailsBean;
 import com.Fertilizer.utility.HibernateUtility;
@@ -34,8 +36,7 @@ import com.Fertilizer.utility.HibernateUtility;
 public class packingInfoHelper {
 
 	
-	public void addowd(HttpServletRequest request,
-			HttpServletResponse response) throws ParseException {
+	public void addowd(HttpServletRequest request, HttpServletResponse response) throws ParseException {
 		
 		/*start Session code For Shop Name*/		
 		HttpSession sessionv = request.getSession(true);
@@ -200,10 +201,173 @@ public class packingInfoHelper {
 			bean.setUsername(username);
 			bean.setShopId(Long.parseLong(shopid));
 			bean.setShopName(shopname);
+			
+			
+			
+			//Outward Stock Intry Code
+			//Start 0
+			
+			OutwardStockHibernate hibernate = new OutwardStockHibernate();
+			
+			if(!"".equals(suppliername)){
+				hibernate.setSupplierName(suppliername);;
+			} else {
+				hibernate.setSupplierName("N/A");
+			}
+			
+			Date  outwardDate1=null;
+			DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd");
+			outwardDate1 = df2.parse(outwardDate);
+			
+			Date outwardDate2 = new Date();
+			
+			if(!"".equals(outwardDate1)){
+				hibernate.setOutwardDate(outwardDate1);
+			} else {
+				hibernate.setOutwardDate(outwardDate2);
+			}
+			if(!"".equals(tinNo)){
+				hibernate.setGSTNo(tinNo);
+			} else {
+				hibernate.setGSTNo("N/A");
+			}
+			if(!"".equals(IdNo)){
+				hibernate.setSupplierIdNo(IdNo);
+			} else {
+				hibernate.setSupplierIdNo("N/A");
+			}
+			if(!"".equals(challanNo)){
+				hibernate.setChallanNo(challanNo);
+			} else {
+				hibernate.setChallanNo("N/A");
+			}
+			
+			Date  inwardDate1=null;
+			DateFormat df3 = new SimpleDateFormat("yyyy-MM-dd");
+			inwardDate1 = df3.parse(inwardDate);
+			
+			Date inwardDate2 = new Date();
+			
+			if(!"".equals(inwardDate1)){
+				hibernate.setInwardDate(inwardDate1);
+			} else {
+				hibernate.setInwardDate(inwardDate2);
+			}
+			if(!"".equals(outwardchallanno)){
+				hibernate.setOutwardChallanNo(outwardchallanno);
+			} else {
+				hibernate.setOutwardChallanNo("N/A");
+			}
+			if(!"".equals(vechicleNo)){
+				hibernate.setVechicleNo(vechicleNo);
+			} else {
+				hibernate.setVechicleNo("N/A");
+			}
+			if(!"".equals(description)){
+				hibernate.setDescription(description);
+			} else {
+				hibernate.setDescription("N/A");
+			}
+			if(!"".equals(total)){
+				hibernate.setTotal(Double.parseDouble(total));
+			} else {
+				hibernate.setTotal(0d);
+			}
+			if(!"".equals(grossTotal)){
+				hibernate.setGrossTotal(Double.parseDouble(grossTotal));
+			} else {
+				hibernate.setGrossTotal(0d);
+			}
+			//Grid Data
+			if(!"".equals(productName)){
+				hibernate.setProductName(productName);
+			} else {
+				hibernate.setProductName("N/A");
+			}
+			if(!"".equals(hsn)){
+				hibernate.setHsnSac(hsn);
+			} else {
+				hibernate.setHsnSac("N/A");
+			}
+			if(!"".equals(Operation)){
+				hibernate.setOperation(Operation);
+			} else {
+				hibernate.setOperation("N/A");
+			}
+			if(!"".equals(okquantity)){
+				hibernate.setOkQuantity(Double.parseDouble(okquantity));
+			} else {
+				hibernate.setOkQuantity(0d);
+			}
+			if(!"".equals(rejectedquantity)){
+				hibernate.setRejectedQuantity(Double.parseDouble(rejectedquantity));
+			} else {
+				hibernate.setRejectedQuantity(0d);
+			}
+			if(!"".equals(unprocessquantity)){
+				hibernate.setUnprocessQuantity(Double.parseDouble(unprocessquantity));
+			} else {
+				hibernate.setUnprocessQuantity(0d);
+			}
+			if(!"".equals(dupQuantityinward)){
+				hibernate.setDuplicateQuantity(Double.parseDouble(dupQuantityinward));
+			} else {
+				hibernate.setDuplicateQuantity(0d);
+			}
+			if(!"".equals(buyPrice)){
+				hibernate.setUnitPrice(Double.parseDouble(buyPrice));
+			} else {
+				hibernate.setUnitPrice(0d);
+			}
+			if(!"".equals(Description)){
+				hibernate.setBoxDescripation(Description);
+			} else {
+				hibernate.setBoxDescripation("N/A");
+			}
+			if(!"".equals(GridTotal)){
+				hibernate.setGridTotal(Double.parseDouble(GridTotal));
+			} else {
+				hibernate.setGridTotal(0d);
+			}
+			
+			HttpSession session3 = request.getSession(true);
+
+			String userid1 = (String)session3.getAttribute("userid");
+			String username1 = (String)session3.getAttribute("user");
+			String shopid1 = (String)session3.getAttribute("shopid");
+			String shopname1 = (String)session3.getAttribute("shopname");
+			
+
+			if(!"".equals(userid1)){
+				hibernate.setUserId(Long.parseLong(userid1));
+			} else {
+				hibernate.setUserId(0l);
+			}
+			if(!"".equals(GridTotal)){
+				hibernate.setUsername(username1);
+			} else {
+				hibernate.setUsername("N/A");
+			}
+			if(!"".equals(shopid1)){
+				hibernate.setShopId(Long.parseLong(shopid1));
+			} else {
+				hibernate.setShopId(0l);
+			}
+			if(!"".equals(shopname1)){
+				hibernate.setShopName(shopname1);
+			} else {
+				hibernate.setShopName("N/A");
+			}
+			
+			Date lastUpdateDate = new Date();
+			
+			hibernate.setLastUpdateDate(lastUpdateDate);
+			
+			dao.outwardStockEntry(hibernate);
+			//End 1
 	        
 			dao.valOwDetails(bean);
 		}
-		
 	
 }
 	public List getProductInGridOnSupplierPurchase2(
@@ -418,5 +582,18 @@ public class packingInfoHelper {
 			System.out.println("----------------Credit cust Bill No before session create::"+session3.getAttribute("VendorBillNo"));
 			
 		}
-	
+		
+		//getOutwardStockDetailsAsPerProductName
+		public List getOutwardStockDetailsAsPerProductName(HttpServletRequest request,HttpServletResponse response) {
+			String proName = request.getParameter("proName");
+			//String company = request.getParameter("company");
+			/*String weight = request.getParameter("weight");*/
+		    
+			Map<Long,OutwardStockHibernate> map = new HashMap<Long,OutwardStockHibernate>();
+			
+			PackingInfoDao dao = new PackingInfoDao();
+			List<OutwardStockHibernate> stockList = dao.getOutwardStockDetailsAsPerProductName(proName);
+			
+			return stockList;
+		}
 }

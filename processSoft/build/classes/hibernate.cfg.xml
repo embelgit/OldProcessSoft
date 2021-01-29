@@ -58,7 +58,8 @@
    		 <mapping resource="com/Fertilizer/hibernate/ContainerStock.hbm.xml"/>
    		 <mapping resource="com/Fertilizer/hibernate/OperationDetails.hbm.xml"/>
    		 <mapping resource="com/Fertilizer/hibernate/PoDetails.hbm.xml"/>
-   		 <mapping resource="com/Fertilizer/hibernate/OutwardDeatils.hbm.xml"/>  
+   		 <mapping resource="com/Fertilizer/hibernate/OutwardDeatils.hbm.xml"/>
+   		 <mapping resource="com/Fertilizer/hibernate/OutwardStockHibernate.hbm.xml"/>
    		 <mapping resource="com/Fertilizer/hibernate/CustomerBillBean1.hbm.xml"/>
    		 <mapping resource="com/Fertilizer/hibernate/GrDetails.hbm.xml"/>
    		 <mapping resource="com/Fertilizer/hibernate/VendorPaymentBean.hbm.xml"/>

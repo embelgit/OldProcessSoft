@@ -38,7 +38,7 @@ function outwardRecieve() {
 
 function outwardRecieve1() {
 
-	document.getElementById("save").disabled = true;
+	document.getElementById("saveBtn").disabled = true;
 	var params = {};
 
 	var count = jQuery("#jqGrid").jqGrid('getGridParam', 'records');
@@ -66,7 +66,7 @@ function outwardRecieve1() {
 		 if(okquantity == undefined || okquantity == 0 )
 			{
 	        	alert("Please Enter okquantity in grid.");
-	        	document.getElementById('save').disabled = false;
+	        	document.getElementById('saveBtn').disabled = false;
 				return false;
 			}
 		params["okquantity" + i] = okquantity;
@@ -95,7 +95,7 @@ function outwardRecieve1() {
 		var description = allRowsInGrid[i].description;
 		if(description == "" || description ==undefined || description == null){
 			alert("Please Enter Description in Grid");
-			document.getElementById('save').disabled = false;
+			document.getElementById('saveBtn').disabled = false;
 			return false;
 		}
 		params["description" + i] = description;
@@ -141,6 +141,7 @@ function outwardRecieve1() {
 
 	$.post('/processSoft/jsp/utility/controller.jsp', params, function(data) {
 		alert(data);
+		document.getElementById('saveBtn').disabled = false;
 		window.open("PackingBillPDF.jsp");
 		window.location.reload();
 

@@ -220,13 +220,11 @@ System.out.println(todayDate);
 					        	  //SupplierDetailsBean sup =(SupplierDetailsBean)sList.get(i);
 					        	  //GoodsReceiveBean grb=(GoodsReceiveBean)sList.get(i);
 							%>
-
 								<option data-value="<%=bean.getPk_inward_id()%>"
 									value="<%=bean.getSuppliername()%>">
 									<%
 				      			}
 				    		%>
-								
 							</datalist>
 							<span class="input-group-addon">
 									<button type="button" id="popup" onclick="suppDetailsDivAction(1);">
@@ -236,16 +234,13 @@ System.out.println(todayDate);
 						</div>
 					</div>
 
-					<label class="col-md-2 control-label" for="purchaseDate">Outward
-						Date<sup>*</sup>
-					</label>
+					<label class="col-md-2 control-label" for="purchaseDate">Outward Date<sup>*</sup></label>
 					<div class="col-md-3">
 						<div class="input-group">
 							<span class="input-group-addon"> <i
 								class="	glyphicon glyphicon-hand-right"></i>
 							</span> <input type="date" id="outwardDate" name="outwardDate"
 								placeholder="outward Date" class="form-control input-md" value="<%=todayDate%>">
-
 						</div>
 					</div>
 				</div>
@@ -466,7 +461,7 @@ System.out.println(todayDate);
 
 				<div class="form-group row">
 					<div class="col-md-11 text-center">
-						<input type="button" id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;"
+						<input type="button" id="saveBtn" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;"
 							class="btn btn-large btn-success glyphicon glyphicon-save  button-height-width"
 							onclick="outwardRecieve()" value="Submit"> 
 						<input id="save" name="btn" style="font-size: 20px;font-weight: 500;padding: 0 8px;width: 110px;height: 45px;"
